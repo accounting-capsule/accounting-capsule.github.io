@@ -854,3 +854,20 @@ if (location.hostname === 'accounting-capsule.github.io') {
     gcScript.setAttribute('data-goatcounter', 'https://accounting-capsule.goatcounter.com/count');
     document.head.appendChild(gcScript);
 }
+
+// WhatsApp consultation floating button (site-wide)
+(function () {
+    if (document.getElementById('wa-float')) return;
+    var s = document.createElement('style');
+    s.textContent = '#wa-float{position:fixed;bottom:1.25rem;left:1.25rem;z-index:999;width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.75rem;box-shadow:0 4px 14px rgba(37,211,102,.45);text-decoration:none;transition:transform .2s}#wa-float:hover{transform:scale(1.08)}';
+    document.head.appendChild(s);
+    var a = document.createElement('a');
+    a.id = 'wa-float';
+    a.href = 'https://wa.me/201092445639?text=' + encodeURIComponent('أهلًا، عايز استشارة محاسبية');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('aria-label', 'للاستشارات المحاسبية - واتساب');
+    a.title = 'للاستشارات المحاسبية';
+    a.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    document.body.appendChild(a);
+})();
