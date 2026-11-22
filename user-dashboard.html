@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="theme-color" content="#0a1628">
-    <meta name="description" content="لوحة تحكم المستخدم - كبسولة المحاسب">
-    <title>حسابي | كبسولة المحاسب</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="لوحة تحكم المستخدم - كبسولة المحاسب" name="description"/>
+<title>حسابي | كبسولة المحاسب</title>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/layout.css" rel="stylesheet"/>
+<style>
         .user-profile-header {
             background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
             border-radius: var(--radius-lg);
@@ -195,377 +195,327 @@
     </style>
 </head>
 <body>
-    <!-- Mobile Overlay -->
-    <div class="mobile-overlay"></div>
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-capsules"></i>
-                </div>
-                <div class="logo-text">
+<!-- Mobile Overlay -->
+<div class="mobile-overlay"></div>
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="index.html">
+<div class="logo-icon">
+<i class="fas fa-capsules"></i>
+</div>
+<div class="logo-text">
                     كبسولة المحاسب
                     <span>حلول محاسبية احترافية</span>
-                </div>
-            </a>
-            <button class="sidebar-toggle" aria-label="Toggle Sidebar">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+</div>
+</a>
+<button aria-label="Toggle Sidebar" class="sidebar-toggle">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="index.html">
+<i class="fas fa-home"></i>
+<span>لوحة التحكم</span>
+</a>
+<a class="nav-item" href="downloads.html">
+<i class="fas fa-download"></i>
+<span>التحميلات</span>
+<span class="nav-badge">150+</span>
+</a>
+<a class="nav-item" href="blog.html">
+<i class="fas fa-blog"></i>
+<span>المدونة</span>
+</a>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">التعلم</div>
 
-        <nav class="sidebar-nav">
-            <div class="nav-section">
-                <div class="nav-section-title">الرئيسية</div>
-                <a href="index.html" class="nav-item">
-                    <i class="fas fa-home"></i>
-                    <span>لوحة التحكم</span>
-                </a>
-                <a href="downloads.html" class="nav-item">
-                    <i class="fas fa-download"></i>
-                    <span>التحميلات</span>
-                    <span class="nav-badge">150+</span>
-                </a>
-                <a href="blog.html" class="nav-item">
-                    <i class="fas fa-blog"></i>
-                    <span>المدونة</span>
-                </a>
-            </div>
+<a class="nav-item" href="downloads.html">
+<i class="fas fa-file-excel"></i>
+<span>شيتات Excel</span>
+</a>
+<a class="nav-item" href="downloads.html">
+<i class="fas fa-laptop-code"></i>
+<span>البرامج</span>
+</a>
+</div>
 
-            <div class="nav-section">
-                <div class="nav-section-title">التعلم</div>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>الكورسات</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-file-excel"></i>
-                    <span>شيتات Excel</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <span>البرامج</span>
-                </a>
-            </div>
+<div class="nav-section">
+<div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="about.html">
+<i class="fas fa-info-circle"></i>
+<span>عنّا</span>
+</a>
+<a class="nav-item" href="contact.html">
+<i class="fas fa-envelope"></i>
+<span>تواصل معنا</span>
+</a>
 
-            <div class="nav-section">
-                <div class="nav-section-title">الحساب</div>
-                <a href="user-dashboard.html" class="nav-item active">
-                    <i class="fas fa-user"></i>
-                    <span>حسابي</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-crown"></i>
-                    <span>الاشتراك VIP</span>
-                </a>
-                <a href="#" class="nav-item">
-                    <i class="fas fa-heart"></i>
-                    <span>المفضلة</span>
-                </a>
-            </div>
+</div>
+</nav>
 
-            <div class="nav-section">
-                <div class="nav-section-title">الدعم</div>
-                <a href="about.html" class="nav-item">
-                    <i class="fas fa-info-circle"></i>
-                    <span>عنّا</span>
-                </a>
-                <a href="contact.html" class="nav-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>تواصل معنا</span>
-                </a>
-                <a href="admin-dashboard.html" class="nav-item">
-                    <i class="fas fa-cog"></i>
-                    <span>لوحة الإدارة</span>
-                </a>
-            </div>
-        </nav>
-
-        <div class="sidebar-footer">
-            <div class="user-card">
-                <div class="user-avatar">م</div>
-                <div class="user-info">
-                    <div class="user-name">محمد أحمد</div>
-                    <div class="user-role">عضو VIP</div>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Top Header -->
-        <header class="top-header">
-            <button class="mobile-menu-btn header-btn no-print" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <div class="header-search">
-                <button class="search-trigger">
-                    <i class="fas fa-search"></i>
-                    <span>ابحث عن شيتات، كورسات، مقالات...</span>
-                    <kbd>Ctrl + K</kbd>
-                </button>
-            </div>
-
-            <div class="header-actions">
-                <button class="header-btn notification-btn" aria-label="Notifications">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-dot"></span>
-                </button>
-                <button class="lang-switcher" aria-label="Switch Language">
-                    <i class="fas fa-globe"></i>
-                    <span>AR</span>
-                </button>
-            </div>
-        </header>
-
-        <!-- Page Content -->
-        <div class="page-content">
-            <!-- User Profile Header -->
-            <div class="user-profile-header">
-                <div class="user-avatar-large">م</div>
-                <div class="user-profile-info">
-                    <h2>محمد أحمد</h2>
-                    <p>محاسب مالي | mohamed@email.com</p>
-                    <div class="user-vip-badge">
-                        <i class="fas fa-crown"></i>
+</aside>
+<!-- Main Content -->
+<main class="main">
+<!-- Top Header -->
+<header class="top-header">
+<button aria-label="Menu" class="mobile-menu-btn header-btn no-print">
+<i class="fas fa-bars"></i>
+</button>
+<div class="header-search">
+<button class="search-trigger">
+<i class="fas fa-search"></i>
+<span>ابحث عن شيتات، كورسات، مقالات...</span>
+<kbd>Ctrl + K</kbd>
+</button>
+</div>
+<div class="header-actions">
+<button aria-label="Notifications" class="header-btn notification-btn">
+<i class="fas fa-bell"></i>
+<span class="notification-dot"></span>
+</button>
+<button aria-label="Switch Language" class="lang-switcher">
+<i class="fas fa-globe"></i>
+<span>AR</span>
+</button>
+</div>
+</header>
+<!-- Page Content -->
+<div class="page-content">
+<!-- User Profile Header -->
+<div class="user-profile-header">
+<div class="user-avatar-large">م</div>
+<div class="user-profile-info">
+<h2>محمد أحمد</h2>
+<p>محاسب مالي | mohamed@email.com</p>
+<div class="user-vip-badge">
+<i class="fas fa-crown"></i>
                         عضو VIP
                     </div>
-                </div>
-                <div style="margin-right: auto;">
-                    <button class="btn btn-gold">
-                        <i class="fas fa-crown"></i>
+</div>
+<div style="margin-right: auto;">
+<button class="btn btn-gold">
+<i class="fas fa-crown"></i>
                         تجديد الاشتراك
                     </button>
-                </div>
-            </div>
-
-            <!-- Tabs -->
-            <div class="tabs-nav">
-                <button class="tab-btn active" data-tab="downloads">
-                    <i class="fas fa-download"></i>
+</div>
+</div>
+<!-- Tabs -->
+<div class="tabs-nav">
+<button class="tab-btn active" data-tab="downloads">
+<i class="fas fa-download"></i>
                     تحميلاتي
                 </button>
-                <button class="tab-btn" data-tab="courses">
-                    <i class="fas fa-graduation-cap"></i>
+<button class="tab-btn" data-tab="courses">
+<i class="fas fa-graduation-cap"></i>
                     كورساتي
                 </button>
-                <button class="tab-btn" data-tab="favorites">
-                    <i class="fas fa-heart"></i>
+<button class="tab-btn" data-tab="favorites">
+<i class="fas fa-heart"></i>
                     المفضلة
                 </button>
-                <button class="tab-btn" data-tab="settings">
-                    <i class="fas fa-cog"></i>
+<button class="tab-btn" data-tab="settings">
+<i class="fas fa-cog"></i>
                     الإعدادات
                 </button>
-            </div>
-
-            <!-- Downloads Tab -->
-            <div class="tab-content active" id="downloads">
-                <div class="download-item">
-                    <div class="download-item-icon" style="background: #d1fae5; color: #059669;">
-                        <i class="fas fa-file-excel"></i>
-                    </div>
-                    <div class="download-item-info">
-                        <h4>شيت إدارة المخزون الكامل</h4>
-                        <p>تم التحميل: 15 يونيو 2026 | الحجم: 2.4 MB</p>
-                    </div>
-                    <div class="download-item-actions">
-                        <button class="btn btn-primary btn-sm">
-                            <i class="fas fa-download"></i>
+</div>
+<!-- Downloads Tab -->
+<div class="tab-content active" id="downloads">
+<div class="download-item">
+<div class="download-item-icon" style="background: #d1fae5; color: #059669;">
+<i class="fas fa-file-excel"></i>
+</div>
+<div class="download-item-info">
+<h4>شيت إدارة المخزون الكامل</h4>
+<p>تم التحميل: 15 يونيو 2026 | الحجم: 2.4 MB</p>
+</div>
+<div class="download-item-actions">
+<button class="btn btn-primary btn-sm">
+<i class="fas fa-download"></i>
                             إعادة التحميل
                         </button>
-                    </div>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-item-icon" style="background: #fee2e2; color: #dc2626;">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <div class="download-item-info">
-                        <h4>دليل الضريبة المضافة 2026</h4>
-                        <p>تم التحميل: 10 يونيو 2026 | الحجم: 5.1 MB</p>
-                    </div>
-                    <div class="download-item-actions">
-                        <button class="btn btn-primary btn-sm">
-                            <i class="fas fa-download"></i>
+</div>
+</div>
+<div class="download-item">
+<div class="download-item-icon" style="background: #fee2e2; color: #dc2626;">
+<i class="fas fa-file-pdf"></i>
+</div>
+<div class="download-item-info">
+<h4>دليل الضريبة المضافة 2026</h4>
+<p>تم التحميل: 10 يونيو 2026 | الحجم: 5.1 MB</p>
+</div>
+<div class="download-item-actions">
+<button class="btn btn-primary btn-sm">
+<i class="fas fa-download"></i>
                             إعادة التحميل
                         </button>
-                    </div>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-item-icon" style="background: #dbeafe; color: #2563eb;">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="download-item-info">
-                        <h4>برنامج الفواتير الذكي v2.0</h4>
-                        <p>تم التحميل: 5 يونيو 2026 | الحجم: 15.3 MB</p>
-                    </div>
-                    <div class="download-item-actions">
-                        <button class="btn btn-primary btn-sm">
-                            <i class="fas fa-download"></i>
+</div>
+</div>
+<div class="download-item">
+<div class="download-item-icon" style="background: #dbeafe; color: #2563eb;">
+<i class="fas fa-laptop-code"></i>
+</div>
+<div class="download-item-info">
+<h4>برنامج الفواتير الذكي v2.0</h4>
+<p>تم التحميل: 5 يونيو 2026 | الحجم: 15.3 MB</p>
+</div>
+<div class="download-item-actions">
+<button class="btn btn-primary btn-sm">
+<i class="fas fa-download"></i>
                             إعادة التحميل
                         </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Courses Tab -->
-            <div class="tab-content" id="courses">
-                <div class="download-item">
-                    <div class="download-item-icon" style="background: #fef3c7; color: #d97706;">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="download-item-info">
-                        <h4>Excel المتقدم للمحاسبين</h4>
-                        <p>التقدم: 65% | آخر درس: VLOOKUP المتقدم</p>
-                    </div>
-                    <div class="download-item-actions">
-                        <button class="btn btn-primary btn-sm">
-                            <i class="fas fa-play"></i>
+</div>
+</div>
+</div>
+<!-- Courses Tab -->
+<div class="tab-content" id="courses">
+<div class="download-item">
+<div class="download-item-icon" style="background: #fef3c7; color: #d97706;">
+<i class="fas fa-graduation-cap"></i>
+</div>
+<div class="download-item-info">
+<h4>Excel المتقدم للمحاسبين</h4>
+<p>التقدم: 65% | آخر درس: VLOOKUP المتقدم</p>
+</div>
+<div class="download-item-actions">
+<button class="btn btn-primary btn-sm">
+<i class="fas fa-play"></i>
                             استمرار
                         </button>
-                    </div>
-                </div>
-
-                <div class="download-item">
-                    <div class="download-item-icon" style="background: #dbeafe; color: #2563eb;">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="download-item-info">
-                        <h4>التحليل المالي للمبتدئين</h4>
-                        <p>التقدم: 30% | آخر درس: النسب المالية</p>
-                    </div>
-                    <div class="download-item-actions">
-                        <button class="btn btn-primary btn-sm">
-                            <i class="fas fa-play"></i>
+</div>
+</div>
+<div class="download-item">
+<div class="download-item-icon" style="background: #dbeafe; color: #2563eb;">
+<i class="fas fa-chart-line"></i>
+</div>
+<div class="download-item-info">
+<h4>التحليل المالي للمبتدئين</h4>
+<p>التقدم: 30% | آخر درس: النسب المالية</p>
+</div>
+<div class="download-item-actions">
+<button class="btn btn-primary btn-sm">
+<i class="fas fa-play"></i>
                             استمرار
                         </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Favorites Tab -->
-            <div class="tab-content" id="favorites">
-                <div class="download-item">
-                    <div class="download-item-icon" style="background: #fce7f3; color: #db2777;">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="download-item-info">
-                        <h4>شيت حساب المرتبات 2026</h4>
-                        <p>تم الإضافة: 20 يونيو 2026 | Excel</p>
-                    </div>
-                    <div class="download-item-actions">
-                        <button class="btn btn-primary btn-sm">
-                            <i class="fas fa-download"></i>
+</div>
+</div>
+</div>
+<!-- Favorites Tab -->
+<div class="tab-content" id="favorites">
+<div class="download-item">
+<div class="download-item-icon" style="background: #fce7f3; color: #db2777;">
+<i class="fas fa-heart"></i>
+</div>
+<div class="download-item-info">
+<h4>شيت حساب المرتبات 2026</h4>
+<p>تم الإضافة: 20 يونيو 2026 | Excel</p>
+</div>
+<div class="download-item-actions">
+<button class="btn btn-primary btn-sm">
+<i class="fas fa-download"></i>
                             تحميل
                         </button>
-                        <button class="btn btn-ghost btn-sm" style="color: var(--red-500);">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Settings Tab -->
-            <div class="tab-content" id="settings">
-                <div class="settings-form">
-                    <div class="settings-section">
-                        <h3><i class="fas fa-user-circle" style="color: var(--primary-500);"></i> المعلومات الشخصية</h3>
-                        <div class="form-group">
-                            <label class="form-label">الاسم الكامل</label>
-                            <input type="text" class="form-input" value="محمد أحمد">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">البريد الإلكتروني</label>
-                            <input type="email" class="form-input" value="mohamed@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">رقم الهاتف</label>
-                            <input type="tel" class="form-input" value="+20 123 456 7890">
-                        </div>
-                        <button class="btn btn-primary">
-                            <i class="fas fa-save"></i>
+<button class="btn btn-ghost btn-sm" style="color: var(--red-500);">
+<i class="fas fa-trash"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Settings Tab -->
+<div class="tab-content" id="settings">
+<div class="settings-form">
+<div class="settings-section">
+<h3><i class="fas fa-user-circle" style="color: var(--primary-500);"></i> المعلومات الشخصية</h3>
+<div class="form-group">
+<label class="form-label">الاسم الكامل</label>
+<input class="form-input" type="text" value="محمد أحمد"/>
+</div>
+<div class="form-group">
+<label class="form-label">البريد الإلكتروني</label>
+<input class="form-input" type="email" value="mohamed@email.com"/>
+</div>
+<div class="form-group">
+<label class="form-label">رقم الهاتف</label>
+<input class="form-input" type="tel" value="+20 123 456 7890"/>
+</div>
+<button class="btn btn-primary">
+<i class="fas fa-save"></i>
                             حفظ التغييرات
                         </button>
-                    </div>
-
-                    <div class="settings-section">
-                        <h3><i class="fas fa-lock" style="color: var(--gold-500);"></i> تغيير كلمة المرور</h3>
-                        <div class="form-group">
-                            <label class="form-label">كلمة المرور الحالية</label>
-                            <input type="password" class="form-input" placeholder="••••••••">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">كلمة المرور الجديدة</label>
-                            <input type="password" class="form-input" placeholder="••••••••">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">تأكيد كلمة المرور الجديدة</label>
-                            <input type="password" class="form-input" placeholder="••••••••">
-                        </div>
-                        <button class="btn btn-primary">
-                            <i class="fas fa-key"></i>
+</div>
+<div class="settings-section">
+<h3><i class="fas fa-lock" style="color: var(--gold-500);"></i> تغيير كلمة المرور</h3>
+<div class="form-group">
+<label class="form-label">كلمة المرور الحالية</label>
+<input class="form-input" placeholder="••••••••" type="password"/>
+</div>
+<div class="form-group">
+<label class="form-label">كلمة المرور الجديدة</label>
+<input class="form-input" placeholder="••••••••" type="password"/>
+</div>
+<div class="form-group">
+<label class="form-label">تأكيد كلمة المرور الجديدة</label>
+<input class="form-input" placeholder="••••••••" type="password"/>
+</div>
+<button class="btn btn-primary">
+<i class="fas fa-key"></i>
                             تحديث كلمة المرور
                         </button>
-                    </div>
-
-                    <div class="settings-section">
-                        <h3><i class="fas fa-bell" style="color: var(--secondary-500);"></i> الإشعارات</h3>
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <span style="font-size: 0.9375rem; color: var(--gray-700);">إشعارات البريد الإلكتروني</span>
-                                <input type="checkbox" checked style="width: 20px; height: 20px; accent-color: var(--primary-600);">
-                            </label>
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <span style="font-size: 0.9375rem; color: var(--gray-700);">إشعارات المنتجات الجديدة</span>
-                                <input type="checkbox" checked style="width: 20px; height: 20px; accent-color: var(--primary-600);">
-                            </label>
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <span style="font-size: 0.9375rem; color: var(--gray-700);">إشعارات العروض والخصومات</span>
-                                <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary-600);">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Command Palette -->
-    <div class="command-palette-overlay">
-        <div class="command-palette">
-            <div class="command-input-wrapper">
-                <i class="fas fa-search"></i>
-                <input type="text" class="command-input" placeholder="ابحث عن أي شيء..." autocomplete="off">
-                <kbd class="command-kbd">ESC</kbd>
-            </div>
-            <div class="command-results">
-                <div class="command-section">
-                    <div class="command-section-title">الصفحات</div>
-                    <div class="command-item selected" data-href="index.html">
-                        <i class="fas fa-home blue"></i>
-                        <div class="command-item-info"><h4>لوحة التحكم</h4><p>الصفحة الرئيسية</p></div>
-                    </div>
-                    <div class="command-item" data-href="downloads.html">
-                        <i class="fas fa-download green"></i>
-                        <div class="command-item-info"><h4>التحميلات</h4><p>شيتات وبرامج</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="command-footer">
-                <span><kbd>↑↓</kbd> للتنقل</span>
-                <span><kbd>Enter</kbd> للاختيار</span>
-                <span><kbd>ESC</kbd> للإغلاق</span>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/app.js"></script>
-    <script>
+</div>
+<div class="settings-section">
+<h3><i class="fas fa-bell" style="color: var(--secondary-500);"></i> الإشعارات</h3>
+<div style="display: flex; flex-direction: column; gap: 1rem;">
+<label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+<span style="font-size: 0.9375rem; color: var(--gray-700);">إشعارات البريد الإلكتروني</span>
+<input checked="" style="width: 20px; height: 20px; accent-color: var(--primary-600);" type="checkbox"/>
+</label>
+<label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+<span style="font-size: 0.9375rem; color: var(--gray-700);">إشعارات المنتجات الجديدة</span>
+<input checked="" style="width: 20px; height: 20px; accent-color: var(--primary-600);" type="checkbox"/>
+</label>
+<label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+<span style="font-size: 0.9375rem; color: var(--gray-700);">إشعارات العروض والخصومات</span>
+<input style="width: 20px; height: 20px; accent-color: var(--primary-600);" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Command Palette -->
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info"><h4>لوحة التحكم</h4><p>الصفحة الرئيسية</p></div>
+</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info"><h4>التحميلات</h4><p>شيتات وبرامج</p></div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div>
+<script src="js/app.js"></script>
+<script>
         // Tab switching
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', function() {
