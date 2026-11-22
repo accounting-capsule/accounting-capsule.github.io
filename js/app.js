@@ -844,3 +844,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// 8. GoatCounter privacy-friendly analytics (dashboard: https://accounting-capsule.goatcounter.com)
+// Loads on the live site only, so local previews and test runs never pollute the stats.
+if (location.hostname === 'accounting-capsule.github.io') {
+    var gcScript = document.createElement('script');
+    gcScript.async = true;
+    gcScript.src = 'https://gc.zgo.at/count.js';
+    gcScript.setAttribute('data-goatcounter', 'https://accounting-capsule.goatcounter.com/count');
+    document.head.appendChild(gcScript);
+}

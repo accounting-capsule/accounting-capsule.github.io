@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://accounting-capsule.github.io/articles/profit-vs-cash-flow.html">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="كبسولة المحاسب">
+    <meta property="og:title" content="الفرق بين الربح والتدفق النقدي | كبسولة المحاسب">
+    <meta property="og:description" content="إزاي شركة بتحقق أرباح على الورق ومش لاقية كاش تدفع مرتبات؟ الفرق بين الربح والتدفق النقدي بشرح علمي ومثال رقمي عملي، ونصايح تحمي بيها شركتك من فجوة الكاش.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://accounting-capsule.github.io/articles/profit-vs-cash-flow.html">
+    <meta property="og:image" content="https://accounting-capsule.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="الفرق بين الربح والتدفق النقدي | كبسولة المحاسب">
+    <meta name="twitter:description" content="إزاي شركة بتحقق أرباح على الورق ومش لاقية كاش تدفع مرتبات؟ الفرق بين الربح والتدفق النقدي بشرح علمي ومثال رقمي عملي.">
+    <meta name="twitter:image" content="https://accounting-capsule.github.io/assets/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#0a1628">
+    <meta name="description" content="إزاي شركة بتحقق أرباح على الورق ومش لاقية كاش تدفع مرتبات؟ الفرق بين الربح والتدفق النقدي بشرح علمي ومثال رقمي عملي، ونصايح تحمي بيها شركتك من فجوة الكاش.">
+    <title>الفرق بين الربح والتدفق النقدي | كبسولة المحاسب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ليه شركتك مكسبانة ومعندكش فلوس؟ الفرق بين الربح والتدفق النقدي",
+      "description": "إزاي شركة بتحقق أرباح على الورق ومش لاقية كاش تدفع مرتبات؟ الفرق بين الربح والتدفق النقدي بشرح علمي ومثال رقمي عملي، ونصايح تحمي بيها شركتك من فجوة الكاش.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "mainEntityOfPage": "https://accounting-capsule.github.io/articles/profit-vs-cash-flow.html",
+      "image": "https://accounting-capsule.github.io/assets/og-image.png",
+      "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"},
+      "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "الفرق بين الربح والتدفق النقدي", "item": "https://accounting-capsule.github.io/articles/profit-vs-cash-flow.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل الربح هو نفسه الكاش؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "لا. الربح فرق بين الإيرادات والمصروفات على أساس الاستحقاق، بيتسجل وقت حدوث العملية حتى لو الفلوس ما اتحركتش. أما الكاش فهو حركة الفلوس الفعلية دخولاً وخروجاً. ممكن شركة تكون ربحانة على الورق والكاش عندها بالسالب."}
+        },
+        {
+          "@type": "Question",
+          "name": "إزاي شركة ربحانة ممكن تفلس؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "لما الكاش يخلص. لو الشركة بتبيع بالأجل وبتدفع مصاريفها ومشترياتها نقدي، ممكن تحقق أرباح دفترية كبيرة ومع ذلك ماتلاقيش فلوس تدفع مرتبات أو تسدد موردين، فتتوقف عن العمل رغم الربح المحاسبي."}
+        },
+        {
+          "@type": "Question",
+          "name": "إيه الفرق بين قائمة الدخل وقائمة التدفقات النقدية؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "قائمة الدخل بتقيس الأداء: الإيرادات والمصروفات على أساس الاستحقاق عشان توصل لصافي الربح. قائمة التدفقات النقدية بتقيس السيولة: حركة الكاش الفعلية مقسمة لتدفقات تشغيلية واستثمارية وتمويلية."}
+        },
+        {
+          "@type": "Question",
+          "name": "هل الإهلاك بيأثر على الكاش؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "لا. الإهلاك مصروف غير نقدي: بيقلل الربح المحاسبي لكنه مابيطلعش فلوس من الشركة، عشان كده بيترجع تاني (يُضاف) في قائمة التدفقات النقدية بالطريقة غير المباشرة."}
+        },
+        {
+          "@type": "Question",
+          "name": "أيهما أهم لصاحب العمل: الربح ولا التدفق النقدي؟",
+          "acceptedAnswer": {"@type": "Answer", "text": "الاتنين مهمين لكن لوظيفتين مختلفتين: الربح بيقولك إذا كان نشاطك مجدي اقتصادياً على المدى الطويل، والتدفق النقدي بيقولك إذا كنت قادر تستمر وتدفع التزاماتك دلوقتي. الشركات مابتفلسش من قلة الأرباح، بتفلس من قلة الكاش."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+            </a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+                <a href="../index.html" class="nav-item"><i class="fas fa-home"></i><span>لوحة التحكم</span></a>
+                <a href="../downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="../blog.html" class="nav-item active"><i class="fas fa-blog"></i><span>المدونة</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الحساب</div>
+                <a href="../user-dashboard.html" class="nav-item"><i class="fas fa-user"></i><span>حسابي</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الدعم</div>
+                <a href="../about.html" class="nav-item"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+                <a href="../contact.html" class="nav-item"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-card"><div class="user-avatar">م</div><div class="user-info"><div class="user-name">محمد أحمد</div><div class="user-role">عضو VIP</div></div></div>
+        </div>
+    </aside>
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                <button class="lang-switcher"><i class="fas fa-globe"></i><span>AR</span></button>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="article-header">
+                <nav class="article-breadcrumb">
+                    <a href="../index.html">الرئيسية</a> &lsaquo;
+                    <a href="../blog.html">المدونة</a> &lsaquo;
+                    <span>الفرق بين الربح والتدفق النقدي</span>
+                </nav>
+                <span class="article-category">محاسبة مالية</span>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+                    <span><i class="far fa-clock"></i> 8 دقائق قراءة</span>
+                </div>
+                <h1>ليه شركتك مكسبانة ومعندكش فلوس؟ الفرق بين الربح والتدفق النقدي</h1>
+            </div>
+            <div class="article-content">
+                <p>تخيل الموقف ده: شركتك باعت بضاعة بـ 500 ألف جنيه الشهر ده، وقائمة الدخل بتقول إنك حققت صافي ربح 110 آلاف جنيه. لكن لما رحت تدفع المرتبات آخر الشهر... الحساب في البنك فاضي. الموقف ده مش خيال، ده بيحصل كل يوم لشركات صغيرة وكبيرة، وأشهر سبب ليه هو الخلط بين مصطلحين بيتستخدموا وكأنهم حاجة واحدة: الربح والتدفق النقدي.</p>
+                <p>في المقال ده هنشرح الفرق بينهم بشكل علمي سليم، بمثال رقمي واحد هيمشي معانا من أول المقال لآخره، وفي الآخر هنقولها ببساطة على طريقة عمي صابر.</p>
+
+                <h2>💰 يعني إيه الربح؟</h2>
+                <p>الربح هو الفرق بين الإيرادات والمصروفات خلال فترة معينة، محسوب على <strong>أساس الاستحقاق</strong>. وأساس الاستحقاق ده هو مفتاح فهم الموضوع كله:</p>
+                <ul>
+                    <li><strong>الإيراد بيتسجل لما يتحقق</strong> (عملية البيع اتمت والبضاعة اتسلمت)، حتى لو العميل لسه مادفعش مليم.</li>
+                    <li><strong>المصروف بيتسجل لما يتكبد</strong> (استفدت من الخدمة أو استهلكت الأصل)، حتى لو لسه مادفعتش ثمنه.</li>
+                </ul>
+                <p>يعني الربح بيجاوب على سؤال: <em>"هل نشاط الشركة مجدي اقتصادياً في الفترة دي؟"</em> مش سؤال: "إزاى الكاش ماشي؟".</p>
+
+                <h2>💵 يعني إيه التدفق النقدي؟</h2>
+                <p>التدفق النقدي (Cash Flow) هو حركة الفلوس الفعلية داخل وخارج الشركة: اللي اتقبض ناقص اللي اتدفع في الفترة. مفيش فيه استحقاق ولا تقديرات: الكاش دخل الخزنة يبقى موجود، لسه مادخلش يبقى مش موجود، بكل بساطة.</p>
+                <p>وقائمة التدفقات النقدية بتقسم حركة الكاش لـ 3 أنشطة:</p>
+                <ol>
+                    <li><strong>تشغيلية:</strong> كاش البيع والشراء والمصاريف اليومية - دي أهم واحدة فيهم وصحتها علامة على صحة النشاط نفسه.</li>
+                    <li><strong>استثمارية:</strong> شراء وبيع الأصول طويلة الأجل (معدات، عقارات، استثمارات).</li>
+                    <li><strong>تمويلية:</strong> قروض، سداد قروض، رأس مال، توزيعات أرباح.</li>
+                </ol>
+
+                <h2>⚖️ الفرق بينهم في جدول واحد</h2>
+                <table>
+                    <tr>
+                        <th>وجه المقارنة</th>
+                        <th>الربح</th>
+                        <th>التدفق النقدي</th>
+                    </tr>
+                    <tr>
+                        <td>أساس القياس</td>
+                        <td>الاستحقاق (العملية حصلت)</td>
+                        <td>الدفع الفعلي (الفلوس اتحركت)</td>
+                    </tr>
+                    <tr>
+                        <td>بيع بالأجل 100 ألف</td>
+                        <td>يتسجل إيراد فوراً</td>
+                        <td>صفر لحد التحصيل</td>
+                    </tr>
+                    <tr>
+                        <td>الإهلاك</td>
+                        <td>مصروف بيقلل الربح</td>
+                        <td>مفيش أثر (مصروف غير نقدي)</td>
+                    </tr>
+                    <tr>
+                        <td>شراء معدات كاش</td>
+                        <td>مش مصروف فوري (أصل يُهلك)</td>
+                        <td>كاش خارج بالكامل وقت الشراء</td>
+                    </tr>
+                    <tr>
+                        <td>القائمة اللي بيظهر فيها</td>
+                        <td>قائمة الدخل</td>
+                        <td>قائمة التدفقات النقدية</td>
+                    </tr>
+                    <tr>
+                        <td>بيجاوب على سؤال</td>
+                        <td>هل النشاط مربح؟</td>
+                        <td>هل الشركة قادرة تعيش وتدفع؟</td>
+                    </tr>
+                </table>
+
+                <h2>🔢 مثال عملي: شركة مكسبانة... ومفلسة</h2>
+                <p>خلينا نطبق الكلام ده على شركة "النور للتجارة" في شهر يناير:</p>
+                <ul>
+                    <li>باعت بضاعة بـ <strong>500,000 جنيه بالأجل</strong> (التحصيل بعد 60 يوم).</li>
+                    <li>تكلفة البضاعة المباعة <strong>300,000 جنيه اتدفعت كاش</strong> للموردين.</li>
+                    <li>مصاريف تشغيل (مرتبات، إيجار، كهربا) <strong>80,000 جنيه كاش</strong>.</li>
+                    <li>اشترت معدات بـ <strong>20,000 جنيه كاش</strong>.</li>
+                    <li>سددت قسط قرض بنكي <strong>30,000 جنيه</strong>.</li>
+                    <li>إهلاك الشهر: <strong>10,000 جنيه</strong>.</li>
+                </ul>
+
+                <h3>الربح على أساس الاستحقاق</h3>
+                <p>الإيرادات 500,000 − تكلفة المبيعات 300,000 − مصاريف التشغيل 80,000 − الإهلاك 10,000 = <strong>صافي ربح 110,000 جنيه</strong>. الشركة على الورق ناجحة ومكسبانة.</p>
+
+                <h3>الكاش على أساس الدفع الفعلي</h3>
+                <p>الكاش الداخل من المبيعات: <strong>صفر</strong> (البيع كله بالأجل). الكاش الخارج: 300,000 + 80,000 + 20,000 + 30,000 = <strong>430,000 جنيه</strong>. يعني الكاش نقص 430 ألف جنيه في شهر واحد.</p>
+
+                <blockquote>
+                    <p>النتيجة: شركة "النور" عندها ربح 110 ألف في الدفاتر، وعجز كاش 430 ألف في البنك. لو مفيش رصيد سابق أو تمويل، الشركة دي مش هتقدر تدفع مرتبات فبراير... رغم إنها "ربحانة".</p>
+                </blockquote>
+
+                <p>ولاحظ حاجة مهمة: الإهلاك الـ 10,000 قلل الربح، لكنه ماطلعش ولا مليم من الخزنة. عشان كده لما بنحسب التدفق النقدي التشغيلي بالطريقة غير المباشرة، بنرجع نضيف الإهلاك تاني لصافي الربح.</p>
+
+                <h2>🛡️ إزاي تحمي شركتك من فجوة الكاش؟</h2>
+                <ol>
+                    <li><strong>تابع الكاش التشغيلي أسبوعياً</strong> مش قائمة الدخل بس. ربحك بيقولك إنك ماشي صح، والكاش بيقولك إنك لسه عايش.</li>
+                    <li><strong>قصّر فترة التحصيل:</strong> شروط دفع أقصر، خصم بسيط للسداد المبكر، ومتابعة أعمار العملاء (Aging) بشكل دوري.</li>
+                    <li><strong>اعمل توقع كاش لـ 13 أسبوع:</strong> جدول بسيط في إكسل بالكاش الداخل والخارج المتوقع كل أسبوع، هيكشفلك الفجوة قبل ما تحصل بشهور.</li>
+                    <li><strong>طابق آجال الدفع مع آجال التحصيل:</strong> لو بتبيع بأجل 60 يوم، حاول تشتري بأجل مشابه بدل الدفع كاش.</li>
+                    <li><strong>احتفظ باحتياطي كاش</strong> يغطي 2-3 شهور مصاريف تشغيلية على الأقل، وفرّق دايماً بين قرار الشراء الاستثماري وقدرة الكاش عليه.</li>
+                </ol>
+
+                <h2>🚨 علامات إن مشكلتك كاش... مش ربح</h2>
+                <p>شركات كتير بتدور على زيادة المبيعات لما تحس بضيق، وهي أصلاً مشكلتها مش في المبيعات. دي علامات إن اللي ناقصك تدفق نقدي مش أرباح:</p>
+                <ul>
+                    <li>قائمة الدخل بتقول إنك كسبان، بس حساب البنك بيقل شهر ورا شهر.</li>
+                    <li>بتستلف أو بتأجل موردين عشان تدفع مصاريف ثابتة زي المرتبات والإيجار.</li>
+                    <li>معظم مبيعاتك بالأجل ومعظم مشترياتك كاش.</li>
+                    <li>أرصدة العملاء (مدينون) بتكبر أسرع من مبيعاتك.</li>
+                    <li>بتشتري معدات أو أصول من كاش التشغيل بدل تمويل مناسب لعمرها.</li>
+                </ul>
+                <p>لو لقيت علامتين أو أكتر من دول عندك، الحل مش "بيع أكتر"، الحل إدارة تدفقات نقدية: تحصيل أسرع، دفع أذكى، وتوقع كاش منتظم. زيادة المبيعات بالأجل لشركة عندها فجوة كاش بتزود المشكلة مش بتحلها، لأن كل عملية بيع جديدة بتاكل كاش أكتر قبل ما تجيب كاش.</p>
+
+                <div class="cta-box">
+                    <h3>🎯 عايز تتابع الكاش بتاعك صح؟</h3>
+                    <p>حمّل شيتات إكسل الجاهزة لمتابعة التدفقات النقدية والتحصيل من مركز التحميلات</p>
+                    <a href="../downloads.html" class="btn btn-gold">
+                        <i class="fas fa-download"></i>
+                        تصفح التحميلات
+                    </a>
+                </div>
+
+                <h2>❓ أسئلة شائعة</h2>
+                <div class="faq-section">
+                    <details>
+                        <summary>هل الربح هو نفسه الكاش؟</summary>
+                        <p>لا. الربح فرق بين الإيرادات والمصروفات على أساس الاستحقاق، بيتسجل وقت حدوث العملية حتى لو الفلوس ما اتحركتش. أما الكاش فهو حركة الفلوس الفعلية دخولاً وخروجاً. ممكن شركة تكون ربحانة على الورق والكاش عندها بالسالب.</p>
+                    </details>
+                    <details>
+                        <summary>إزاي شركة ربحانة ممكن تفلس؟</summary>
+                        <p>لما الكاش يخلص. لو الشركة بتبيع بالأجل وبتدفع مصاريفها ومشترياتها نقدي، ممكن تحقق أرباح دفترية كبيرة ومع ذلك ماتلاقيش فلوس تدفع مرتبات أو تسدد موردين، فتتوقف عن العمل رغم الربح المحاسبي.</p>
+                    </details>
+                    <details>
+                        <summary>إيه الفرق بين قائمة الدخل وقائمة التدفقات النقدية؟</summary>
+                        <p>قائمة الدخل بتقيس الأداء: الإيرادات والمصروفات على أساس الاستحقاق عشان توصل لصافي الربح. قائمة التدفقات النقدية بتقيس السيولة: حركة الكاش الفعلية مقسمة لتدفقات تشغيلية واستثمارية وتمويلية.</p>
+                    </details>
+                    <details>
+                        <summary>هل الإهلاك بيأثر على الكاش؟</summary>
+                        <p>لا. الإهلاك مصروف غير نقدي: بيقلل الربح المحاسبي لكنه مابيطلعش فلوس من الشركة، عشان كده بيترجع تاني (يُضاف) في قائمة التدفقات النقدية بالطريقة غير المباشرة.</p>
+                    </details>
+                    <details>
+                        <summary>أيهما أهم لصاحب العمل: الربح ولا التدفق النقدي؟</summary>
+                        <p>الاتنين مهمين لكن لوظيفتين مختلفتين: الربح بيقولك إذا كان نشاطك مجدي اقتصادياً على المدى الطويل، والتدفق النقدي بيقولك إذا كنت قادر تستمر وتدفع التزاماتك دلوقتي. الشركات مابتفلسش من قلة الأرباح، بتفلس من قلة الكاش.</p>
+                    </details>
+                </div>
+
+                <div class="saber-box">
+                    <h2>☕ وببساطة على طريقة عمي صابر</h2>
+                    <p>عمي صابر عنده محل أدوات كهربائية بقاله 20 سنة، والشهر ده عمل أحسن شهر في حياته: المقاول الحاج سيد جه خد منه بضاعة بـ 200 ألف جنيه وقاله "هحاسبك أول ما أخلص الشغلانة". عمي صابر طاير من الفرحة، قافل حساباته في دماغه: البضاعة واقفة عليه بـ 140 ألف، يبقى كسبان 60 ألف جنيه!</p>
+                    <p>بس لما فتح الدرج لقى الحكاية تانية خالص: دفع للتاجر 140 ألف كاش عشان يجيب البضاعة، ودفع إيجار وكهربا ومرتب الولد اللي شغال معاه 25 ألف، واللي داخل الدرج من الحاج سيد لحد دلوقتي؟ ولا مليم. يعني عمي صابر مكسبان على الورق 60 ألف، والدرج فاضي ومش لاقي يدفع إيجار الشهر الجاي.</p>
+                    <p>وده اللي بيحصل بالظبط لما حد يقولك "الشركة مكسبانة بس مفيهاش فلوس": المكسب رقم في الدفتر بيتكتب يوم البيع، والكاش هو اللي بيدخل جيبتك يوم التحصيل. الاتنين مهمين، بس اللي بيدفع الإيجار والمرتبات هو الكاش مش الدفتر.</p>
+                    <p>الخلاصة على لسان عمي صابر نفسه: <strong>"الربح حساب، والكاش أكل عيش. اللي معاهش أكل عيش، الحساب مش هينفعه."</strong></p>
+                </div>
+
+                <div class="related-articles">
+                    <h3>📚 مقالات ذات صلة</h3>
+                    <div class="related-grid">
+                        <a href="../blog-post.html" class="related-card">
+                            <h4>كيف يغير الذكاء الاصطناعي مستقبل المحاسبة؟</h4>
+                            <p>دليل شامل عن تطبيقات AI في المحاسبة</p>
+                        </a>
+                        <a href="../blog.html" class="related-card">
+                            <h4>مدونة كبسولة المحاسب</h4>
+                            <p>كل المقالات: محاسبة، ضرائب، إكسل، وتحليل مالي</p>
+                        </a>
+                        <a href="../downloads.html" class="related-card">
+                            <h4>مركز التحميلات</h4>
+                            <p>شيتات إكسل وبرامج وكتب محاسبية جاهزة</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <section class="newsletter-section">
+                    <div class="newsletter-content">
+                        <div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <h2>كبسولة المحاسب في إيميلك 📬</h2>
+                        <p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="اكتب إيميلك هنا" required>
+                            <input type="text" name="_honey" class="newsletter-honey" tabindex="-1" autocomplete="off">
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i> اشترك</button>
+                        </form>
+                        <small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="../js/app.js"></script>
+</body>
+</html>
