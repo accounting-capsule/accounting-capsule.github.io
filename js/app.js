@@ -801,4 +801,46 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // 7. Newsletter signup forms (FormSubmit, same approach as the contact form)
+    // Interim recipient: the site inbox below. Flip NEWSLETTER_ENDPOINT to the owner's email once decided (needs one-time FormSubmit activation on the new address).
+    var NEWSLETTER_ENDPOINT = 'https://formsubmit.co/ajax/1d9sxh@mail.instinct.com';
+    document.querySelectorAll('.newsletter-form').forEach(function(newsForm) {
+        newsForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var emailF = newsForm.querySelector('input[type="email"]');
+            var honeyF = newsForm.querySelector('input[name="_honey"]');
+            if (honeyF && honeyF.value) return;
+            if (!emailF.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailF.value)) {
+                launchToast('اكتب إيميل صحيح الأول', 'error');
+                return;
+            }
+            var submitBtn = newsForm.querySelector('button[type="submit"]');
+            var original = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> لحظة...';
+
+            fetch(NEWSLETTER_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    _subject: 'اشتراك جديد في نشرة كبسولة المحاسب',
+                    نوع_الرسالة: 'اشتراك نشرة بريدية',
+                    البريد: emailF.value.trim(),
+                    الصفحة: window.location.pathname
+                })
+            }).then(function(res) {
+                if (!res.ok) throw new Error('send failed');
+                return res.json();
+            }).then(function() {
+                launchToast('تم الاشتراك بنجاح ✅ أهلاً بيك في الكبسولة', 'success');
+                newsForm.reset();
+            }).catch(function() {
+                launchToast('حصلت مشكلة في الاشتراك، جرب تاني', 'error');
+            }).finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = original;
+            });
+        });
+    });
 });

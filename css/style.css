@@ -621,3 +621,81 @@ h1, h2, h3, h4, h5, h6 {
     body { background: white; }
     .card { box-shadow: none; border: 1px solid var(--gray-300); }
 }
+
+/* ============ Newsletter Signup ============ */
+.newsletter-section {
+    background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    margin: 2rem 0 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background: rgba(212, 160, 23, 0.12);
+    border-radius: 50%;
+}
+.newsletter-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: rgba(16, 185, 129, 0.10);
+    border-radius: 50%;
+}
+.newsletter-content { position: relative; z-index: 1; max-width: 560px; margin: 0 auto; }
+.newsletter-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: rgba(212, 160, 23, 0.2);
+    color: var(--gold-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.newsletter-section h2 { color: white; font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+.newsletter-section p { color: rgba(255, 255, 255, 0.85); margin-bottom: 1.5rem; line-height: 1.8; }
+.newsletter-form { display: flex; gap: 0.75rem; max-width: 480px; margin: 0 auto 1rem; }
+.newsletter-input {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.newsletter-input:focus { outline: none; border-color: var(--gold-500); }
+.newsletter-honey { display: none; }
+.newsletter-btn {
+    padding: 0.875rem 1.75rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+    color: var(--primary-900);
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.newsletter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 160, 23, 0.4); }
+.newsletter-btn:disabled { opacity: 0.7; cursor: wait; transform: none; }
+.newsletter-note { color: rgba(255, 255, 255, 0.6); font-size: 0.8125rem; }
+@media (max-width: 480px) {
+    .newsletter-form { flex-direction: column; }
+    .newsletter-btn { width: 100%; }
+}
