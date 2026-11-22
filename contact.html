@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل مع كبسولة المحاسب - نحن هنا لمساعدتك">
+    <title>تواصل معنا | كبسولة المحاسب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contact-hero h1 { font-size: 2rem; font-weight: 900; margin-bottom: 0.75rem; }
+        .contact-hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .contact-info { display: flex; flex-direction: column; gap: 1rem; }
+        .contact-card { background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); padding: 1.5rem; display: flex; align-items: center; gap: 1rem; transition: var(--transition-base); }
+        .contact-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .contact-card-icon { width: 50px; height: 50px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+        .contact-card-icon.green { background: var(--secondary-100); color: var(--secondary-700); }
+        .contact-card-icon.blue { background: #dbeafe; color: var(--primary-600); }
+        .contact-card-icon.gold { background: var(--gold-100); color: var(--gold-600); }
+        .contact-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 0.25rem; }
+        .contact-card p { font-size: 0.875rem; color: var(--gray-500); }
+        .contact-form { background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); padding: 2rem; }
+        .contact-form h3 { font-size: 1.25rem; font-weight: 800; color: var(--gray-900); margin-bottom: 1.5rem; }
+        .social-links-large { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .social-links-large a { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; color: white; transition: var(--transition-base); }
+        .social-links-large a:hover { transform: translateY(-3px); }
+        .social-links-large .facebook { background: #1877f2; }
+        .social-links-large .youtube { background: #ff0000; }
+        .social-links-large .telegram { background: #0088cc; }
+        .social-links-large .whatsapp { background: #25d366; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+            </a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>لوحة التحكم</span></a>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="blog.html" class="nav-item"><i class="fas fa-blog"></i><span>المدونة</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الدعم</div>
+                <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+                <a href="contact.html" class="nav-item active"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-card"><div class="user-avatar">م</div><div class="user-info"><div class="user-name">محمد أحمد</div><div class="user-role">عضو VIP</div></div></div>
+        </div>
+    </aside>
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                <button class="lang-switcher"><i class="fas fa-globe"></i><span>AR</span></button>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="contact-hero">
+                <h1>📞 تواصل معنا</h1>
+                <p>نحن هنا لمساعدتك! لا تتردد في التواصل معنا لأي استفسار أو اقتراح</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon green"><i class="fab fa-whatsapp"></i></div>
+                        <div><h4>واتساب</h4><p>تواصل مباشر وسريع</p></div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon blue"><i class="fas fa-envelope"></i></div>
+                        <div><h4>البريد الإلكتروني</h4><p>support@accountingcapsule.com</p></div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon gold"><i class="fab fa-telegram"></i></div>
+                        <div><h4>قناة تليجرام</h4><p>آخر الأخبار والتحديثات</p></div>
+                    </div>
+                    <div class="social-links-large">
+                        <a href="#" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="telegram" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>✉️ أرسل رسالتك</h3>
+                    <form data-validate>
+                        <div class="form-group">
+                            <label class="form-label">الاسم</label>
+                            <input type="text" class="form-input" placeholder="اسمك الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-input" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">الموضوع</label>
+                            <select class="form-select" required>
+                                <option value="">اختر الموضوع</option>
+                                <option value="support">دعم فني</option>
+                                <option value="sales">مبيعات</option>
+                                <option value="partnership">شراكة</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">الرسالة</label>
+                            <textarea class="form-textarea" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full" style="padding: 0.875rem;">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="command-palette-overlay">
+        <div class="command-palette">
+            <div class="command-input-wrapper"><i class="fas fa-search"></i><input type="text" class="command-input" placeholder="ابحث..." autocomplete="off"><kbd class="command-kbd">ESC</kbd></div>
+            <div class="command-results">
+                <div class="command-section"><div class="command-section-title">الصفحات</div>
+                    <div class="command-item selected" data-href="contact.html"><i class="fas fa-envelope blue"></i><div class="command-item-info"><h4>تواصل معنا</h4><p>مساعدة واستفسارات</p></div></div>
+                </div>
+            </div>
+            <div class="command-footer"><span><kbd>↑↓</kbd> للتنقل</span><span><kbd>Enter</kbd> للاختيار</span><span><kbd>ESC</kbd> للإغلاق</span></div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

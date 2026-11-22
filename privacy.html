@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سياسة الخصوصية - كبسولة المحاسب">
+    <title>سياسة الخصوصية | كبسولة المحاسب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .legal-page { max-width: 800px; margin: 0 auto; }
+        .legal-header { text-align: center; margin-bottom: 2rem; }
+        .legal-header h1 { font-size: 1.75rem; font-weight: 900; color: var(--gray-900); margin-bottom: 0.5rem; }
+        .legal-header p { color: var(--gray-500); }
+        .legal-section { background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); padding: 2rem; margin-bottom: 1.5rem; }
+        .legal-section h2 { font-size: 1.125rem; font-weight: 800; color: var(--gray-900); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .legal-section h2 i { color: var(--primary-500); }
+        .legal-section p, .legal-section li { color: var(--gray-600); line-height: 1.8; font-size: 0.9375rem; }
+        .legal-section ul { padding-right: 1.5rem; }
+        .legal-section li { margin-bottom: 0.5rem; }
+        .last-updated { text-align: center; color: var(--gray-400); font-size: 0.875rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+            </a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>لوحة التحكم</span></a>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="blog.html" class="nav-item"><i class="fas fa-blog"></i><span>المدونة</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الدعم</div>
+                <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+                <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-card"><div class="user-avatar">م</div><div class="user-info"><div class="user-name">محمد أحمد</div><div class="user-role">عضو VIP</div></div></div>
+        </div>
+    </aside>
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                <button class="lang-switcher"><i class="fas fa-globe"></i><span>AR</span></button>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="legal-page">
+                <div class="legal-header">
+                    <h1><i class="fas fa-shield-alt" style="color: var(--primary-500);"></i> سياسة الخصوصية</h1>
+                    <p>نحن نهتم بخصوصيتك ونحمي بياناتك الشخصية</p>
+                </div>
+                <div class="legal-section">
+                    <h2><i class="fas fa-database"></i> البيانات التي نجمعها</h2>
+                    <p>نقوم بجمع المعلومات التالية عند استخدامك لمنصتنا:</p>
+                    <ul>
+                        <li>معلومات الحساب (الاسم، البريد الإلكتروني)</li>
+                        <li>سجل التحميلات والمشتريات</li>
+                        <li>بيانات الاستخدام والتفاعل مع الموقع</li>
+                        <li>معلومات الجهاز والمتصفح (للأمان)</li>
+                    </ul>
+                </div>
+                <div class="legal-section">
+                    <h2><i class="fas fa-lock"></i> كيف نحمي بياناتك</h2>
+                    <p>نستخدم تقنيات حماية متقدمة لضمان أمان بياناتك:</p>
+                    <ul>
+                        <li>تشفير HTTPS لجميع الاتصالات</li>
+                        <li>تشفير كلمات المرور باستخدام bcrypt</li>
+                        <li>نسخ احتياطي يومي لقاعدة البيانات</li>
+                        <li>حماية من هجمات SQL Injection و XSS</li>
+                    </ul>
+                </div>
+                <div class="legal-section">
+                    <h2><i class="fas fa-share-alt"></i> مشاركة البيانات</h2>
+                    <p>نحن لا نشارك بياناتك الشخصية مع أي طرف ثالث إلا في الحالات التالية:</p>
+                    <ul>
+                        <li>بموافقتك الصريحة</li>
+                        <li>الامتثال للمتطلبات القانونية</li>
+                        <li>حماية حقوقنا القانونية</li>
+                    </ul>
+                </div>
+                <div class="legal-section">
+                    <h2><i class="fas fa-cookie-bite"></i> ملفات الكوكيز</h2>
+                    <p>نستخدم ملفات الكوكيز لتحسين تجربتك في الموقع. يمكنك إدارة إعدادات الكوكيز من إعدادات المتصفح الخاص بك.</p>
+                </div>
+                <p class="last-updated">آخر تحديث: 26 يونيو 2026</p>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

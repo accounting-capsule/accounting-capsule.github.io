@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="لوحة تحكم المدير - كبسولة المحاسب">
+    <title>لوحة الإدارة | كبسولة المحاسب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .admin-header {
+            background: linear-gradient(135deg, var(--gray-900), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .admin-header h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .admin-header p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9375rem;
+        }
+
+        .admin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--red-500);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+        }
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .admin-stat-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+        }
+
+        .admin-stat-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .admin-stat-card .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .admin-stat-card .stat-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--gray-900);
+        }
+
+        .admin-stat-card .stat-label {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 0;
+        }
+
+        .admin-tab-btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            color: var(--gray-500);
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: var(--transition-base);
+            background: none;
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        .admin-tab-btn:hover { color: var(--primary-600); }
+        .admin-tab-btn.active { color: var(--primary-700); border-bottom-color: var(--primary-600); }
+
+        .admin-tab-content { display: none; }
+        .admin-tab-content.active { display: block; animation: fadeIn 0.3s ease-out; }
+
+        .action-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.625rem 2.5rem 0.625rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 0.9375rem;
+            transition: var(--transition-base);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-400);
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-400);
+        }
+
+        .audit-log {
+            background: var(--gray-900);
+            color: white;
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8125rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .audit-log-item {
+            padding: 0.375rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .audit-log-item:last-child { border-bottom: none; }
+        .audit-time { color: var(--gray-400); white-space: nowrap; }
+        .audit-action { color: var(--gold-400); }
+        .audit-user { color: var(--secondary-300); }
+    </style>
+</head>
+<body>
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">
+                    كبسولة المحاسب
+                    <span>حلول محاسبية احترافية</span>
+                </div>
+            </a>
+            <button class="sidebar-toggle" aria-label="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">الرئيسية</div>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>لوحة التحكم</span></a>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="blog.html" class="nav-item"><i class="fas fa-blog"></i><span>المدونة</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">الحساب</div>
+                <a href="user-dashboard.html" class="nav-item"><i class="fas fa-user"></i><span>حسابي</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">الإدارة</div>
+                <a href="admin-dashboard.html" class="nav-item active"><i class="fas fa-cog"></i><span>لوحة الإدارة</span></a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-card">
+                <div class="user-avatar" style="background: var(--red-500);">أ</div>
+                <div class="user-info">
+                    <div class="user-name">عمر البدري</div>
+                    <div class="user-role" style="color: var(--red-400);">مدير النظام</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn no-print" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn notification-btn" aria-label="Notifications"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                <button class="lang-switcher" aria-label="Switch Language"><i class="fas fa-globe"></i><span>AR</span></button>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <!-- Admin Header -->
+            <div class="admin-header">
+                <div>
+                    <h1><i class="fas fa-shield-alt" style="margin-left: 0.5rem;"></i> لوحة تحكم المدير</h1>
+                    <p>إدارة المحتوى والمستخدمين والإحصائيات</p>
+                </div>
+                <div class="admin-badge"><i class="fas fa-lock"></i> محمية</div>
+            </div>
+
+            <!-- Admin Stats -->
+            <div class="admin-stats">
+                <div class="admin-stat-card">
+                    <div class="stat-icon" style="background: #dbeafe; color: var(--primary-600);"><i class="fas fa-users"></i></div>
+                    <div class="stat-value">1,234</div>
+                    <div class="stat-label">إجمالي المستخدمين</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon" style="background: var(--secondary-100); color: var(--secondary-700);"><i class="fas fa-crown"></i></div>
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">أعضاء VIP</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon" style="background: var(--gold-100); color: var(--gold-600);"><i class="fas fa-download"></i></div>
+                    <div class="stat-value">8,432</div>
+                    <div class="stat-label">إجمالي التحميلات</div>
+                </div>
+                <div class="admin-stat-card">
+                    <div class="stat-icon" style="background: var(--red-100); color: var(--red-600);"><i class="fas fa-eye"></i></div>
+                    <div class="stat-value">45.2K</div>
+                    <div class="stat-label">الزيارات هذا الشهر</div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" data-tab="content"><i class="fas fa-file-alt"></i> المحتوى</button>
+                <button class="admin-tab-btn" data-tab="users"><i class="fas fa-users"></i> المستخدمين</button>
+                <button class="admin-tab-btn" data-tab="analytics"><i class="fas fa-chart-bar"></i> الإحصائيات</button>
+                <button class="admin-tab-btn" data-tab="chatbot"><i class="fas fa-robot"></i> المساعد الذكي</button>
+                <button class="admin-tab-btn" data-tab="audit"><i class="fas fa-history"></i> سجل النشاط</button>
+            </div>
+
+            <!-- Content Tab -->
+            <div class="admin-tab-content active" id="content">
+                <div class="action-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="ابحث في المحتوى...">
+                    </div>
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> إضافة جديد</button>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>العنوان</th>
+                                <th>النوع</th>
+                                <th>التصنيف</th>
+                                <th>الحالة</th>
+                                <th>التحميلات</th>
+                                <th>التاريخ</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>شيت إدارة المخزون الكامل</strong></td>
+                                <td><span class="badge badge-green">Excel</span></td>
+                                <td>مخزون</td>
+                                <td><span class="status-badge active"><span class="status-dot active"></span> نشط</span></td>
+                                <td>1,234</td>
+                                <td>15 يونيو 2026</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>شيت حساب المرتبات 2026</strong></td>
+                                <td><span class="badge badge-green">Excel</span></td>
+                                <td>مرتبات</td>
+                                <td><span class="status-badge active"><span class="status-dot active"></span> نشط</span></td>
+                                <td>987</td>
+                                <td>10 يونيو 2026</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>برنامج الفواتير الذكي</strong></td>
+                                <td><span class="badge badge-blue">برنامج</span></td>
+                                <td>فواتير</td>
+                                <td><span class="status-badge active"><span class="status-dot active"></span> نشط</span></td>
+                                <td>756</td>
+                                <td>5 يونيو 2026</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>دليل الضريبة المضافة</strong></td>
+                                <td><span class="badge badge-red">PDF</span></td>
+                                <td>ضرائب</td>
+                                <td><span class="status-badge pending"><span class="status-dot pending"></span> مراجعة</span></td>
+                                <td>—</td>
+                                <td>1 يونيو 2026</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Users Tab -->
+            <div class="admin-tab-content" id="users">
+                <div class="action-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="ابحث في المستخدمين...">
+                    </div>
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> إضافة مستخدم</button>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>المستخدم</th>
+                                <th>البريد</th>
+                                <th>نوع الاشتراك</th>
+                                <th>التحميلات</th>
+                                <th>آخر دخول</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>محمد أحمد</strong></td>
+                                <td>mohamed@email.com</td>
+                                <td><span class="badge badge-vip"><i class="fas fa-crown"></i> VIP</span></td>
+                                <td>45</td>
+                                <td>منذ 5 دقائق</td>
+                                <td><span class="status-badge active"><span class="status-dot active"></span> نشط</span></td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>فاطمة علي</strong></td>
+                                <td>fatima@email.com</td>
+                                <td><span class="badge badge-blue">مجاني</span></td>
+                                <td>12</td>
+                                <td>منذ ساعة</td>
+                                <td><span class="status-badge active"><span class="status-dot active"></span> نشط</span></td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>أحمد سامي</strong></td>
+                                <td>ahmed@email.com</td>
+                                <td><span class="badge badge-vip"><i class="fas fa-crown"></i> VIP</span></td>
+                                <td>78</td>
+                                <td>منذ يوم</td>
+                                <td><span class="status-badge inactive"><span class="status-dot inactive"></span> غير نشط</span></td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button class="delete" title="حذف"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Analytics Tab -->
+            <div class="admin-tab-content" id="analytics">
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-value">12.5K</div>
+                        <div class="stat-label">زيارات اليوم</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 15%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fas fa-download"></i></div>
+                        <div class="stat-value">342</div>
+                        <div class="stat-label">تحميلات اليوم</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 8%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon gold"><i class="fas fa-user-plus"></i></div>
+                        <div class="stat-value">28</div>
+                        <div class="stat-label">تسجيلات جديدة</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 22%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon red"><i class="fas fa-crown"></i></div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">اشتراكات VIP</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 3</div>
+                    </div>
+                </div>
+                <div class="chart-widget">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-area" style="color: var(--primary-500); margin-left: 0.5rem;"></i> الزيارات اليومية</h3>
+                        <div class="chart-period">
+                            <button>أسبوع</button>
+                            <button class="active">شهر</button>
+                            <button>سنة</button>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <div class="bar-chart">
+                            <div class="bar-item"><div class="bar-fill" data-height="40%" style="height: 40%;"></div><span class="bar-label">1</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="55%" style="height: 55%;"></div><span class="bar-label">2</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="70%" style="height: 70%;"></div><span class="bar-label">3</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="45%" style="height: 45%;"></div><span class="bar-label">4</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="80%" style="height: 80%;"></div><span class="bar-label">5</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="60%" style="height: 60%;"></div><span class="bar-label">6</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="90%" style="height: 90%;"></div><span class="bar-label">7</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="75%" style="height: 75%;"></div><span class="bar-label">8</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="85%" style="height: 85%;"></div><span class="bar-label">9</span></div>
+                            <div class="bar-item"><div class="bar-fill" data-height="65%" style="height: 65%;"></div><span class="bar-label">10</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chatbot Tab -->
+            <div class="admin-tab-content" id="chatbot">
+                <div class="settings-form">
+                    <div class="settings-section">
+                        <h3><i class="fas fa-robot" style="color: var(--primary-500);"></i> إجابات المساعد الذكي</h3>
+                        <p style="color: var(--gray-500); margin-bottom: 1rem; font-size: 0.9375rem;">أضف أو عدل الإجابات الجاهزة التي يقدمها المساعد الذكي للمستخدمين.</p>
+
+                        <div class="form-group">
+                            <label class="form-label">الكلمة المفتاحية</label>
+                            <input type="text" class="form-input" placeholder="مثال: ضريبة, excel, سعر...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">الإجابة</label>
+                            <textarea class="form-textarea" rows="4" placeholder="اكتب الإجابة هنا..."></textarea>
+                        </div>
+                        <div style="display: flex; gap: 0.75rem;">
+                            <button class="btn btn-primary"><i class="fas fa-plus"></i> إضافة إجابة</button>
+                            <button class="btn btn-secondary"><i class="fas fa-sync"></i> تحديث</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3><i class="fas fa-list" style="color: var(--gold-500);"></i> الإجابات الحالية</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="padding: 1rem; background: var(--gray-50); border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                    <span class="badge badge-blue">مرحبا</span>
+                                    <div class="admin-table-actions">
+                                        <button class="edit"><i class="fas fa-edit"></i></button>
+                                        <button class="delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.875rem; color: var(--gray-600);">أهلاً بيك في كبسولة المحاسب! 🎉 أنا المساعد الذكي بتاعك...</p>
+                            </div>
+                            <div style="padding: 1rem; background: var(--gray-50); border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                    <span class="badge badge-blue">ضريبة</span>
+                                    <div class="admin-table-actions">
+                                        <button class="edit"><i class="fas fa-edit"></i></button>
+                                        <button class="delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.875rem; color: var(--gray-600);">الضريبة في مصر بتختلف حسب نوع النشاط...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audit Log Tab -->
+            <div class="admin-tab-content" id="audit">
+                <div class="settings-section">
+                    <h3><i class="fas fa-history" style="color: var(--secondary-500);"></i> سجل النشاط</h3>
+                    <div class="audit-log">
+                        <div class="audit-log-item">
+                            <span class="audit-time">2026-06-26 10:45</span>
+                            <span class="audit-action">[تسجيل دخول]</span>
+                            <span class="audit-user">عمر البدري</span>
+                            <span>دخول إلى لوحة الإدارة</span>
+                        </div>
+                        <div class="audit-log-item">
+                            <span class="audit-time">2026-06-26 10:30</span>
+                            <span class="audit-action">[إضافة محتوى]</span>
+                            <span class="audit-user">عمر البدري</span>
+                            <span>إضافة شيت جديد: "إدارة المخزون"</span>
+                        </div>
+                        <div class="audit-log-item">
+                            <span class="audit-time">2026-06-26 09:15</span>
+                            <span class="audit-action">[تعديل مستخدم]</span>
+                            <span class="audit-user">عمر البدري</span>
+                            <span>ترقية "محمد أحمد" إلى VIP</span>
+                        </div>
+                        <div class="audit-log-item">
+                            <span class="audit-time">2026-06-25 18:20</span>
+                            <span class="audit-action">[حذف]</span>
+                            <span class="audit-user">عمر البدري</span>
+                            <span>حذف مقال قديم</span>
+                        </div>
+                        <div class="audit-log-item">
+                            <span class="audit-time">2026-06-25 14:00</span>
+                            <span class="audit-action">[تسجيل دخول]</span>
+                            <span class="audit-user">عمر البدري</span>
+                            <span>دخول إلى لوحة الإدارة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Command Palette -->
+    <div class="command-palette-overlay">
+        <div class="command-palette">
+            <div class="command-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" class="command-input" placeholder="ابحث..." autocomplete="off">
+                <kbd class="command-kbd">ESC</kbd>
+            </div>
+            <div class="command-results">
+                <div class="command-section">
+                    <div class="command-section-title">الإدارة</div>
+                    <div class="command-item selected" data-href="admin-dashboard.html">
+                        <i class="fas fa-cog blue"></i>
+                        <div class="command-item-info"><h4>لوحة الإدارة</h4><p>التحكم الكامل</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="command-footer">
+                <span><kbd>↑↓</kbd> للتنقل</span>
+                <span><kbd>Enter</kbd> للاختيار</span>
+                <span><kbd>ESC</kbd> للإغلاق</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.admin-tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="عن كبسولة المحاسب - من نحن ورؤيتنا">
+    <title>عنّا | كبسولة المحاسب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .about-hero h1 { font-size: 2rem; font-weight: 900; margin-bottom: 0.75rem; }
+        .about-hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .about-content { max-width: 800px; margin: 0 auto; }
+        .about-section { background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); padding: 2rem; margin-bottom: 1.5rem; }
+        .about-section h2 { font-size: 1.25rem; font-weight: 800; color: var(--gray-900); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+        .about-section h2 i { color: var(--gold-500); }
+        .about-section p { color: var(--gray-600); line-height: 1.8; margin-bottom: 1rem; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+        .value-card { text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: var(--radius-md); }
+        .value-card i { font-size: 2rem; color: var(--primary-500); margin-bottom: 0.75rem; }
+        .value-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 0.25rem; }
+        .value-card p { font-size: 0.8125rem; color: var(--gray-500); }
+        @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+            </a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>لوحة التحكم</span></a>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="blog.html" class="nav-item"><i class="fas fa-blog"></i><span>المدونة</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الدعم</div>
+                <a href="about.html" class="nav-item active"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+                <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-card"><div class="user-avatar">م</div><div class="user-info"><div class="user-name">محمد أحمد</div><div class="user-role">عضو VIP</div></div></div>
+        </div>
+    </aside>
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                <button class="lang-switcher"><i class="fas fa-globe"></i><span>AR</span></button>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="about-hero">
+                <h1>🎯 من نحن؟</h1>
+                <p>كبسولة المحاسب هي منصة متكاملة تقدم حلولاً محاسبية احترافية للمحاسبين وأصحاب الأعمال</p>
+            </div>
+            <div class="about-content">
+                <div class="about-section">
+                    <h2><i class="fas fa-bullseye"></i> رؤيتنا</h2>
+                    <p>نؤمن بأن كل محاسب يستحق أدوات احترافية تساعده في عمله. هدفنا هو تمكين المحاسبين في مصر والوطن العربي من الوصول إلى أحدث الأدوات والمعرفة المحاسبية بسهولة وكفاءة.</p>
+                </div>
+                <div class="about-section">
+                    <h2><i class="fas fa-rocket"></i> مهمتنا</h2>
+                    <p>توفير منصة تعليمية وتقنية متكاملة تجمع بين الشيتات المحاسبية الجاهزة، الكورسات الاحترافية، والبرامج المحاسبية — كل ذلك في "كبسولة" واحدة سهلة الاستخدام.</p>
+                </div>
+                <div class="about-section">
+                    <h2><i class="fas fa-star"></i> قيمنا</h2>
+                    <div class="values-grid">
+                        <div class="value-card"><i class="fas fa-handshake"></i><h4>الثقة</h4><p>محتوى موثوق ومدقق</p></div>
+                        <div class="value-card"><i class="fas fa-lightbulb"></i><h4>الابتكار</h4><p>حلول تقنية متقدمة</p></div>
+                        <div class="value-card"><i class="fas fa-users"></i><h4>المجتمع</h4><p>دعم وتعلم مشترك</p></div>
+                    </div>
+                </div>
+                <div class="about-section">
+                    <h2><i class="fas fa-user-tie"></i> عن المؤسس</h2>
+                    <p>كبسولة المحاسب هي مبادرة من عمر البدري، خبير محاسبي يؤمن بقوة التكنولوجيا في تطوير المجال المحاسبي. الهدف هو بناء أكبر مجتمع محاسبي عربي رقمي.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="command-palette-overlay">
+        <div class="command-palette">
+            <div class="command-input-wrapper"><i class="fas fa-search"></i><input type="text" class="command-input" placeholder="ابحث..." autocomplete="off"><kbd class="command-kbd">ESC</kbd></div>
+            <div class="command-results">
+                <div class="command-section"><div class="command-section-title">الصفحات</div>
+                    <div class="command-item selected" data-href="about.html"><i class="fas fa-info-circle blue"></i><div class="command-item-info"><h4>عنّا</h4><p>من نحن</p></div></div>
+                </div>
+            </div>
+            <div class="command-footer"><span><kbd>↑↓</kbd> للتنقل</span><span><kbd>Enter</kbd> للاختيار</span><span><kbd>ESC</kbd> للإغلاق</span></div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
