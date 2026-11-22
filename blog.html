@@ -140,6 +140,15 @@
             transition: var(--transition-base);
             display: flex;
             flex-direction: column;
+            position: relative;
+        }
+
+        /* Whole card is tappable: stretch the read-more link over the card */
+        .blog-card .read-more::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
         }
 
         .blog-card:hover {
