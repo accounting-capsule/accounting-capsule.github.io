@@ -699,3 +699,11 @@ h1, h2, h3, h4, h5, h6 {
     .newsletter-form { flex-direction: column; }
     .newsletter-btn { width: 100%; }
 }
+
+/* Arabic script fix: letter-spacing breaks cursive joining - never track Arabic text */
+.badge,
+.table th,
+.nav-section-title,
+.command-section-title {
+    letter-spacing: normal;
+}
