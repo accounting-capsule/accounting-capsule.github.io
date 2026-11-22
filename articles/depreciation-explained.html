@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://accounting-capsule.github.io/articles/depreciation-explained.html">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="كبسولة المحاسب">
+    <meta property="og:title" content="الإهلاك في المحاسبة ببساطة: القسط الثابت والمتناقص بأمثلة | كبسولة المحاسب">
+    <meta property="og:description" content="يعني إيه إهلاك؟ شرح مبسط للإهلاك المحاسبي: القسط الثابت والمتناقص ووحدات الإنتاج بأمثلة رقمية، قيد الإهلاك، والفرق بين الإهلاك المحاسبي والضريبي في مصر.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://accounting-capsule.github.io/articles/depreciation-explained.html">
+    <meta property="og:image" content="https://accounting-capsule.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="الإهلاك في المحاسبة ببساطة: القسط الثابت والمتناقص بأمثلة | كبسولة المحاسب">
+    <meta name="twitter:description" content="يعني إيه إهلاك؟ شرح مبسط للإهلاك المحاسبي: القسط الثابت والمتناقص ووحدات الإنتاج بأمثلة رقمية، قيد الإهلاك، والفرق بين الإهلاك المحاسبي والضريبي في مصر.">
+    <meta name="twitter:image" content="https://accounting-capsule.github.io/assets/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#0a1628">
+    <meta name="description" content="يعني إيه إهلاك؟ شرح مبسط للإهلاك المحاسبي: القسط الثابت والمتناقص ووحدات الإنتاج بأمثلة رقمية، قيد الإهلاك، والفرق بين الإهلاك المحاسبي والضريبي في مصر.">
+    <title>الإهلاك في المحاسبة ببساطة: القسط الثابت والمتناقص بأمثلة | كبسولة المحاسب</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "الإهلاك يعني إيه؟ دليل عملي بطرق الحساب وأمثلة رقمية",
+      "description": "يعني إيه إهلاك؟ شرح مبسط للإهلاك المحاسبي: القسط الثابت والمتناقص ووحدات الإنتاج بأمثلة رقمية، قيد الإهلاك، والفرق بين الإهلاك المحاسبي والضريبي في مصر.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "mainEntityOfPage": "https://accounting-capsule.github.io/articles/depreciation-explained.html",
+      "image": "https://accounting-capsule.github.io/assets/og-image.png",
+      "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"},
+      "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "الإهلاك في المحاسبة ببساطة", "item": "https://accounting-capsule.github.io/articles/depreciation-explained.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "هل الإهلاك بيأثر على الكاش بتاع الشركة؟", "acceptedAnswer": {"@type": "Answer", "text": "لا. الإهلاك مصروف غير نقدي: بيقلل الربح المحاسبي لكنه مابيطلعش فلوس من الشركة، لأن الفلوس خرجت يوم شراء الأصل. عشان كده في قائمة التدفقات النقدية بيترجع يتضاف لصافي الربح."}},
+        {"@type": "Question", "name": "أختار القسط الثابت ولا المتناقص؟", "acceptedAnswer": {"@type": "Answer", "text": "القسط الثابت أبسط وأشهر ومناسب لأصول بتدي استفادة منتظمة زي المباني والأثاث، والمتناقص مناسب لأصول بتفقد من قيمتها بسرعة في أول عمرها زي السيارات والأجهزة. المهم تختار ما يعبر عن الاستفادة الفعلية وتثبت عليه."}},
+        {"@type": "Question", "name": "يعني إيه قيمة خردة؟", "acceptedAnswer": {"@type": "Answer", "text": "هي القيمة المتوقع بيع الأصل بها في آخر عمره الإنتاجي، وبتتخصم من التكلفة قبل حساب القسط. لو الأصل مش متوقع يساوي حاجة في الآخر، تُعتبر صفر ويتهلك بالكامل."}},
+        {"@type": "Question", "name": "هل الأرض بتتهلك؟", "acceptedAnswer": {"@type": "Answer", "text": "لا. الأرض عمرها الإنتاجي غير محدود وقيمتها مابتستهلكش مع الاستخدام، فمابتتهلكش لا محاسبياً ولا ضريبياً. اللي بيتهلك هو المباني والإنشاءات اللي عليها."}},
+        {"@type": "Question", "name": "ليه إهلاكي الدفتري مختلف عن الإهلاك في الإقرار الضريبي؟", "acceptedAnswer": {"@type": "Answer", "text": "عادي جداً: الشركة بتختار طريقة مناسبة لنشاطها في الدفاتر، ومصلحة الضرائب ليها نسب ثابتة في القانون (5% و10% و25% و50% حسب نوع الأصل). الفرق بينهم فرق مؤقت بيتعالج كضريبة مؤجلة."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+            </a>
+            <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+                <a href="../index.html" class="nav-item"><i class="fas fa-home"></i><span>لوحة التحكم</span></a>
+                <a href="../downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="../blog.html" class="nav-item active"><i class="fas fa-blog"></i><span>المدونة</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الحساب</div>
+                <a href="../user-dashboard.html" class="nav-item"><i class="fas fa-user"></i><span>حسابي</span></a>
+            </div>
+            <div class="nav-section"><div class="nav-section-title">الدعم</div>
+                <a href="../about.html" class="nav-item"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+                <a href="../contact.html" class="nav-item"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+            </div>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-card"><div class="user-avatar">م</div><div class="user-info"><div class="user-name">محمد أحمد</div><div class="user-role">عضو VIP</div></div></div>
+        </div>
+    </aside>
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn notification-btn"><i class="fas fa-bell"></i><span class="notification-dot"></span></button>
+                <button class="lang-switcher"><i class="fas fa-globe"></i><span>AR</span></button>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="article-header">
+                <nav class="article-breadcrumb">
+                    <a href="../index.html">الرئيسية</a> &lsaquo;
+                    <a href="../blog.html">المدونة</a> &lsaquo;
+                    <span>الإهلاك في المحاسبة ببساطة</span>
+                </nav>
+                <span class="article-category">محاسبة مالية</span>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+                    <span><i class="far fa-clock"></i> 9 دقائق قراءة</span>
+                </div>
+                <h1>الإهلاك يعني إيه؟ دليل عملي بطرق الحساب وأمثلة رقمية</h1>
+            </div>
+            <div class="article-content">
+
+                <p>شركتك اشترت عربية نقل بـ 400,000 جنيه. الفلوس خرجت كلها يوم الشراء، صح؟ طيب هل يصح نقول إن مصروف السنة دي اتخصم منه 400 ألف؟ لأ، ودي أشهر نقطة بيلخبط فيها الناس: العربية هتخدم الشركة 5 سنين، فمن العدل محاسبياً إن كل سنة منهم تتحمل نصيبها من التمن. النصيب السنوي ده اسمه الإهلاك.</p>
+
+                <h2>🚚 يعني إيه الإهلاك؟</h2>
+                <p>الإهلاك (Depreciation) هو التوزيع المنتظم لتكلفة الأصل الثابت على سنوات استفادته. بدل ما نحمل سنة الشراء بالتكلفة كلها، بنحمل كل سنة جزء منها باسم "مصروف الإهلاك"، تطبيقاً لمبدأ محاسبي أساسي اسمه <strong>مبدأ المقابلة</strong>: كل سنة بتستفيد من الأصل، تتحمل نصيبها من تكلفته عشان الإيراد يقابل المصروف اللي ساعد في تحقيقه.</p>
+                <p>ونقطة مهمة جداً: <strong>الإهلاك مصروف غير نقدي</strong>. مفيش فلوس بتخرج من الشركة كل سنة بسبب الإهلاك؛ الفلوس خرجت يوم الشراء. الإهلاك مجرد توزيع محاسبي للتكلفة، عشان كده بيترجع يتضاف تاني في قائمة التدفقات النقدية (اللي شرحناها في مقال <a href="profit-vs-cash-flow.html">الفرق بين الربح والتدفق النقدي</a>).</p>
+
+                <h2>🎯 ليه بنعمل إهلاك أصلاً؟</h2>
+                <ul>
+                    <li><strong>عشان الربح يبقى حقيقي:</strong> لو حملنا سنة الشراء بالـ 400 ألف كلهم، السنة دي هتبان خسرانة بالظلم، والسنين اللي بعدها هتبان مكسبانة من غير ما تدفع تمن العربية. الإهلاك بيوزع العبء بعدل.</li>
+                    <li><strong>عشان الميزانية تعبر:</strong> قيمة العربية في الدفاتر بتقل كل سنة بمقدار المستهلك منها، فالميزانية بتفضل قريبة من الواقع.</li>
+                    <li><strong>عشان التخطيط:</strong> لما تعرف إن العربية هتخلص عمرها بعد 5 سنين، بتبدأ من دلوقتي تجهّز لبديلها.</li>
+                </ul>
+
+                <h2>🧩 عناصر حساب القسط</h2>
+                <p>أي طريقة حساب هتستخدمها، محتاج 3 حاجات:</p>
+                <ol>
+                    <li><strong>تكلفة الأصل:</strong> مش سعر الشراء بس؛ سعر الشراء + كل مصاريف تجهيزه للعمل (نقل، تركيب، جمارك). عربيتنا: 400,000 جنيه.</li>
+                    <li><strong>العمر الإنتاجي:</strong> عدد السنين (أو وحدات التشغيل) اللي نتوقع نستفيد فيها من الأصل. عربيتنا: 5 سنين.</li>
+                    <li><strong>قيمة الخردة (التخريدية):</strong> اللي نتوقع نبيع بيه الأصل في آخر عمره. عشان نبسط المثال هنفترضها صفر.</li>
+                </ol>
+
+                <h2>📏 طريقة القسط الثابت</h2>
+                <p>أشهر وأبسط طريقة: نفس القسط كل سنة.</p>
+                <p><strong>القسط السنوي = (تكلفة الأصل − قيمة الخردة) ÷ العمر الإنتاجي</strong></p>
+                <p>للعربية بتاعتنا: (400,000 − 0) ÷ 5 = <strong>80,000 جنيه كل سنة</strong>. يعني كل سنة قائمة الدخل بتتحمل 80 ألف مصروف إهلاك، والقيمة الدفترية للعربية بتقل بنفس المقدار: 320 ألف بعد أول سنة، 240 بعد التانية، وهكذا لحد ما توصل صفر في آخر السنة الخامسة.</p>
+
+                <h2>📉 طريقة القسط المتناقص (الرصيد المتناقص)</h2>
+                <p>هنا القسط بيكون نسبة ثابتة من <strong>القيمة الدفترية أول كل سنة</strong>، مش من التكلفة الأصلية. يعني قسط كبير في أول عمر الأصل وبيقل مع الوقت، وده منطقي لأصول بتفقد من قيمتها بسرعة في البداية زي العربيات والأجهزة. بنستخدم معدل مضاعف القسط الثابت: 2 ÷ 5 = 40%.</p>
+                <table>
+                    <tr><th>السنة</th><th>القيمة أول السنة</th><th>قسط الإهلاك 40%</th><th>مجمع الإهلاك</th><th>القيمة الدفترية آخر السنة</th></tr>
+                    <tr><td>1</td><td>400,000</td><td>160,000</td><td>160,000</td><td>240,000</td></tr>
+                    <tr><td>2</td><td>240,000</td><td>96,000</td><td>256,000</td><td>144,000</td></tr>
+                    <tr><td>3</td><td>144,000</td><td>57,600</td><td>313,600</td><td>86,400</td></tr>
+                    <tr><td>4</td><td>86,400</td><td>34,560</td><td>348,160</td><td>51,840</td></tr>
+                    <tr><td>5</td><td>51,840</td><td>20,736</td><td>368,896</td><td>31,104</td></tr>
+                </table>
+                <p>لاحظ الفرق: القسط الثابت حمل كل سنة 80 ألف بالتساوي، أما المتناقص حمل أول سنة 160 ألف وآخر سنة حوالي 21 ألف بس.</p>
+
+                <h2>⚙️ طريقة وحدات النشاط (بالاستخدام الفعلي)</h2>
+                <p>لو الأصل بيستهلك بالشغل مش بالزمن، الأعدل إننا نهلكه بالإنتاج. عربيتنا متوقع تقطع 200,000 كم في عمرها:</p>
+                <p><strong>تكلفة الكيلومتر = 400,000 ÷ 200,000 = 2 جنيه لكل كم.</strong></p>
+                <p>لو قطعت 60,000 كم في أول سنة، قسط السنة = 60,000 × 2 = <strong>120,000 جنيه</strong>. سنة شغل تقيلة قسطها أكبر، وسنة هادية قسطها أصغر، ودي أعدل مطابقة ممكنة بين المصروف والاستفادة الفعلية.</p>
+
+                <h2>✍️ قيد الإهلاك ومجمع الإهلاك</h2>
+                <p>قيد قسط السنة الأولى (قسط ثابت):</p>
+                <ul>
+                    <li>80,000 من حـ/ مصروف الإهلاك (مصروف في قائمة الدخل)</li>
+                    <li>80,000 إلى حـ/ مجمع الإهلاك (حساب مقابل للأصل في الميزانية)</li>
+                </ul>
+                <p>ليه منخصمش من حساب العربية مباشرة؟ عشان تكلفة الأصل التاريخية تفضل ظاهرة في الدفاتر. الميزانية بتعرض: عربية نقل 400,000، يخصم منها مجمع الإهلاك 80,000، فتظهر <strong>القيمة الدفترية 320,000</strong>. مجمع الإهلاك بيكبر كل سنة لحد ما يساوي التكلفة في آخر العمر.</p>
+
+                <h2>🗂️ الإهلاك بيظهر فين في القوائم؟</h2>
+                <ul>
+                    <li><strong>قائمة الدخل:</strong> مصروف بيقلل الربح.</li>
+                    <li><strong>الميزانية:</strong> مجمع الإهلاك بيقلل قيمة الأصول الثابتة.</li>
+                    <li><strong>قائمة التدفقات النقدية:</strong> بيترجع يتضاف لصافي الربح في التدفق التشغيلي، لأنه مصروف غير نقدي ماطلعش فلوس.</li>
+                </ul>
+
+                <h2>🇪🇬 الإهلاك المحاسبي والإهلاك الضريبي في مصر مش واحد</h2>
+                <p>الشركة حرة تختار طريقة الإهلاك المحاسبية اللي تعبر عن نشاطها، لكن مصلحة الضرائب ليها نسبها الثابتة اللي بتقبل بيها الخصم في الإقرار. المادة 25 من قانون الضريبة على الدخل 91 لسنة 2005 بتحدد: <strong>5%</strong> للمباني والمنشآت والتجهيزات والسفن والطائرات، <strong>10%</strong> للأصول المعنوية المشتراة، <strong>50%</strong> للحاسبات ونظم المعلومات، و<strong>25%</strong> لباقي أصول النشاط، ومفيش إهلاك للأراضي. لو إهلاكك الدفتري مختلف عن الضريبي، الفرق بيتعالج في الإقرار وبيظهر كضريبة مؤجلة. عربيتنا مثلاً ضريبياً هتتهلك بـ 25% من باقي الأصول مهما كانت طريقتنا الدفترية.</p>
+
+                <h2>🚫 4 أخطاء شائعة في الإهلاك</h2>
+                <ol>
+                    <li>نسيان تسجيل قسط سنة كاملة: بيطلع الربح أعلى من الحقيقة والميزانية منتفخة.</li>
+                    <li>إهلاك الأرض: الأرض مابتستهلكش، مابتتهلكش مهما حصل.</li>
+                    <li>تغيير الطريقة كل سنة: الثبات مبدأ محاسبي؛ التغيير ليه قواعد وإفصاح.</li>
+                    <li>الخلط بين الإهلاك والتمويل: الإهلاك مابيجهزش فلوس لأصل جديد، هو توزيع تكلفة بس.</li>
+                </ol>
+
+                <div class="cta-box">
+                    <h3>📥 طبق اللي قريته</h3>
+                    <p>حمّل شيتات إكسل المحاسبية الجاهزة من مركز التحميلات، واقرأ أشهر 15 سؤال انترفيو للمحاسب حديث التخرّج - الإهلاك سؤال مضمون فيهم.</p>
+                    <a href="../downloads.html" class="btn btn-gold btn-lg"><i class="fas fa-download"></i> مركز التحميلات</a>
+                </div>
+
+                <h2>❓ أسئلة شائعة</h2>
+                <div class="faq-section">
+                    <details>
+                        <summary>هل الإهلاك بيأثر على الكاش بتاع الشركة؟</summary>
+                        <p>لا. الإهلاك مصروف غير نقدي: بيقلل الربح المحاسبي لكنه مابيطلعش فلوس من الشركة. الفلوس خرجت يوم شراء الأصل. عشان كده في قائمة التدفقات النقدية بيترجع يتضاف لصافي الربح.</p>
+                    </details>
+                    <details>
+                        <summary>أختار القسط الثابت ولا المتناقص؟</summary>
+                        <p>القسط الثابت أبسط وأشهر، ومناسب لأصول بتدي استفادة منتظمة زي المباني والأثاث. المتناقص مناسب لأصول بتفقد من قيمتها بسرعة في أول عمرها زي السيارات والأجهزة. المهم تختار الطريقة اللي تعبر عن استفادتك الفعلية وتثبت عليها.</p>
+                    </details>
+                    <details>
+                        <summary>يعني إيه قيمة خردة؟ ولو مفيش قيمة خردة؟</summary>
+                        <p>قيمة الخردة هي اللي تتوقع تبيع بيه الأصل في آخر عمره الإنتاجي. بتتخصم من التكلفة قبل حساب القسط. لو تتوقع إن الأصل مش هيساوي حاجة في الآخر، بتعتبرها صفر ويتهلك بالكامل، زي مثال العربية في المقال ده.</p>
+                    </details>
+                    <details>
+                        <summary>هل الأرض بتتهلك؟</summary>
+                        <p>لا. الأرض عمرها الإنتاجي غير محدود وقيمتها مابتستهلكش مع الاستخدام، فمابتتهلكش لا محاسبياً ولا ضريبياً. اللي بيتهلك هو المباني والإنشاءات اللي عليها.</p>
+                    </details>
+                    <details>
+                        <summary>ليه إهلاكي الدفتري مختلف عن الإهلاك في الإقرار الضريبي؟</summary>
+                        <p>عادي جداً. إنت بتختار طريقة مناسبة لنشاطك في الدفاتر، ومصلحة الضرائب ليها نسب ثابتة في القانون (5% و10% و25% و50% حسب نوع الأصل). الفرق بينهم بيتسمّى فرق مؤقت وبيتعالج كضريبة مؤجلة في القوائم.</p>
+                    </details>
+                </div>
+
+                <div class="saber-box">
+                    <h2>☕ وببساطة على طريقة عمي صابر</h2>
+                    <p>عمي صابر اشترى تروسيكل للتوصيل بـ 60,000 جنيه كاش. صاحبه قاله: "الستين ألف راحوا عليك السنة دي يا صابر". عمي صابر ابتسم وقاله: "لأ يا معلم، التروسيكل مش هيعيش سنة ويموت، ده هيركب معايا 5 سنين. يبقى كل سنة منهم تتحمل 12 ألف بس من تمنه، مش الستين كلها".</p>
+                    <p>وبعدين ورّيه الدفتر: "بص، أنا بقسّم التمن على السنين اللي التروسيكل هيعيشها معايا. كل سنة تتحمل 12 ألف، وأعرف ربحي الحقيقي. لو شلت الستين كلها من ربح أول سنة، هقول على نفسي خسران وأنا كسبان، وبعدها هقول كسبان فلوس من غير ما أكون دفعت حاجة، وده هيبوظ حساباتي كلها".</p>
+                    <p>الخلاصة على لسان عمي صابر: <strong>"الحاجة اللي بتعيش سنين، تمنها يتوزع على سنينها. متشيلش عمر التروسيكل كله على سنة واحدة."</strong></p>
+                </div>
+
+
+                <div class="related-articles">
+                    <h3>📚 مقالات ذات صلة</h3>
+                    <div class="related-grid">
+                        <a href="fresh-accountant-interview.html" class="related-card">
+                            <h4>أشهر 15 سؤال انترفيو للمحاسب حديث التخرّج</h4>
+                            <p>أسئلة فعلية بإجابات نموذجية وأخطاء بتسقط ناس</p>
+                        </a>
+                        <a href="../blog.html" class="related-card">
+                            <h4>مدونة كبسولة المحاسب</h4>
+                            <p>كل المقالات: محاسبة، ضرائب، إكسل، وتحليل مالي</p>
+                        </a>
+                        <a href="../downloads.html" class="related-card">
+                            <h4>مركز التحميلات</h4>
+                            <p>شيتات إكسل وبرامج وكتب محاسبية جاهزة</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <section class="newsletter-section">
+                    <div class="newsletter-content">
+                        <div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <h2>كبسولة المحاسب في إيميلك 📬</h2>
+                        <p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="اكتب إيميلك هنا" required>
+                            <input type="text" name="_honey" class="newsletter-honey" tabindex="-1" autocomplete="off">
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i> اشترك</button>
+                        </form>
+                        <small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="../js/app.js"></script>
+</body>
+</html>
