@@ -140,16 +140,9 @@
             transition: var(--transition-base);
             display: flex;
             flex-direction: column;
-            position: relative;
         }
 
-        /* Whole card is tappable: stretch the read-more link over the card */
-        .blog-card .read-more::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-        }
+        a.blog-card { text-decoration: none; color: inherit; }
 
         .blog-card:hover {
             box-shadow: var(--shadow-lg);
@@ -384,7 +377,7 @@
             <!-- Masonry Blog Grid -->
             <div class="masonry-grid" id="blog-grid">
                 <!-- Featured Article - newest published -->
-                <article class="blog-card featured" data-searchable>
+                <a class="blog-card featured" href="articles/depreciation-explained.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #b45309, #78350f);">
                         <i class="fas fa-truck"></i>
                         <span class="category-overlay">محاسبة مالية</span>
@@ -397,12 +390,12 @@
                         <h3>الإهلاك يعني إيه؟ دليل عملي بطرق الحساب وأمثلة رقمية</h3>
                         <p>القسط الثابت والمتناقص ووحدات النشاط بجداول رقمية، قيد الإهلاك ومجمعه، والفرق بين الإهلاك المحاسبي والضريبي في مصر - وببساطة على طريقة عمي صابر...</p>
                         <div class="blog-card-footer">
-                            <a href="articles/depreciation-explained.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                         </div>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="articles/fresh-accountant-interview.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #234876, #7c3aed);">
                         <i class="fas fa-user-tie"></i>
                         <span class="category-overlay">تطوير مهني</span>
@@ -415,13 +408,13 @@
                         <h3>أشهر 35 سؤال في انترفيو المحاسب حديث التخرّج.. وإزاي ترد عليهم صح</h3>
                         <p>35 سؤال فعلي بإجابات نموذجية: القيود، الإهلاك، المخزون، المرتبات والتأمينات، الضرائب، البنوك، إكسل وERP، والأسئلة الشخصية - والغلطة اللي بتسقط ناس في كل واحد...</p>
                         <div class="blog-card-footer">
-                            <a href="articles/fresh-accountant-interview.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Previous featured -->
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="articles/profit-vs-cash-flow.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #1a365d, #0a1628);">
                         <i class="fas fa-scale-balanced"></i>
                         <span class="category-overlay">محاسبة مالية</span>
@@ -434,13 +427,13 @@
                         <h3>ليه شركتك مكسبانة ومعندكش فلوس؟ الفرق بين الربح والتدفق النقدي</h3>
                         <p>إزاي شركة بتحقق أرباح على الورق ومش لاقية كاش تدفع مرتبات؟ شرح علمي بمثال رقمي كامل، ونصايح تحمي بيها شركتك من فجوة الكاش...</p>
                         <div class="blog-card-footer">
-                            <a href="articles/profit-vs-cash-flow.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Featured Article -->
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="blog-post.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #1e3a5f, #2d6a4f);">
                         <i class="fas fa-robot"></i>
                         <span class="category-overlay">AI في المحاسبة</span>
@@ -453,14 +446,14 @@
                         <h3>كيف يغير الذكاء الاصطناعي مستقبل المحاسبة؟ دليل شامل 2026</h3>
                         <p>استكشف كيف تُحدث أدوات الذكاء الاصطناعي ثورة في مجال المحاسبة، من التحليل التنبؤي إلى أتمتة الفواتير...</p>
                         <div class="blog-card-footer">
-                            <a href="blog-post.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                             <span style="font-size: 0.8125rem; color: var(--gray-400);"><i class="far fa-eye"></i> 1,234</span>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- Regular Articles -->
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="blog-post.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #059669, #047857);">
                         <i class="fas fa-calculator"></i>
                         <span class="category-overlay">ضرائب</span>
@@ -473,13 +466,13 @@
                         <h3>دليلك الشامل للضريبة المضافة في مصر 2026</h3>
                         <p>كل ما تحتاج معرفته عن الضريبة المضافة: النسب، الإعفاءات، والإجراءات...</p>
                         <div class="blog-card-footer">
-                            <a href="blog-post.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                             <span style="font-size: 0.8125rem; color: var(--gray-400);"><i class="far fa-eye"></i> 987</span>
                         </div>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="blog-post.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #2563eb, #1d4ed8);">
                         <i class="fas fa-file-excel"></i>
                         <span class="category-overlay">Excel متقدم</span>
@@ -492,13 +485,13 @@
                         <h3>10 معادلات Excel يجب على كل محاسب معرفتها</h3>
                         <p>VLOOKUP, SUMIFS, INDEX-MATCH وغيرها من المعادلات الأساسية...</p>
                         <div class="blog-card-footer">
-                            <a href="blog-post.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                             <span style="font-size: 0.8125rem; color: var(--gray-400);"><i class="far fa-eye"></i> 2,456</span>
                         </div>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="blog-post.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #d97706, #b45309);">
                         <i class="fas fa-chart-pie"></i>
                         <span class="category-overlay">تحليل مالي</span>
@@ -511,13 +504,13 @@
                         <h3>النسب المالية: كيف تقرأ بيانات الشركة كمحترف</h3>
                         <p>تعرف على أهم النسب المالية وكيفية استخدامها في تقييم أداء الشركات...</p>
                         <div class="blog-card-footer">
-                            <a href="blog-post.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                             <span style="font-size: 0.8125rem; color: var(--gray-400);"><i class="far fa-eye"></i> 876</span>
                         </div>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="blog-post.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">
                         <i class="fas fa-rocket"></i>
                         <span class="category-overlay">ريادة الأعمال</span>
@@ -530,13 +523,13 @@
                         <h3>5 نصائح لإدارة مالية ناجحة لشركتك الناشئة</h3>
                         <p>كيف تبني نظام مالي قوي لشركتك من اليوم الأول...</p>
                         <div class="blog-card-footer">
-                            <a href="blog-post.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                             <span style="font-size: 0.8125rem; color: var(--gray-400);"><i class="far fa-eye"></i> 654</span>
                         </div>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card" data-searchable>
+                <a class="blog-card" href="blog-post.html" data-searchable>
                     <div class="blog-card-image" style="background: linear-gradient(135deg, #dc2626, #b91c1c);">
                         <i class="fas fa-file-invoice-dollar"></i>
                         <span class="category-overlay">محاسبة مالية</span>
@@ -549,11 +542,11 @@
                         <h3>فهم قائمة الدخل: الدليل العملي للمبتدئين</h3>
                         <p>شرح مبسط لقائمة الدخل وأهميتها في تقييم أداء الشركة...</p>
                         <div class="blog-card-footer">
-                            <a href="blog-post.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                            <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></span>
                             <span style="font-size: 0.8125rem; color: var(--gray-400);"><i class="far fa-eye"></i> 1,102</span>
                         </div>
                     </div>
-                </article>
+                </a>
             </div>
 
             <!-- CTA Section -->
