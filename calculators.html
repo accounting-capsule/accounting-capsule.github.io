@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبات محاسبية سريعة 2026 | ضريبة المرتبات - القيمة المضافة - الإهلاك</title>
+    <meta name="description" content="حاسبات محاسبية مجانية تعمل مباشرة على المتصفح: ضريبة المرتبات والتأمينات الاجتماعية 2026 (قانون 7 لسنة 2024)، ضريبة القيمة المضافة 14%، وحاسبة الإهلاك بالقسط الثابت والمتناقص.">
+    <link rel="canonical" href="https://accounting-capsule.github.io/calculators.html">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="كبسولة المحاسب">
+    <meta property="og:title" content="حاسبات محاسبية سريعة 2026 | كبسولة المحاسب">
+    <meta property="og:description" content="احسب ضريبة مرتبك، القيمة المضافة، وإهلاك الأصول في ثوانٍ - مجانًا وبدون تسجيل.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://accounting-capsule.github.io/calculators.html">
+    <meta property="og:image" content="https://accounting-capsule.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#0a1628">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "حاسبات كبسولة المحاسب",
+        "url": "https://accounting-capsule.github.io/calculators.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "ar",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EGP" },
+        "description": "حاسبات محاسبية مجانية: ضريبة المرتبات 2026، القيمة المضافة 14%، الإهلاك."
+    }
+    </script>
+    <style>
+        .calc-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .calc-header h1 { color: white; font-size: 1.75rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .calc-header p { color: rgba(255,255,255,0.85); margin: 0; }
+        .calc-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .calc-card h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .calc-card h2 i { color: var(--primary-600); }
+        .calc-card .calc-sub { color: var(--gray-600); font-size: 0.875rem; margin-bottom: 1.25rem; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+        .calc-field label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--gray-700); margin-bottom: 0.35rem; }
+        .calc-field input, .calc-field select {
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            border: 1.5px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.15s;
+        }
+        .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--primary-500); }
+        .calc-result {
+            background: var(--primary-50, #eff6ff);
+            border: 1px solid var(--primary-200, #bfdbfe);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+        .calc-result-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--gray-300);
+            font-size: 0.95rem;
+        }
+        .calc-result-line:last-child { border-bottom: none; }
+        .calc-result-line .val { font-weight: 800; font-variant-numeric: tabular-nums; }
+        .calc-result-line.highlight { font-size: 1.1rem; color: var(--primary-700); }
+        .calc-result-line.highlight .val { font-size: 1.2rem; }
+        .calc-note { color: var(--gray-500); font-size: 0.8rem; margin-top: 0.75rem; line-height: 1.7; }
+        .calc-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; }
+        .calc-table th, .calc-table td { padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid var(--gray-200); font-variant-numeric: tabular-nums; }
+        .calc-table th { background: var(--gray-100); font-weight: 700; }
+        .mode-toggle { display: inline-flex; background: var(--gray-100); border-radius: var(--radius-md); padding: 0.25rem; margin-bottom: 1rem; }
+        .mode-toggle button {
+            border: none; background: transparent; padding: 0.5rem 1.25rem; border-radius: var(--radius-md);
+            font-family: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; color: var(--gray-600);
+        }
+        .mode-toggle button.active { background: white; color: var(--primary-700); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) {
+            .calc-header { padding: 1.25rem; }
+            .calc-header h1 { font-size: 1.35rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-capsules"></i></div>
+                <div class="logo-text">
+                    كبسولة المحاسب
+                    <span>حلول محاسبية احترافية</span>
+                </div>
+            </a>
+            <button class="sidebar-toggle" aria-label="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">الرئيسية</div>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-download"></i><span>التحميلات</span></a>
+                <a href="blog.html" class="nav-item"><i class="fas fa-blog"></i><span>المدونة</span></a>
+                <a href="calculators.html" class="nav-item active"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">التعلم</div>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-file-excel"></i><span>شيتات Excel</span></a>
+                <a href="downloads.html" class="nav-item"><i class="fas fa-laptop-code"></i><span>البرامج</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">الدعم</div>
+                <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+                <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+        <header class="top-header">
+            <button class="mobile-menu-btn header-btn no-print" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <div class="header-search">
+                <button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+            </div>
+            <div class="header-actions">
+                <a class="header-btn" href="https://wa.me/201092445639" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <div class="calc-header">
+                <h1><i class="fas fa-calculator" style="margin-left: 0.5rem;"></i> حاسبات محاسبية سريعة</h1>
+                <p>أدوات مجانية تعمل مباشرة على المتصفح - بدون تسجيل، وبياناتك لا تغادر جهازك. محدثة بقواعد 2026.</p>
+            </div>
+
+            <!-- Payroll Tax Calculator -->
+            <div class="calc-card" id="payroll">
+                <h2><i class="fas fa-money-check-alt"></i> حاسبة مرتب الموظف (ضريبة كسب العمل + التأمينات)</h2>
+                <p class="calc-sub">وفق القانون 7 لسنة 2024 وحدود الاشتراك التأميني لعام 2026 (الحد الأقصى لأجر الاشتراك 16,700 ج شهريًا).</p>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="gross">المرتب الشهري الإجمالي (ج.م)</label>
+                        <input type="number" id="gross" min="0" step="100" value="10000" inputmode="decimal">
+                    </div>
+                </div>
+                <div class="calc-result" id="payroll-result"></div>
+                <p class="calc-note">
+                    طريقة الحساب: يخصم من المرتب السنوي نصيب الموظف في التأمينات (11% من أجر الاشتراك بحد أقصى 16,700 ج شهريًا)، ثم الإعفاء الشخصي 20,000 ج سنويًا، وتطبق شرائح المادة 8 على الباقي بعد تقريبه لأقرب 10 جنيهات أقل، وتقسم الضريبة السنوية على 12. أصحاب صافي الدخل الأعلى من 600 ألف ج سنويًا لا يستفيدون من الشرائح الدنيا وفق الجداول القانونية. النتيجة استرشادية ولا تغني عن مراجعة محاسبك القانوني.
+                </p>
+            </div>
+
+            <!-- VAT Calculator -->
+            <div class="calc-card" id="vat">
+                <h2><i class="fas fa-percent"></i> حاسبة ضريبة القيمة المضافة (14%)</h2>
+                <p class="calc-sub">أضف الضريبة إلى سعر أو استخرجها من مبلغ شامل.</p>
+                <div class="mode-toggle">
+                    <button type="button" id="vat-add" class="active">إضافة الضريبة</button>
+                    <button type="button" id="vat-extract">استخراج من مبلغ شامل</button>
+                </div>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="vat-amount" id="vat-label">السعر قبل الضريبة (ج.م)</label>
+                        <input type="number" id="vat-amount" min="0" step="0.01" value="1000" inputmode="decimal">
+                    </div>
+                </div>
+                <div class="calc-result" id="vat-result"></div>
+                <p class="calc-note">السعر العام لضريبة القيمة المضافة في مصر 14% وفق القانون 67 لسنة 2016. بعض السلع والخدمات تخضع لضريبة الجدول أو الإعفاء - راجع دليل الأكواد الضريبية أو محاسبك للحالات الخاصة.</p>
+            </div>
+
+            <!-- Depreciation Calculator -->
+            <div class="calc-card" id="depreciation">
+                <h2><i class="fas fa-chart-line"></i> حاسبة الإهلاك</h2>
+                <p class="calc-sub">بالقسط الثابت أو القسط المتناقص، مع معدلات الإهلاك الضريبية المصرية (المادة 25 من قانون 91 لسنة 2005).</p>
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="asset-cost">تكلفة الأصل (ج.م)</label>
+                        <input type="number" id="asset-cost" min="0" step="100" value="100000" inputmode="decimal">
+                    </div>
+                    <div class="calc-field">
+                        <label for="salvage">قيمة الخردة (ج.م - اختياري)</label>
+                        <input type="number" id="salvage" min="0" step="100" value="0" inputmode="decimal">
+                    </div>
+                    <div class="calc-field">
+                        <label for="dep-rate">معدل الإهلاك السنوي</label>
+                        <select id="dep-rate">
+                            <option value="5">5% - مباني وإنشاءات</option>
+                            <option value="10">10% - آلات ومعدات</option>
+                            <option value="25" selected>25% - سيارات ووسائل نقل</option>
+                            <option value="50">50% - حاسبات وبرامج</option>
+                            <option value="custom">معدل مخصص</option>
+                        </select>
+                    </div>
+                    <div class="calc-field" id="custom-rate-field" style="display:none;">
+                        <label for="custom-rate">المعدل المخصص (%)</label>
+                        <input type="number" id="custom-rate" min="1" max="100" step="0.5" value="20" inputmode="decimal">
+                    </div>
+                    <div class="calc-field">
+                        <label for="dep-method">طريقة الإهلاك</label>
+                        <select id="dep-method">
+                            <option value="sl">القسط الثابت</option>
+                            <option value="db">القسط المتناقص</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calc-result" id="dep-result"></div>
+                <p class="calc-note">ضريبيًا تطبق مصر القسط الثابت بهذه المعدلات، ولا يهلاك الأرض. القسط المتناقص متاح هنا لأغراض الإدارة والدراسة. تُعرض أول 10 سنوات من الجدول.</p>
+            </div>
+        </div>
+
+        <footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+            <div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+            <div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a href="about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+                <a href="contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+                <a href="privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+                <a href="terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script>
+    // ===== Shared helpers =====
+    const fmt = n => n.toLocaleString('en-EG', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const line = (label, val, hl) => `<div class="calc-result-line${hl ? ' highlight' : ''}"><span>${label}</span><span class="val">${fmt(val)} ج.م</span></div>`;
+
+    // ===== Payroll (Law 7/2024, insurance 2026) =====
+    const INS_RATE_EMP = 0.11, INS_RATE_EMPLOYER = 0.1875;
+    const INS_MAX_WAGE = 16700, INS_MIN_WAGE = 2700, PERSONAL_EXEMPTION = 20000;
+    const TIER_TABLES = [
+        { max: 600000,  brackets: [[40000,0],[55000,0.10],[70000,0.15],[200000,0.20],[400000,0.225],[Infinity,0.25]] },
+        { max: 700000,  brackets: [[55000,0.10],[70000,0.15],[200000,0.20],[400000,0.225],[Infinity,0.25]] },
+        { max: 800000,  brackets: [[70000,0.15],[200000,0.20],[400000,0.225],[Infinity,0.25]] },
+        { max: 900000,  brackets: [[200000,0.20],[400000,0.225],[Infinity,0.25]] },
+        { max: 1200000, brackets: [[400000,0.225],[Infinity,0.25]] },
+        { max: Infinity, brackets: [[1200000,0.25],[Infinity,0.275]] },
+    ];
+    function annualTax(net) {
+        const table = TIER_TABLES.find(t => net <= t.max);
+        let tax = 0, prev = 0;
+        for (const [cap, rate] of table.brackets) {
+            if (net > prev) { tax += (Math.min(net, cap) - prev) * rate; prev = cap; }
+        }
+        return tax;
+    }
+    function calcPayroll() {
+        const gross = parseFloat(document.getElementById('gross').value) || 0;
+        const el = document.getElementById('payroll-result');
+        if (gross <= 0) { el.innerHTML = '<div class="calc-result-line"><span>أدخل مرتبًا أكبر من صفر</span></div>'; return; }
+        const insWage = Math.min(Math.max(gross, INS_MIN_WAGE), INS_MAX_WAGE);
+        const insEmp = insWage * INS_RATE_EMP;
+        const insEmployer = insWage * INS_RATE_EMPLOYER;
+        const annualNet = Math.floor((gross * 12 - insEmp * 12 - PERSONAL_EXEMPTION) / 10) * 10;
+        const taxYear = annualNet > 0 ? annualTax(annualNet) : 0;
+        const taxMonth = taxYear / 12;
+        const net = gross - insEmp - taxMonth;
+        el.innerHTML =
+            line('تأمينات الموظف (11%)', insEmp) +
+            line('ضريبة كسب العمل الشهرية', taxMonth) +
+            line('صافي المرتب الشهري', net, true) +
+            line('تكلفة الموظف على صاحب العمل (إجمالي + 18.75%)', gross + insEmployer) +
+            `<div class="calc-note">الوعاء السنوي بعد التأمينات والإعفاء الشخصي: ${fmt(Math.max(annualNet,0))} ج - الضريبة السنوية: ${fmt(taxYear)} ج</div>`;
+    }
+    document.getElementById('gross').addEventListener('input', calcPayroll);
+
+    // ===== VAT 14% =====
+    let vatMode = 'add';
+    function calcVat() {
+        const amt = parseFloat(document.getElementById('vat-amount').value) || 0;
+        const el = document.getElementById('vat-result');
+        if (vatMode === 'add') {
+            const vat = amt * 0.14;
+            el.innerHTML = line('قيمة الضريبة (14%)', vat) + line('الإجمالي شامل الضريبة', amt + vat, true);
+        } else {
+            const base = amt / 1.14;
+            el.innerHTML = line('الأساس قبل الضريبة', base) + line('قيمة الضريبة المستخرجة (14%)', amt - base, true);
+        }
+    }
+    document.getElementById('vat-add').addEventListener('click', function() {
+        vatMode = 'add';
+        this.classList.add('active'); document.getElementById('vat-extract').classList.remove('active');
+        document.getElementById('vat-label').textContent = 'السعر قبل الضريبة (ج.م)'; calcVat();
+    });
+    document.getElementById('vat-extract').addEventListener('click', function() {
+        vatMode = 'extract';
+        this.classList.add('active'); document.getElementById('vat-add').classList.remove('active');
+        document.getElementById('vat-label').textContent = 'المبلغ الشامل للضريبة (ج.م)'; calcVat();
+    });
+    document.getElementById('vat-amount').addEventListener('input', calcVat);
+
+    // ===== Depreciation =====
+    function calcDep() {
+        const cost = parseFloat(document.getElementById('asset-cost').value) || 0;
+        const salvage = parseFloat(document.getElementById('salvage').value) || 0;
+        const sel = document.getElementById('dep-rate').value;
+        const rate = sel === 'custom' ? (parseFloat(document.getElementById('custom-rate').value) || 0) / 100 : parseFloat(sel) / 100;
+        const method = document.getElementById('dep-method').value;
+        const el = document.getElementById('dep-result');
+        if (cost <= 0 || rate <= 0) { el.innerHTML = '<div class="calc-result-line"><span>أدخل تكلفة ومعدلًا صحيحين</span></div>'; return; }
+        const years = Math.ceil(100 / (rate * 100));
+        let rows = '', book = cost, total = 0;
+        if (method === 'sl') {
+            const annual = (cost - salvage) * rate;
+            for (let y = 1; y <= Math.min(years, 10); y++) {
+                const dep = Math.min(annual, book - salvage);
+                book -= dep; total += dep;
+                rows += `<tr><td>${y}</td><td>${fmt(dep)}</td><td>${fmt(book)}</td></tr>`;
+            }
+            el.innerHTML = line('قسط الإهلاك السنوي (قسط ثابت)', annual, true) + line('العمر الإنتاجي', years, false).replace('ج.م', 'سنة');
+        } else {
+            for (let y = 1; y <= Math.min(years, 10); y++) {
+                const dep = Math.min(book * rate, book - salvage);
+                book -= dep; total += dep;
+                rows += `<tr><td>${y}</td><td>${fmt(dep)}</td><td>${fmt(book)}</td></tr>`;
+            }
+            el.innerHTML = line('إهلاك السنة الأولى (قسط متناقص)', cost * rate, true);
+        }
+        el.innerHTML += `<table class="calc-table"><thead><tr><th>السنة</th><th>قسط الإهلاك (ج.م)</th><th>القيمة الدفترية (ج.م)</th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+    document.getElementById('dep-rate').addEventListener('change', function() {
+        document.getElementById('custom-rate-field').style.display = this.value === 'custom' ? 'block' : 'none';
+        calcDep();
+    });
+    for (const id of ['asset-cost','salvage','custom-rate','dep-method']) {
+        document.getElementById(id).addEventListener('input', calcDep);
+        document.getElementById(id).addEventListener('change', calcDep);
+    }
+
+    // initial render
+    calcPayroll(); calcVat(); calcDep();
+    </script>
+</body>
+</html>
