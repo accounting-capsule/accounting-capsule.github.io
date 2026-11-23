@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/journal-entries-guide.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="قيود اليومية من الصفر: شرح المدين والدائن بعشرين قيدًا عمليًا | كبسولة المحاسب" property="og:title"/>
+<meta content="تعلم كتابة قيود اليومية من الصفر: قاعدة طبيعة الحسابات الخمسة، تحليل أي عملية في ثلاث خطوات، وعشرون قيدًا متدرجًا من البيع النقدي حتى قيود التسوية والقيد المركب بالقيمة المضافة." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/journal-entries-guide.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="قيود اليومية من الصفر: شرح المدين والدائن بعشرين قيدًا عمليًا | كبسولة المحاسب" name="twitter:title"/>
+<meta content="قاعدة المدين والدائن + عشرون قيد يومية متدرجًا بأمثلة رقمية كاملة، من أول قيد نقدي حتى قيود التسوية." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="تعلم كتابة قيود اليومية من الصفر: قاعدة طبيعة الحسابات الخمسة، تحليل أي عملية في ثلاث خطوات، وعشرون قيدًا متدرجًا من البيع النقدي حتى قيود التسوية والقيد المركب بالقيمة المضافة." name="description"/>
+<title>قيود اليومية من الصفر: شرح المدين والدائن بعشرين قيدًا عمليًا | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/journal-entries-guide.html#article", "headline": "قيود اليومية من الصفر: شرح المدين والدائن بعشرين قيدًا عمليًا متدرجًا", "description": "تعلم كتابة قيود اليومية من الصفر: قاعدة طبيعة الحسابات الخمسة، تحليل أي عملية في ثلاث خطوات، وعشرون قيدًا متدرجًا من البيع النقدي حتى قيود التسوية والقيد المركب بالقيمة المضافة.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": "https://accounting-capsule.github.io/articles/journal-entries-guide.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "قيود اليومية من الصفر"}]}]}</script>
+</head>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> &lsaquo;
+<a href="../blog.html">المدونة</a> &lsaquo;
+<span>قيود اليومية من الصفر</span>
+</nav>
+<span class="article-category">أساسيات</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 18 دقيقة قراءة</span>
+</div>
+<h1>قيود اليومية من الصفر: شرح المدين والدائن بعشرين قيدًا عمليًا متدرجًا</h1>
+</div>
+<div class="article-content">
+<p>كل ما يحدث في المحاسبة يبدأ من قيد اليومية. الفاتورة التي تصدرها، المرتب الذي تدفعه، البضاعة التي تشتريها، حتى الإهلاك الذي يُحسب في نهاية السنة: كلها تترجم في النهاية إلى سطرين أو أكثر في دفتر اليومية، مدين ودائن، متساويين دائمًا. من يفهم القيد يفهم المحاسبة كلها، ومن يحفظ القيود دون فهم يضيع في أول عملية لم يرها من قبل. هذا المقال دليلك الكامل: القاعدة الوحيدة التي تحتاجها، طريقة تحليل أي عملية في ثلاث خطوات، ثم عشرون قيدًا متدرجًا من أبسط عملية نقدية حتى قيود التسوية في نهاية العام.</p>
+
+<h2>⚖️ القاعدة الوحيدة التي تحتاج حفظها</h2>
+<p>الحسابات خمسة أنواع، ولكل نوع «طبيعة» واحدة تزيد بها:</p>
+<table>
+<thead>
+<tr><th>نوع الحساب</th><th>طبيعته (يزيد في)</th><th>أمثلة</th></tr>
+</thead>
+<tbody>
+<tr><td>الأصول</td><td>مدين</td><td>النقدية، البنك، العملاء، البضاعة، السيارات</td></tr>
+<tr><td>الالتزامات</td><td>دائن</td><td>الموردون، القروض، مصروفات مستحقة</td></tr>
+<tr><td>حقوق الملكية</td><td>دائن</td><td>رأس المال، الأرباح المبقاة</td></tr>
+<tr><td>الإيرادات</td><td>دائن</td><td>المبيعات، إيرادات الخدمات</td></tr>
+<tr><td>المصروفات</td><td>مدين</td><td>المرتبات، الإيجار، الكهرباء، الإهلاك</td></tr>
+</tbody>
+</table>
+<p>ومن هذا الجدول تخرج كل القواعد الصغيرة: ما يزيد في طبيعته يسجل في جهتها، وما ينقص يسجل في الجهة المقابلة. النقدية أصل، فتزيد مدينة وتنقص دائنة. الموردون التزام، فيزيدون دائنين عند الشراء على الحساب وينقصون مدينين عند السداد. المبيعات إيراد، فتزيد دائنة. المرتبات مصروف، فتزيد مدينة. <strong>وكل قيد يجب أن يتوازن: مجموع المدين يساوي مجموع الدائن في كل عملية بلا استثناء.</strong></p>
+
+<h2>🧭 طريقة تحليل أي عملية في ثلاث خطوات</h2>
+<p>قبل كتابة أي قيد، اسأل نفسك بالترتيب:</p>
+<h3>الخطوة الأولى: ما الحسابان (أو أكثر) المتأثران؟</h3>
+<p>كل عملية مالية لها طرفان على الأقل. بعت بضاعة نقدًا؟ تتأثر النقدية والمبيعات. دفعت إيجارًا؟ يتأثر مصروف الإيجار والنقدية.</p>
+<h3>الخطوة الثانية: ما نوع كل حساب، وهل زاد أم نقص؟</h3>
+<p>النقدية أصل زاد. المبيعات إيراد زاد. الإيجار مصروف زاد. حدد النوع والاتجاه لكل حساب.</p>
+<h3>الخطوة الثالثة: طبّق جدول الطبيعة</h3>
+<p>الأصل الذي زاد: مدين. الإيراد الذي زاد: دائن. المصروف الذي زاد: مدين. ثم تأكد أن الجانبين متساويان قبل التسجيل.</p>
+<p>مع التدريب تختصر هذه الخطوات في ثوانٍ. والآن إلى القيود العشرين، مرتبة من الأسهل إلى الأصعب، كلها على شركة تجارية واحدة متخيلة.</p>
+
+<h2>🟢 المستوى الأول: العمليات النقدية</h2>
+
+<h3>القيد 1: بدء النشاط برأس مال نقدي</h3>
+<p>بدأ صاحب المنشأة نشاطه بإيداع 500,000 جنيه في خزينة الشركة.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>500,000</td><td></td><td>من حـ/ النقدية بالخزينة</td></tr>
+<tr><td></td><td>500,000</td><td>إلى حـ/ رأس المال</td></tr>
+</tbody>
+</table>
+<p>النقدية أصل زاد (مدين)، ورأس المال حقوق ملكية زاد (دائن).</p>
+
+<h3>القيد 2: شراء بضاعة نقدًا</h3>
+<p>اشترت الشركة بضاعة بقيمة 120,000 جنيه ودفعت نقدًا.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>120,000</td><td></td><td>من حـ/ المشتريات (أو المخزون)</td></tr>
+<tr><td></td><td>120,000</td><td>إلى حـ/ النقدية بالخزينة</td></tr>
+</tbody>
+</table>
+
+<h3>القيد 3: بيع بضاعة نقدًا</h3>
+<p>باعت الشركة بضاعة بمبلغ 45,000 جنيه وقبضت نقدًا.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>45,000</td><td></td><td>من حـ/ النقدية بالخزينة</td></tr>
+<tr><td></td><td>45,000</td><td>إلى حـ/ المبيعات</td></tr>
+</tbody>
+</table>
+
+<h3>القيد 4: دفع مصروف نقدًا</h3>
+<p>سددت الشركة فاتورة كهرباء المحل بمبلغ 3,500 جنيه.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>3,500</td><td></td><td>من حـ/ مصروف الكهرباء</td></tr>
+<tr><td></td><td>3,500</td><td>إلى حـ/ النقدية بالخزينة</td></tr>
+</tbody>
+</table>
+<p>لاحظ: كل مصروف يزيد مدينًا مهما كان نوعه، وكل نقص في النقدية دائن. هاتان القاعدتان وحدهما تغطيان نصف عملياتك اليومية.</p>
+
+<h3>القيد 5: مسحوبات شخصية للمالك</h3>
+<p>سحب المالك 10,000 جنيه لاستخدامه الشخصي.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>10,000</td><td></td><td>من حـ/ المسحوبات الشخصية</td></tr>
+<tr><td></td><td>10,000</td><td>إلى حـ/ النقدية بالخزينة</td></tr>
+</tbody>
+</table>
+<p>المسحوبات ليست مصروفًا: هي نقص في حقوق الملكية، وطبيعة حقوق الملكية دائنة، فالنقص منها يسجل مدينًا.</p>
+
+<h2>🔵 المستوى الثاني: البيع والشراء على الحساب</h2>
+
+<h3>القيد 6: شراء بضاعة على الحساب (آجل)</h3>
+<p>اشترت الشركة بضاعة بقيمة 80,000 جنيه من المورد «الأمل» على الحساب.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>80,000</td><td></td><td>من حـ/ المشتريات (أو المخزون)</td></tr>
+<tr><td></td><td>80,000</td><td>إلى حـ/ الموردون - شركة الأمل</td></tr>
+</tbody>
+</table>
+<p>لا نقدية هنا. الالتزام (الموردون) زاد، فيسجل دائنًا.</p>
+
+<h3>القيد 7: بيع بضاعة على الحساب (آجل)</h3>
+<p>باعت الشركة بضاعة بمبلغ 60,000 جنيه للعميل «النور» على الحساب.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>60,000</td><td></td><td>من حـ/ العملاء - شركة النور</td></tr>
+<tr><td></td><td>60,000</td><td>إلى حـ/ المبيعات</td></tr>
+</tbody>
+</table>
+
+<h3>القيد 8: سداد دفعة للمورد</h3>
+<p>سددت الشركة 50,000 جنيه من مستحقات المورد «الأمل» نقدًا.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>50,000</td><td></td><td>من حـ/ الموردون - شركة الأمل</td></tr>
+<tr><td></td><td>50,000</td><td>إلى حـ/ النقدية بالخزينة</td></tr>
+</tbody>
+</table>
+<p>الالتزام نقص، فيسجل مدينًا. بعد هذا القيد يتبقى للمورد 30,000 جنيه.</p>
+
+<h3>القيد 9: تحصيل دفعة من عميل</h3>
+<p>حصلت الشركة 40,000 جنيه من العميل «النور» نقدًا.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>40,000</td><td></td><td>من حـ/ النقدية بالخزينة</td></tr>
+<tr><td></td><td>40,000</td><td>إلى حـ/ العملاء - شركة النور</td></tr>
+</tbody>
+</table>
+
+<h3>القيد 10: خصم نقدي مكتسب عند السداد المبكر</h3>
+<p>اتفقت الشركة مع المورد «الأمل» على سداد المتبقي (30,000) فورًا مقابل خصم 1,500 جنيه، فدفعت 28,500 نقدًا.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>30,000</td><td></td><td>من حـ/ الموردون - شركة الأمل</td></tr>
+<tr><td></td><td>28,500</td><td>إلى حـ/ النقدية بالخزينة</td></tr>
+<tr><td></td><td>1,500</td><td>إلى حـ/ الخصم المكتسب (إيراد)</td></tr>
+</tbody>
+</table>
+<p>أول قيد مركب: طرف واحد مدين وطرفان دائنان، والمجموع متساوٍ (30,000 = 28,500 + 1,500). الخصم المكتسب إيراد، والخصم الممنوح لعملائك مصروف.</p>
+
+<h2>🟡 المستوى الثالث: التعامل البنكي</h2>
+
+<h3>القيد 11: إيداع نقدية في البنك</h3>
+<p>أودعت الشركة 200,000 جنيه من الخزينة في حسابها الجاري بالبنك.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>200,000</td><td></td><td>من حـ/ البنك - الحساب الجاري</td></tr>
+<tr><td></td><td>200,000</td><td>إلى حـ/ النقدية بالخزينة</td></tr>
+</tbody>
+</table>
+<p>أصل حل محل أصل: البنك زاد والخزينة نقصت، فلا أثر على مجموع الأصول.</p>
+
+<h3>القيد 12: تحصيل شيك من عميل وإيداعه البنك</h3>
+<p>حصلت الشركة شيكًا من العميل «النور» بقيمة 20,000 جنيه (تسوية لباقي مستحقاته) وأودعته البنك مباشرة.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>20,000</td><td></td><td>من حـ/ البنك - الحساب الجاري</td></tr>
+<tr><td></td><td>20,000</td><td>إلى حـ/ العملاء - شركة النور</td></tr>
+</tbody>
+</table>
+
+<h3>القيد 13: عمولات ومصاريف بنكية</h3>
+<p>خصم البنك 750 جنيهًا عمولات إدارة حساب.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>750</td><td></td><td>من حـ/ مصروفات وعمولات بنكية</td></tr>
+<tr><td></td><td>750</td><td>إلى حـ/ البنك - الحساب الجاري</td></tr>
+</tbody>
+</table>
+
+<h2>🟠 المستوى الرابع: المستحقات والمقدمات</h2>
+
+<h3>القيد 14: مرتبات الشهر عند الاستحقاق (لم تُدفع بعد)</h3>
+<p>استحقت مرتبات شهر ديسمبر بقيمة 95,000 جنيه وستُدفع في أول يناير.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>95,000</td><td></td><td>من حـ/ مصروف المرتبات</td></tr>
+<tr><td></td><td>95,000</td><td>إلى حـ/ مرتبات مستحقة (التزام)</td></tr>
+</tbody>
+</table>
+<p>مبدأ الاستحقاق: المصروف يخص ديسمبر حتى لو دُفع في يناير. وهذا الفرق الجوهري بين المحاسبة النقدية والمحاسبة على أساس الاستحقاق.</p>
+
+<h3>القيد 15: دفع المرتبات المستحقة في الشهر التالي</h3>
+<p>في أول يناير، دفعت الشركة مرتبات ديسمبر (95,000) من البنك.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>95,000</td><td></td><td>من حـ/ مرتبات مستحقة</td></tr>
+<tr><td></td><td>95,000</td><td>إلى حـ/ البنك - الحساب الجاري</td></tr>
+</tbody>
+</table>
+<p>لا يتكرر المصروف: استُنزف الالتزام فقط. لو قيدت «مصروف مرتبات» هنا مرة أخرى لضاعفت المصروف خطأً.</p>
+
+<h3>القيد 16: إيجار مدفوع مقدمًا عن سنة</h3>
+<p>دفعت الشركة في أول يوليو 120,000 جنيه إيجار مخزن لمدة سنة كاملة مقدمًا.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>120,000</td><td></td><td>من حـ/ إيجار مدفوع مقدمًا (أصل)</td></tr>
+<tr><td></td><td>120,000</td><td>إلى حـ/ البنك - الحساب الجاري</td></tr>
+</tbody>
+</table>
+<p>ثم في نهاية كل شهر يُحمَّل الشهر نصيبه: 10,000 من حـ/ مصروف الإيجار إلى حـ/ إيجار مدفوع مقدمًا.</p>
+
+<h3>القيد 17: إيراد مستحق لم يُحصَّل</h3>
+<p>قدمت الشركة خدمة استشارية لعميل بقيمة 15,000 جنيه في ديسمبر، ولم تصدر الفاتورة بعد ولم تقبض.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>15,000</td><td></td><td>من حـ/ إيرادات مستحقة (أصل)</td></tr>
+<tr><td></td><td>15,000</td><td>إلى حـ/ إيرادات خدمات استشارية</td></tr>
+</tbody>
+</table>
+
+<h2>🔴 المستوى الخامس: قيود التسوية في نهاية العام</h2>
+
+<h3>القيد 18: إهلاك الأصول الثابتة</h3>
+<p>بلغ إهلاك السنة لسيارات وأجهزة الشركة 48,000 جنيه.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>48,000</td><td></td><td>من حـ/ مصروف الإهلاك</td></tr>
+<tr><td></td><td>48,000</td><td>إلى حـ/ مجمع الإهلاك</td></tr>
+</tbody>
+</table>
+<p>لاحظ أن الطرف الدائن ليس الأصل مباشرة بل «مجمع الإهلاك»، وهو حساب مخصوم من الأصل يظهر صافي القيمة الدفترية في القوائم. التفاصيل الكاملة في <a href="depreciation-explained.html">مقال الإهلاك</a>.</p>
+
+<h3>القيد 19: تكوين مخصص ديون مشكوك في تحصيلها</h3>
+<p>قدّرت الشركة أن 2% من أرصدة العملاء (إجمالي 400,000) قد لا تُحصَّل: مخصص 8,000 جنيه.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>8,000</td><td></td><td>من حـ/ مصروف الديون المشكوك في تحصيلها</td></tr>
+<tr><td></td><td>8,000</td><td>إلى حـ/ مخصص الديون المشكوك في تحصيلها</td></tr>
+</tbody>
+</table>
+<p>تطبيق لمبدأ الحيطة والحذر: الالتزام بالاعتراف بالخسارة المتوقعة اليوم لا عند وقوعها.</p>
+
+<h3>القيد 20: قيد مركب - بيع بضاعة بقيمة مضافة وتحصيل جزئي</h3>
+<p>باعت الشركة بضاعة للعميل «المتحدة» بقيمة 100,000 جنيه + ضريبة قيمة مضافة 14% (14,000)، وقبضت 50,000 نقدًا والباقي على الحساب.</p>
+<table>
+<thead><tr><th>مدين</th><th>دائن</th><th>البيان</th></tr></thead>
+<tbody>
+<tr><td>50,000</td><td></td><td>من حـ/ النقدية بالخزينة</td></tr>
+<tr><td>64,000</td><td></td><td>من حـ/ العملاء - شركة المتحدة</td></tr>
+<tr><td></td><td>100,000</td><td>إلى حـ/ المبيعات</td></tr>
+<tr><td></td><td>14,000</td><td>إلى حـ/ ضريبة القيمة المضافة - مخرجات (التزام)</td></tr>
+</tbody>
+</table>
+<p>أربعة أطراف ويتوازن تمامًا: 114,000 في كل جانب. إن فهمت هذا القيد، فقد فهمت المنطق كله. ولحساب الضريبة على أي فاتورة استخدم <a href="../calculators.html">حاسبة القيمة المضافة</a> على الموقع.</p>
+
+<h2>⚠️ أربعة أخطاء يقع فيها المبتدئون</h2>
+<ul>
+<li><strong>عكس اتجاه العملاء والموردين:</strong> العميل أصل (له علينا: يزيد مدينًا) والمورد التزام (علينا له: يزيد دائنًا). احفظها بجملة: «العميل لنا، والمورد علينا».</li>
+<li><strong>تكرار المصروف المستحق:</strong> قيد الاستحقاق ثم قيد الدفع كمصروف مرة أخرى، فيتضاعف المصروف. الدفع يُقفل الالتزام فقط.</li>
+<li><strong>معاملة المسحوبات كمصروف:</strong> مسحوبات المالك لا تدخل قائمة الدخل إطلاقًا، بل تخصم من حقوق الملكية.</li>
+<li><strong>قيد غير متوازن:</strong> إن لم يتساوَ الجانبان فهناك خطأ حتمًا. تحقق قبل الترحيل، لا بعده.</li>
+</ul>
+
+<h2>❓ أسئلة شائعة</h2>
+<div class="faq-section">
+<details>
+<summary>ما الفرق بين دفتر اليومية ودفتر الأستاذ؟</summary>
+<p>اليومية تسجل العمليات بترتيب حدوثها الزمني قيدًا قيدًا. الأستاذ يعيد فرز هذه القيود حسب الحساب: كل ما يخص النقدية في صفحة، وكل ما يخص المبيعات في صفحة أخرى، لتعرف رصيد كل حساب في أي وقت. اليومية للتسجيل، والأستاذ للتجميع والأرصدة.</p>
+</details>
+<details>
+<summary>هل يمكن أن يكون القيد من ثلاثة أطراف أو أكثر؟</summary>
+<p>نعم، ويسمى قيدًا مركبًا، والشرط الوحيد أن يتساوى مجموع المدين مع مجموع الدائن. القيدان 10 و20 في هذا المقال مثالان عمليان.</p>
+</details>
+<details>
+<summary>متى أستخدم حساب المخزون ومتى أستخدم المشتريات؟</summary>
+<p>نظامان للجرد: في الجرد المستمر يُستخدم حساب المخزون مع كل عملية وتُقيد تكلفة البضاعة المباعة عند كل بيع، وفي الجرد الدوري تُستخدم المشتريات طوال العام وتُسوّى الأرصدة بعد الجرد الفعلي. أغلب المنشآت الصغيرة تعمل بالجرد الدوري، والأنظمة المحاسبية الحديثة بالجرد المستمر.</p>
+</details>
+<details>
+<summary>كيف أتدرب على القيود حتى تثبت؟</summary>
+<p>حوّل أي عشر فواتير أو إيصالات حقيقية من عملك إلى قيود بطريقة الخطوات الثلاث، ثم اعرضها على محاسب أقدم أو قارنها بما سجله النظام فعلًا. عشر عمليات حقيقية من مجالك تفوق مئة مثال نظري.</p>
+</details>
+<details>
+<summary>هل أحتاج حفظ شجرة حسابات كاملة قبل البدء؟</summary>
+<p>لا. يكفي جدول الطبيعة الخمسة في أول المقال، وستتسع شجرتك مع اتساع نشاطك. المهم ألا تسجل عملية قبل أن تحدد نوع حسابيها واتجاه كل منهما.</p>
+</details>
+</div>
+
+<div class="cta-box">
+<h3>🧮 جرّب أدواتنا المجانية</h3>
+<p>برامج حسابات Excel جاهزة لـ 19 نشاطًا تسجل قيودك وترحلها وتطلع التقارير تلقائيًا، وحاسبات سريعة للضريبة والقيمة المضافة والإهلاك</p>
+<a class="btn btn-gold" href="../downloads.html">
+<i class="fas fa-download"></i>
+                        حمّل برنامج حسابات نشاطك
+                    </a>
+</div>
+
+<div class="saber-box">
+<h3>☕ وببساطة على طريقة عمي صابر</h3>
+<p>قصة القيود دي أسهل مما شكلها يا بطل. اعتبر كل حساب عندك زي صينية ميزان ليها اتجاه بيكبّرها. الفلوس اللي عندك، والبضاعة، والناس اللي عليهم ليك، دول أصول، بيكبروا في المدين. والناس اللي ليهم عليك، ورأس المال، والمبيعات، دول بيكبروا في الدائن. والمصاريف بيكبروا في المدين.</p>
+<p>أي عملية بتعدي عليك اعملها في دماغك كده: مين الاتنين اللي اتحركوا؟ كل واحد فيهم كبّر ولا صغّر؟ وبعدين حط كل واحد في جهته، ولازم الطرفين يطلعوا قد بعض بالمليم، وإلا في حاجة غلط.</p>
+<p>خدها مني: اللي بيلخبط الناس مش القيد، اللي بيلخبطهم إنهم بيحفظوا "بيع نقدًا يعمل كذا" من غير ما يفهموا ليه. أول عملية غريبة تقابلهم يقفوا. انت متعملش كده: افهم إن الكهربا مصروف يكبر مدين، والنقدية أصل يصغر دائن، وخلاص، أي فاتورة كهربا في الدنيا هتعرف تقيدها.</p>
+<p>وبالمناسبة، أهم غلطتين شفتهم بيتكرروا: حد بيسجل مرتبات الشهر مصروف لما استحقت، وبعدين يسجلها مصروف تاني لما اتدفعت، فالمرتبات تتضاعف في الدفاتر. والتانية: صاحب المحل ساحب فلوس لبيته وكاتبها مصروف، فبيطلع مكسبه أقل من الحقيقة. المسحوبات مش مصروف، دي فلوسك انت، بتنقص من حقك في الشركة مش من مكسبها.</p>
+<p>اتمرن على عشر فواتير حقيقية من شغلك، وهتلاقي الموضوع ثبت. المحاسبة كلها في الآخر قيد متوازن، مين فهمه مبقاش فيه حاجة تخوف.</p>
+</div>
+
+<div class="related-articles">
+<h3>مقالات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="profit-vs-cash-flow.html">
+<h4>الفرق بين الربح والتدفق النقدي</h4>
+<p>كيف تربح الشركة وتعجز عن الدفع؟</p>
+</a>
+<a class="related-card" href="asset-vs-expense.html">
+<h4>الأصل أم المصروف؟</h4>
+<p>قاعدة القرار في ثلاثة أسئلة</p>
+</a>
+<a class="related-card" href="depreciation-explained.html">
+<h4>الإهلاك في المحاسبة</h4>
+<p>الدليل العملي بطرق الحساب</p>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
