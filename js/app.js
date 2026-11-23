@@ -776,7 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
 
-                fetch('https://formsubmit.co/ajax/1d9sxh@mail.instinct.com', {
+                fetch('https://formsubmit.co/ajax/omarelbadry300@gmail.com', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({
@@ -803,8 +803,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 7. Newsletter signup forms (FormSubmit, same approach as the contact form)
-    // Interim recipient: the site inbox below. Flip NEWSLETTER_ENDPOINT to the owner's email once decided (needs one-time FormSubmit activation on the new address).
-    var NEWSLETTER_ENDPOINT = 'https://formsubmit.co/ajax/1d9sxh@mail.instinct.com';
+    // Recipient: site owner email (FormSubmit activation confirmed on this address).
+    var NEWSLETTER_ENDPOINT = 'https://formsubmit.co/ajax/omarelbadry300@gmail.com';
     document.querySelectorAll('.newsletter-form').forEach(function(newsForm) {
         newsForm.addEventListener('submit', function(e) {
             e.preventDefault();
