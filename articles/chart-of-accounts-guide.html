@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/chart-of-accounts-guide.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="شجرة الحسابات: شرح التصنيف والترقيم مع مثال عملي جاهز | كبسولة المحاسب" property="og:title"/>
+<meta content="ما هي شجرة الحسابات وكيف تصممها؟ شرح الأقسام الخمسة ومستويات الحساب وقواعد الترقيم مع مثال كامل لشركة تجارية صغيرة وأخطاء شائعة يجب تجنبها." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/chart-of-accounts-guide.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="شجرة الحسابات: شرح التصنيف والترقيم مع مثال عملي جاهز | كبسولة المحاسب" name="twitter:title"/>
+<meta content="ما هي شجرة الحسابات وكيف تصممها؟ شرح الأقسام الخمسة ومستويات الحساب وقواعد الترقيم مع مثال كامل لشركة تجارية صغيرة وأخطاء شائعة يجب تجنبها." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="ما هي شجرة الحسابات وكيف تصممها؟ شرح الأقسام الخمسة ومستويات الحساب وقواعد الترقيم مع مثال كامل لشركة تجارية صغيرة وأخطاء شائعة يجب تجنبها." name="description"/>
+<title>شجرة الحسابات: شرح التصنيف والترقيم مع مثال عملي جاهز | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/chart-of-accounts-guide.html#article", "headline": "شجرة الحسابات: شرح التصنيف والترقيم مع مثال عملي جاهز | كبسولة المحاسب", "description": "ما هي شجرة الحسابات وكيف تصممها؟ شرح الأقسام الخمسة ومستويات الحساب وقواعد الترقيم مع مثال كامل لشركة تجارية صغيرة وأخطاء شائعة يجب تجنبها.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://accounting-capsule.github.io/articles/chart-of-accounts-guide.html"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "قيود اليومية من الصفر"}]}]}</script>
+</head>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> &lsaquo;
+<a href="../blog.html">المدونة</a> &lsaquo;
+<span>شجرة الحسابات</span>
+</nav>
+<span class="article-category">أساسيات</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 15 دقيقة قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>شجرة الحسابات: ما هي وكيف تصممها لشركتك خطوة بخطوة؟</h1>
+</div>
+<div class="article-content">
+
+<p>افتح برنامج حسابات أي شركة وستجد قائمة طويلة من الحسابات مرتبة بأرقام. هذه القائمة ليست تفصيلًا ثانويًا، بل هي العمود الفقري الذي يقوم عليه النظام المحاسبي كله: كل قيد يومية، وكل تقرير، وكل قائمة مالية يخرج منها. اسمها <strong>شجرة الحسابات</strong>، وفي هذا المقال نشرح ماهيتها، وكيف تُبنى ترقيمًا وتصنيفًا، وكيف تصمم واحدة لشركتك دون الوقوع في الأخطاء الشائعة.</p>
+
+<h2>ما شجرة الحسابات؟</h2>
+<p>شجرة الحسابات (Chart of Accounts) هي الدليل المنظم لكل الحسابات التي تتعامل معها المنشأة، مرتبة تصنيفًا وترقيمًا بحيث ينتمي كل حساب إلى مجموعة رئيسية، وإلى مجموعة فرعية تحتها، حتى يصل إلى المستوى التحليلي الذي تُقيد عليه الحركات فعليًا.</p>
+<p>سبب تسميتها «شجرة» هو شكلها الهرمي: جذع رئيسي (الأصول مثلًا)، تتفرع منه فروع (أصول ثابتة، أصول متداولة)، وكل فرع يتفرع إلى حسابات أدق (أراضٍ، مبانٍ، سيارات، معدات). عندما يكون الدليل مصممًا جيدًا، تستطيع قراءة رقم الحساب وحده فتعرف موضعه في القوائم المالية دون أن تقرأ اسمه.</p>
+
+<h2>الأقسام الرئيسية الخمسة</h2>
+<p>الاصطلاح الأكثر شيوعًا في الأنظمة العربية يخصص الرقم الأول من كود الحساب للقسم الرئيسي:</p>
+<table class="article-table">
+<thead><tr><th>الكود</th><th>القسم</th><th>أمثلة</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>الأصول</td><td>النقدية، البنوك، العملاء، المخزون، الأصول الثابتة</td></tr>
+<tr><td>2</td><td>الخصوم (الالتزامات)</td><td>الموردون، أوراق الدفع، القروض، المصروفات المستحقة</td></tr>
+<tr><td>3</td><td>حقوق الملكية</td><td>رأس المال، جاري الشركاء، الأرباح المرحلة، الاحتياطيات</td></tr>
+<tr><td>4</td><td>الإيرادات</td><td>إيرادات النشاط، إيرادات أخرى، خصم مكتسب</td></tr>
+<tr><td>5</td><td>المصروفات</td><td>تكلفة المبيعات، الرواتب، الإيجار، الكهرباء، الدعاية</td></tr>
+</tbody>
+</table>
+<p>لاحظ أن هذا الترتيب يطابق ترتيب عرض القوائم المالية نفسها: قائمة المركز المالي تبدأ بالأصول فالخصوم فحقوق الملكية، وقائمة الدخل تبدأ بالإيرادات فالمصروفات. هذا التطابق ليس مصادفة؛ الهدف أن يخرج التقرير من الدليل مباشرة دون إعادة تجميع يدوية.</p>
+
+<h2>مستويات الحساب: من الرئيسي إلى التحليلي</h2>
+<p>القاعدة الذهبية: <strong>الحركات اليومية تُقيد على أدنى مستوى فقط</strong> (الحساب التحليلي)، والمستويات الأعلى موجودة للتجميع والتقارير. مثال متدرج:</p>
+<ul>
+<li><strong>1</strong> الأصول (مستوى أول - لا يُقيد عليه)</li>
+<li><strong>11</strong> الأصول المتداولة (مستوى ثانٍ - لا يُقيد عليه)</li>
+<li><strong>111</strong> النقدية وما في حكمها (مستوى ثالث - لا يُقيد عليه)</li>
+<li><strong>11101</strong> خزينة الفرع الرئيسي (تحليلي - يُقيد عليه)</li>
+<li><strong>11102</strong> بنك مصر - حساب جارٍ (تحليلي - يُقيد عليه)</li>
+</ul>
+<p>بهذا الترقيم، رصيد حساب «النقدية وما في حكمها» هو مجموع أرصدة الخزينة والبنك تلقائيًا، ورصيد «الأصول المتداولة» مجموع ما تحته، وهكذا حتى قمة الشجرة. أي برنامج حسابات حديث يبني هذا التجميع وحده بشرط ألا تقيد حركة على حساب رئيسي.</p>
+
+<h2>مثال عملي: شجرة مبسطة لشركة تجارية صغيرة</h2>
+<table class="article-table">
+<thead><tr><th>الكود</th><th>الحساب</th><th>ملاحظة</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>الأصول</td><td>رئيسي</td></tr>
+<tr><td>11</td><td>الأصول المتداولة</td><td>رئيسي</td></tr>
+<tr><td>111</td><td>النقدية والبنوك</td><td>فرعي</td></tr>
+<tr><td>11101</td><td>الخزينة الرئيسية</td><td>تحليلي</td></tr>
+<tr><td>11102</td><td>حساب البنك الجاري</td><td>تحليلي</td></tr>
+<tr><td>112</td><td>العملاء (ذمم مدينة)</td><td>فرعي</td></tr>
+<tr><td>11201</td><td>عملاء المبيعات الآجلة</td><td>تحليلي (وتحته حساب لكل عميل)</td></tr>
+<tr><td>113</td><td>المخزون</td><td>فرعي - مخزون البضاعة تامة الصنع</td></tr>
+<tr><td>12</td><td>الأصول الثابتة</td><td>رئيسي</td></tr>
+<tr><td>1201</td><td>السيارات</td><td>تحليلي - ويقابله مجمع إهلاك السيارات</td></tr>
+<tr><td>1202</td><td>الأثاث والتجهيزات</td><td>تحليلي</td></tr>
+<tr><td>2</td><td>الخصوم</td><td>رئيسي</td></tr>
+<tr><td>21</td><td>الخصوم المتداولة</td><td>رئيسي</td></tr>
+<tr><td>2101</td><td>الموردون</td><td>تحليلي - حساب لكل مورد</td></tr>
+<tr><td>2102</td><td>مصروفات مستحقة</td><td>تحليلي</td></tr>
+<tr><td>2103</td><td>ضرائب مستحقة السداد</td><td>تحليلي - قيمة مضافة وخصم تحت حساب الضريبة</td></tr>
+<tr><td>3</td><td>حقوق الملكية</td><td>رئيسي</td></tr>
+<tr><td>301</td><td>رأس المال</td><td>تحليلي</td></tr>
+<tr><td>302</td><td>جاري صاحب الشركة</td><td>تحليلي - المسحوبات والإيداعات الشخصية</td></tr>
+<tr><td>4</td><td>الإيرادات</td><td>رئيسي</td></tr>
+<tr><td>401</td><td>إيرادات المبيعات</td><td>تحليلي</td></tr>
+<tr><td>402</td><td>إيرادات أخرى</td><td>تحليلي</td></tr>
+<tr><td>5</td><td>المصروفات</td><td>رئيسي</td></tr>
+<tr><td>501</td><td>تكلفة البضاعة المباعة</td><td>تحليلي</td></tr>
+<tr><td>502</td><td>الرواتب والأجور</td><td>تحليلي</td></tr>
+<tr><td>503</td><td>الإيجار</td><td>تحليلي</td></tr>
+<tr><td>504</td><td>الكهرباء والمياه والاتصالات</td><td>تحليلي</td></tr>
+<tr><td>505</td><td>مصروفات التسويق والدعاية</td><td>تحليلي</td></tr>
+<tr><td>506</td><td>الإهلاكات</td><td>تحليلي</td></tr>
+</tbody>
+</table>
+<p>هذه شجرة بداية صالحة لمنشأة صغيرة: نحو عشرين حسابًا تحليليًا تغطي 95% من حركات النشاط التجاري البسيط، وتتسع مستقبلًا دون إعادة هيكلة، لأن الترقيم يترك مساحات خالية بين الأقسام.</p>
+
+<h2>أخطاء شائعة في تصميم شجرة الحسابات</h2>
+<h3>1. التفصيل المفرط منذ اليوم الأول</h3>
+<p>فتح حساب مستقل لكل بند صغير («مصروف أقلام»، «مصروف أكواب ورقية») يحول الدليل إلى قائمة من مئات الحسابات يصعب مراجعتها. القاعدة: لا تفتح حسابًا تحليليًا إلا إذا كنت ستحتاج رصيده منفصلًا في قرار أو تقرير. غير ذلك يذهب إلى حساب «مصروفات عمومية وإدارية».</p>
+<h3>2. القيد على الحسابات الرئيسية</h3>
+<p>أشهر خطأ تشغيلي: قيد حركة على حساب «العملاء» الرئيسي بدل حساب العميل التحليلي. النتيجة أن الرصيد الإجمالي لا يساوي مجموع أرصدة العملاء، وتنهار مصداقية كشف الحسابات. اضبط البرنامج على منع القيد إلا على المستوى الأدنى.</p>
+<h3>3. ترقيم عشوائي لا يعبر عن التصنيف</h3>
+<p>إذا كان رقم الحساب لا يدل على قسمه (حساب مصروف يبدأ بـ 2 مثلًا)، فستضطر لإعادة تجميع القوائم يدويًا كل مرة. التزم بأن يكون أول رقم هو القسم، وثاني رقم هو الفرع، وهكذا.</p>
+<h3>4. عدم ترك مساحات للنمو</h3>
+<p>لو رقمت المصروفات 501 و502 و503 متتالية ثم احتجت حسابًا جديدًا يلي الرواتب منطقيًا، ستضعه في آخر القائمة بعيدًا عن موضعه الطبيعي. اترك فجوات ترقيم بين الحسابات التي تتوقع التوسع بينها.</p>
+<h3>5. الخلط بين الحساب ومركز التكلفة</h3>
+<p>فتح «إيجار - فرع المعادي» و«إيجار - فرع مدينة نصر» كحسابين مستقلين خطأ شائع. الإيجار حساب واحد، والفرع <strong>مركز تكلفة</strong> يُسند إليه القيد. الخلط بينهما يضاعف حجم الشجرة بلا فائدة ويعقد مقارنة الفروع.</p>
+
+<h2>كيف تبني شجرة حسابات شركتك في خمس خطوات</h2>
+<ol>
+<li><strong>حدد طبيعة النشاط:</strong> تجاري أم خدمي أم صناعي؟ النشاط التجاري يحتاج حساب مخزون وتكلفة مبيعات، والخدمي قد يستغني عنهما، والصناعي يحتاج مراحل إنتاج وتكاليف إضافية.</li>
+<li><strong>ابدأ من التقارير المطلوبة:</strong> اسأل نفسك: ما القوائم والتحليلات التي سأحتاجها فعلًا؟ كل سطر في هذه التقارير يجب أن يقابله حساب أو مجموعة حسابات في الشجرة.</li>
+<li><strong>صمم الأقسام الرئيسية والفرعية أولًا:</strong> لا تبدأ بالحسابات التحليلية. ارسم المستوى الأول والثاني كاملًا قبل فتح أي حساب تشغيلي.</li>
+<li><strong>افتح الحسابات التحليلية بقدر الحاجة الفعلية:</strong> ابدأ بالحد الأدنى، وأضف حسابًا جديدًا عندما تظهر حاجة حقيقية له، لا توقعًا لحاجة قد لا تأتي.</li>
+<li><strong>وثّق الدليل:</strong> ورقة واحدة تشرح قواعد الترقيم وسياسة فتح الحسابات الجديدة تمنع انحراف الشجرة مع الوقت، خاصة عندما يتعامل معها أكثر من محاسب.</li>
+</ol>
+
+<h2>الأسئلة الشائعة</h2>
+<h3>هل توجد شجرة حسابات موحدة إلزامية في مصر؟</h3>
+<p>لا يوجد دليل حسابات موحد ملزم لكل المنشآت في مصر؛ معايير المحاسبة تحدد عرض القوائم المالية وقواعد القياس، لكن تصميم الدليل الداخلي متروك لكل منشأة بما يناسب نشاطها وحجمها. بعض القطاعات الخاضعة لرقابة خاصة (كالبنوك وشركات التأمين) لها أدلة إرشادية من جهاتها الرقابية.</p>
+<h3>كم عدد الحسابات المناسب لشركة صغيرة؟</h3>
+<p>لا يوجد رقم سحري، لكن معظم المنشآت الصغيرة تعمل بكفاءة بما بين 20 و50 حسابًا تحليليًا. إذا تجاوز الدليل مئات الحسابات في منشأة صغيرة، فهذا غالبًا علامة تفصيل مفرط وليس دقة.</p>
+<h3>هل يمكن تعديل الشجرة بعد بدء العمل بها؟</h3>
+<p>يمكن إضافة حسابات جديدة في أي وقت. أما حذف أو دمج حسابات عليها حركات فمسألة أدق: يستحسن إيقاف الحساب القديم عن القيد والاحتفاظ بأرصدته التاريخية، لأن الحذف الفعلي يشوه مقارنات الفترات السابقة.</p>
+<h3>ما الفرق بين شجرة الحسابات ومراكز التكلفة؟</h3>
+<p>شجرة الحسابات تجيب «على ماذا أُنفق المال؟» (رواتب، إيجار، مشتريات)، بينما مراكز التكلفة تجيب «أين أُنفق؟» (فرع المعادي، قسم الصيانة، مشروع كذا). البعدان مستقلان ويتقاطعان في التحليل، وخلطهما في دليل واحد من أشهر أخطاء التصميم.</p>
+<h3>هل أحتاج برنامجًا لتطبيق شجرة الحسابات؟</h3>
+<p>يمكنك العمل بدفاتر أو ملف Excel في البدايات الصغيرة جدًا، لكن أي برنامج حسابات، حتى المجاني، يطبق الشجرة تلقائيًا ويمنع القيد على المستويات الرئيسية ويجمع الأرصدة هرميًا، وهو ما يوفر وقتًا وأخطاءً كثيرة.</p>
+
+<div class="saber-box">
+<div class="saber-header"><i class="fas fa-lightbulb"></i> كلمة عمي صابر</div>
+<p>شجرة الحسابات دي زي خريطة البيت قبل ما تبنيه. لو رسمتها صح من الأول، كل حاجة بعد كده هتلاقي مكانها بسهولة. واللي يضيع الناس مش الترقيم ولا الشكل، هو حكتين: يا يفتح حسابات كتير أوي ملهاش لازمة فيضيع فيها، يا يقيد على الحسابات الكبيرة بدل التحليلية فتطلع الأرقام مش مظبوطة. ابدأ بسيط، واتوسع لما تحتاج فعلًا، وسيب مساحات فاضية في الترقيم للمستقبل. ولو لسه بتحفظ القيود نفسها، ارجع لمقالنا عن قيود اليومية الأول، وبعدها تعالى هنا ترتب بيتك المحاسبي صح.</p>
+</div>
+
+<div class="article-cta">
+<h3>طبّق عمليًا على ملفات جاهزة</h3>
+<p>تحتوي مكتبة كبسولة المحاسب على برامج حسابات Excel جاهزة لأنشطة تجارية وخدمية، مبنية على شجرة حسابات واضحة وتدفق قيود منطقي، ومتاحة مجانًا بالكامل.</p>
+<a href="../downloads.html" class="cta-button"><i class="fas fa-download"></i> تصفح مكتبة البرامج</a>
+</div>
+
+</div>
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="../changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
