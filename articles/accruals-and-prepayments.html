@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/accruals-and-prepayments.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="الإيرادات والمصروفات المستحقة والمقدمة: الفرق والمعالجة بأمثلة | كبسولة المحاسب" property="og:title"/>
+<meta content="ما الفرق بين المستحق والمقدم؟ شرح المصروف المقدم والمستحق والإيراد المقدم والمستحق بأمثلة رقمية وقيود تسوية، وأثر كل نوع على قائمة الدخل والميزانية." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/accruals-and-prepayments.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="الإيرادات والمصروفات المستحقة والمقدمة: الفرق والمعالجة بأمثلة | كبسولة المحاسب" name="twitter:title"/>
+<meta content="ما الفرق بين المستحق والمقدم؟ شرح المصروف المقدم والمستحق والإيراد المقدم والمستحق بأمثلة رقمية وقيود تسوية، وأثر كل نوع على قائمة الدخل والميزانية." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="ما الفرق بين المستحق والمقدم؟ شرح المصروف المقدم والمستحق والإيراد المقدم والمستحق بأمثلة رقمية وقيود تسوية، وأثر كل نوع على قائمة الدخل والميزانية." name="description"/>
+<title>الإيرادات والمصروفات المستحقة والمقدمة: الفرق والمعالجة بأمثلة | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "الإيرادات والمصروفات المستحقة والمقدمة: الفرق والمعالجة بأمثلة عملية",
+      "description": "ما الفرق بين المستحق والمقدم؟ شرح المصروف المقدم والمستحق والإيراد المقدم والمستحق بأمثلة رقمية وقيود تسوية، وأثر كل نوع على قائمة الدخل والميزانية.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "mainEntityOfPage": "https://accounting-capsule.github.io/articles/accruals-and-prepayments.html",
+      "image": "https://accounting-capsule.github.io/assets/og-image.png",
+      "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"},
+      "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}
+    }
+  ]
+}</script>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="../tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="../quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="../closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="../financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> ‹
+                    <a href="../blog.html">المدونة</a> ‹
+                    <span>المستحقات والمقدمات</span>
+</nav>
+<span class="article-category">محاسبة مالية</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 9 دقائق قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>الإيرادات والمصروفات المستحقة والمقدمة: الفرق والمعالجة بأمثلة عملية</h1>
+</div>
+<div class="article-content">
+<p>دفعت شركتك إيجار سنة كاملة مقدمًا: 120,000 جنيه في أول أكتوبر. وسنتك المالية تنتهي في 31 ديسمبر. كم يظهر مصروف الإيجار في قائمة دخل هذه السنة؟ إذا أجبت 120,000 فقد حمّلت السنة بمصروف تسعة أشهر لم تأتِ بعد، وإذا أجبت صفرًا فقد تجاهلت ثلاثة أشهر استهلكتها بالفعل. الإجابة الصحيحة 30,000 جنيه فقط، والباقي أصل اسمه «مصروف مقدم». هذه الزاوية بين التوقيت النقدي والتوقيت الاقتصادي هي موضوع المستحقات والمقدمات، وهي من أكثر بنود التسويات تكرارًا في قيود نهاية الفترة.</p>
+
+<h2>مبدأ الاستحقاق في سطرين</h2>
+<p>المحاسبة على <strong>أساس الاستحقاق</strong> تعني: الإيراد يُسجَّل عند تحققه (تقديم السلعة أو الخدمة) سواء قُبض أم لا، والمصروف يُسجَّل عند استهلاكه سواء دُفع أم لا. وفي المقابل يسجّل <strong>الأساس النقدي</strong> كل شيء عند حركة النقد فقط. لأن الاستحقاق يطابق كل سنة بإيراداتها ومصروفاتها الحقيقية (مبدأ المقابلة)، فهو الأساس المتبع في القوائم المالية. لكن هذا يترك فجوات بين التوقيت الاقتصادي والتوقيت النقدي، وتسدّها أربعة أنواع من التسويات:</p>
+<ul>
+<li><strong>مصروف مقدم:</strong> دفعت الآن مقابل خدمة لم تُستهلك بعد.</li>
+<li><strong>مصروف مستحق:</strong> استهلكت الخدمة ولم تدفع ثمنها بعد.</li>
+<li><strong>إيراد مقدم:</strong> قبضت الآن مقابل خدمة لم تقدمها بعد.</li>
+<li><strong>إيراد مستحق:</strong> قدمت الخدمة ولم تقبض ثمنها بعد.</li>
+</ul>
+
+<h2>أولًا: المصروف المقدم (أصل)</h2>
+<p>في مثالنا الافتتاحي، دُفع 120,000 جنيه في أول أكتوبر إيجارًا لسنة (من أكتوبر حتى نهاية سبتمبر التالي). عند الدفع يكون المبلغ كله أصلًا، لأن الشركة اشترت منفعة مستقبلية:</p>
+<table>
+<tr><th>البيان</th><th>مدين</th><th>دائن</th></tr>
+<tr><td>من ح/ مصروفات مقدمة (إيجار مدفوع مقدمًا)</td><td>120,000</td><td></td></tr>
+<tr><td>إلى ح/ النقدية</td><td></td><td>120,000</td></tr>
+</table>
+<p>وفي 31 ديسمبر، استهلكت الشركة ثلاثة أشهر (أكتوبر ونوفمبر وديسمبر) بقيمة 120,000 ÷ 12 × 3 = <strong>30,000 جنيه</strong>. قيد التسوية:</p>
+<table>
+<tr><th>البيان</th><th>مدين</th><th>دائن</th></tr>
+<tr><td>من ح/ مصروف الإيجار</td><td>30,000</td><td></td></tr>
+<tr><td>إلى ح/ مصروفات مقدمة</td><td></td><td>30,000</td></tr>
+</table>
+<p>النتيجة: قائمة الدخل تتحمل 30,000 فقط، والميزانية تظهر في أصولها 90,000 جنيه مصروف مقدم يُستهلك في السنة التالية. والمنطق نفسه يسري على التأمين المدفوع مقدمًا والاشتراكات السنوية.</p>
+
+<h2>ثانيًا: المصروف المستحق (التزام)</h2>
+<p>الاتجاه المعاكس: الخدمة استُهلكت لكنها لم تُدفع. مثال: رواتب شهر ديسمبر بقيمة 80,000 جنيه تُصرف في أول يناير. هل تتحملها سنة ديسمبر أم يناير؟ الموظفون عملوا في ديسمبر، إذن ديسمبر هي من يتحمل التكلفة. قيد التسوية في 31 ديسمبر:</p>
+<table>
+<tr><th>البيان</th><th>مدين</th><th>دائن</th></tr>
+<tr><td>من ح/ مصروف الرواتب</td><td>80,000</td><td></td></tr>
+<tr><td>إلى ح/ مصروفات مستحقة (رواتب مستحقة)</td><td></td><td>80,000</td></tr>
+</table>
+<p>وعند الصرف الفعلي في يناير: من ح/ المصروفات المستحقة إلى ح/ النقدية، فلا يتكرر تحميل المصروف مرتين. وهنا تنشأ التزامات من هذا النوع باستمرار: الكهرباء والمياه المستهلكة قبل وصول الفاتورة، الفوائد المتراكمة على القروض، والعمولات المستحقة للمندوبين.</p>
+
+<h2>ثالثًا: الإيراد المقدم (التزام)</h2>
+<p>هذه المرة أنت من قبضت مقدمًا. مثال: شركة صيانة قبضت 24,000 جنيه في أول نوفمبر مقابل عقد صيانة سنوي. هل كل المبلغ إيراد 2026؟ لا؛ فحتى 31 ديسمبر لم تقدم الشركة سوى شهرين من الخدمة. عند القبض يكون المبلغ التزامًا، لأن عليك خدمة لم تقدمها بعد:</p>
+<table>
+<tr><th>البيان</th><th>مدين</th><th>دائن</th></tr>
+<tr><td>من ح/ النقدية</td><td>24,000</td><td></td></tr>
+<tr><td>إلى ح/ إيرادات مقدمة (عقود صيانة)</td><td></td><td>24,000</td></tr>
+</table>
+<p>وفي 31 ديسمبر، تحقق إيراد شهرين: 24,000 ÷ 12 × 2 = <strong>4,000 جنيه</strong>. قيد التسوية:</p>
+<table>
+<tr><th>البيان</th><th>مدين</th><th>دائن</th></tr>
+<tr><td>من ح/ إيرادات مقدمة</td><td>4,000</td><td></td></tr>
+<tr><td>إلى ح/ إيراد الصيانة</td><td></td><td>4,000</td></tr>
+</table>
+<p>تبقى 20,000 جنيه إيرادًا مقدمًا في الميزانية ضمن الالتزامات، يتحول إلى إيراد شهرًا بشهر مع تنفيذ العقد. والمثال نفسه على الاشتراكات السنوية والإيجار المقبوض مقدمًا.</p>
+
+<h2>رابعًا: الإيراد المستحق (أصل)</h2>
+<p>الاتجاه الأخير: قدمت الخدمة ولم تقبض. مثال: أنجزت الشركة أعمالًا في ديسمبر بقيمة 15,000 جنيه تُحصَّل في يناير. الإيراد تحقق في ديسمبر، فيُسجَّل فيها:</p>
+<table>
+<tr><th>البيان</th><th>مدين</th><th>دائن</th></tr>
+<tr><td>من ح/ إيرادات مستحقة (أو العملاء)</td><td>15,000</td><td></td></tr>
+<tr><td>إلى ح/ إيراد الخدمات</td><td></td><td>15,000</td></tr>
+</table>
+<p>وعند التحصيل: من ح/ النقدية إلى ح/ الإيرادات المستحقة. عمليًا كثير من المنشآت تستخدم حساب العملاء مباشرة بدلًا من حساب إيرادات مستحقة منفصل، والنتيجة واحدة: الإيراد محقق ومدينٌ لك على الغير.</p>
+
+<h2>الجدول الذي يحسم الخلط</h2>
+<table>
+<tr><th>النوع</th><th>ماذا حدث أولًا؟</th><th>طبيعته في الميزانية</th><th>مثال</th></tr>
+<tr><td>مصروف مقدم</td><td>الدفع قبل الاستهلاك</td><td>أصل</td><td>إيجار أو تأمين مدفوع عن شهور قادمة</td></tr>
+<tr><td>مصروف مستحق</td><td>الاستهلاك قبل الدفع</td><td>التزام</td><td>رواتب الشهر تُدفع في الشهر التالي</td></tr>
+<tr><td>إيراد مقدم</td><td>القبض قبل تقديم الخدمة</td><td>التزام</td><td>اشتراك سنوي مقبوض مقدمًا</td></tr>
+<tr><td>إيراد مستحق</td><td>تقديم الخدمة قبل القبض</td><td>أصل</td><td>أعمال سُلّمت ولم تُحصَّل بعد</td></tr>
+</table>
+<p>قاعدة سريعة للحفظ: <strong>المقدم أوله نقد</strong> (دفعت أو قبضت مبكرًا)، <strong>والمستحق آخره نقد</strong> (النقد سيأتي لاحقًا). والمصروف المقدم والإيراد المستحق أصول، بينما المصروف المستحق والإيراد المقدم التزامات.</p>
+
+<h2>ثلاثة أخطاء شائعة</h2>
+<ol>
+<li><strong>نسيان قيد التسوية أصلًا:</strong> فتظهر السنة بمصروفات ناقصة أو إيرادات ناقصة، والربح يكذب في الاتجاهين.</li>
+<li><strong>تحميل المصروف مرتين:</strong> تسجيل المصروف مستحقًا في ديسمبر ثم تحميله مجددًا عند الدفع في يناير بدلًا من إقفال حساب المستحقات.</li>
+<li><strong>الخلط في اتجاه الميزانية:</strong> وضع الإيراد المقدم ضمن الأصول مثلًا، مع أنه التزام لأنك مدين بخدمة لم تقدمها.</li>
+</ol>
+<p>وتظهر هذه البنود في ميزان المراجعة قبل التسويات كأرصدة تحتاج معالجة، ولهذا يفيد وجود شيت ميزان مراجعة مبني تلقائيًا - كما في برامج <a href="../downloads.html">مكتبة الموقع</a> - في رصد الحسابات المعلقة قبل قفل السنة.</p>
+
+<div class="saber-box">
+<h2>☕ وببساطة على طريقة عمي صابر</h2>
+<p>عمي صابر دفع إيجار محله سنة كاملة قدام، 120 ألف جنيه في أول أكتوبر. جه يقفل السنة في ديسمبر وراح شاعل على المحل بالـ 120 ألف كلهم: «السنة دي خسارة والله». المحاسب ضحك وقاله: «إنت استهلكت تلاتة شهور بس يا عم صابر، يعني 30 ألف بس اللي على السنة دي. التسعين الباقيين فلوسك مدفوعة قدام، أصل ليك لسه هتستفيد بيه».</p>
+<p>وفي نفس اليوم لقى رواتب ديسمبر 80 ألف هتتدفع أول يناير. قال: «طيب دي هتتخصم من يناير». قاله المحاسب: «لأ، الشغل اتعمل في ديسمبر، يبقى ديسمبر هو اللي يتحملها. هنسجلها مصروف مستحق دلوقتي، ولما تدفع في يناير هنقفل المستحق، من غير ما يناير يتحمل حاجة مش بتاعته».</p>
+<p>عمي صابر حط إيده على دماغه: «يعني نص فلوسي دفعتها بدري ونص تكاليفي لسه مدفعهاش، والسنة لازم تشيل بتاعها بس؟». المحاسب: «بالظبط كده. المقدم أوله نقد، والمستحق آخره نقد، وكل سنة تشيل اللي حصل فيها مش اللي اتدفع فيها».</p>
+<p>الخلاصة على لسان عمي صابر: <strong>"متسجلش الفلوس على حسب يوم القبض والدفع. سجلها على حسب يوم الاستحقاق: الخدمة اتحصلت إمتى؟ والإيجار استهلكته إمتى؟ واللي يتبقى يقعد في الميزانية مستني دوره، أصل لو ليك والتزام لو عليك."</strong></p>
+</div>
+<div class="related-articles">
+<h3>📚 مقالات وأدوات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="inventory-count-variances.html">
+<h4>فروق الجرد: أنواعها ومعالجتها</h4>
+<p>العجز والزيادة بين الدفتري والفعلي وقيود المعالجة</p>
+</a>
+<a class="related-card" href="journal-entries-guide.html">
+<h4>دليل قيود اليومية</h4>
+<p>القيد المزدوج خطوة بخطوة من التحليل حتى الترحيل</p>
+</a>
+<a class="related-card" href="income-statement-guide.html">
+<h4>قائمة الدخل ببساطة</h4>
+<p>من المبيعات حتى صافي الربح، بندًا بندًا</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>66 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+<div class="command-item" data-href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+
+
+
+
+<div class="command-item" data-href="../financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div><div class="command-item" data-href="../closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div><div class="command-item" data-href="../quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div><div class="command-item" data-href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div><div class="command-item" data-href="../tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div>
+<div class="command-item" data-href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div></div></div>
+<div class="command-item" data-href="../changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>66 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
