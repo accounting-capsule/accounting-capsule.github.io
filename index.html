@@ -216,19 +216,13 @@
 <div class="header-search">
 <button class="search-trigger">
 <i class="fas fa-search"></i>
-<span>ابحث عن شيتات، كورسات، مقالات...</span>
+<span>ابحث في الموقع...</span>
 <kbd>Ctrl + K</kbd>
 </button>
 </div>
 <div class="header-actions">
-<button aria-label="Notifications" class="header-btn notification-btn">
-<i class="fas fa-bell"></i>
-<span class="notification-dot"></span>
-</button>
-<button aria-label="Switch Language" class="lang-switcher">
-<i class="fas fa-globe"></i>
-<span>AR</span>
-</button>
+
+
 </div>
 </header>
 <!-- Page Content -->
@@ -236,13 +230,13 @@
 <!-- Welcome Banner -->
 <div class="welcome-banner">
 <div class="welcome-content">
-<h1>👋 أهلاً بيك في كبسولة المحاسب</h1>
-<p>19 برنامج حسابات Excel جاهزة للتحميل المجاني، ومقالات تعليمية عملية - بدون تسجيل.</p>
+<h1>كل أدوات المحاسب في مكان واحد</h1>
+<p>19 برنامج حسابات Excel جاهزة لنشاطك، حاسبات ضريبية محدثة بقواعد 2026، ومقالات عملية - مجانًا وبدون تسجيل.</p>
 </div>
-<a class="btn btn-gold" href="downloads.html">
-<i class="fas fa-download"></i>
-                    تصفح الجديد
-                </a>
+<div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+<a class="btn btn-gold" href="downloads.html"><i class="fas fa-download"></i> برامج الحسابات</a>
+<a class="btn btn-gold" href="calculators.html" style="background:rgba(255,255,255,0.15); box-shadow:none;"><i class="fas fa-calculator"></i> حاسبة المرتبات</a>
+</div>
 </div>
 <!-- Quick Actions -->
 <div class="quick-actions">
@@ -253,14 +247,14 @@
 <h4>شيتات Excel</h4>
 <p>19 برنامج جاهز</p>
 </div>
-<div class="quick-action" onclick="location.href='#'">
+<div class="quick-action" onclick="location.href='calculators.html'">
 <div class="quick-action-icon blue">
-<i class="fas fa-graduation-cap"></i>
+<i class="fas fa-calculator"></i>
 </div>
-<h4>الكورسات</h4>
-<p>قريبًا</p>
+<h4>حاسبات سريعة</h4>
+<p>مرتبات - قيمة مضافة - إهلاك</p>
 </div>
-<div class="quick-action" onclick="location.href='#'">
+<div class="quick-action" onclick="location.href='downloads.html'">
 <div class="quick-action-icon gold">
 <i class="fas fa-laptop-code"></i>
 </div>
@@ -284,6 +278,25 @@
 <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-file-excel"></i></div><div class="stat-value">19</div><div class="stat-label">برامج حسابات جاهزة</div></div>
 <div class="stat-card"><div class="stat-icon green"><i class="fas fa-newspaper"></i></div><div class="stat-value">3</div><div class="stat-label">مقالات تعليمية</div></div>
 <div class="stat-card"><div class="stat-icon gold"><i class="fas fa-gift"></i></div><div class="stat-value">100%</div><div class="stat-label">مجاني وبدون تسجيل</div></div>
+</div><div style="margin:1.5rem 0;">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+<h2 style="font-size:1.25rem; font-weight:800; margin:0;"><i class="fas fa-calculator" style="color:var(--primary-600); margin-left:0.5rem;"></i>حاسبات سريعة</h2>
+<a href="calculators.html" style="color:var(--primary-600); font-weight:700; text-decoration:none; font-size:0.9rem;">كل الحاسبات <i class="fas fa-arrow-left"></i></a>
+</div>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem;">
+<a href="calculators.html#payroll" style="background:white; border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:1.25rem; text-decoration:none; color:inherit; display:block;">
+<div style="font-weight:800; margin-bottom:0.25rem;"><i class="fas fa-money-check-alt" style="color:var(--primary-600); margin-left:0.4rem;"></i>حاسبة مرتب الموظف</div>
+<div style="color:var(--gray-600); font-size:0.85rem;">ضريبة كسب العمل والتأمينات 2026 - صافي مرتبك في ثانية</div>
+</a>
+<a href="calculators.html#vat" style="background:white; border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:1.25rem; text-decoration:none; color:inherit; display:block;">
+<div style="font-weight:800; margin-bottom:0.25rem;"><i class="fas fa-percent" style="color:var(--primary-600); margin-left:0.4rem;"></i>حاسبة القيمة المضافة</div>
+<div style="color:var(--gray-600); font-size:0.85rem;">أضف أو استخرج ضريبة الـ 14% من أي مبلغ</div>
+</a>
+<a href="calculators.html#depreciation" style="background:white; border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:1.25rem; text-decoration:none; color:inherit; display:block;">
+<div style="font-weight:800; margin-bottom:0.25rem;"><i class="fas fa-chart-line" style="color:var(--primary-600); margin-left:0.4rem;"></i>حاسبة الإهلاك</div>
+<div style="color:var(--gray-600); font-size:0.85rem;">قسط ثابت أو متناقص بالمعدلات الضريبية المصرية</div>
+</a>
+</div>
 </div>
 <!-- Chart Widget -->
 <!-- Featured Downloads -->
