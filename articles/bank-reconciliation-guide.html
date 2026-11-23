@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/bank-reconciliation-guide.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="تسوية البنك خطوة بخطوة: مذكرة التسوية بمثال رقمي كامل | كبسولة المحاسب" property="og:title"/>
+<meta content="شرح تسوية البنك (Bank Reconciliation) للمحاسبين: لماذا يختلف رصيد الدفاتر عن كشف البنك، بنود الفروق، مذكرة تسوية بمثال رقمي كامل، والقيود المحاسبية اللازمة." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/bank-reconciliation-guide.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="تسوية البنك خطوة بخطوة: مذكرة التسوية بمثال رقمي كامل | كبسولة المحاسب" name="twitter:title"/>
+<meta content="شرح تسوية البنك (Bank Reconciliation) للمحاسبين: لماذا يختلف رصيد الدفاتر عن كشف البنك، بنود الفروق، مذكرة تسوية بمثال رقمي كامل، والقيود المحاسبية اللازمة." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="شرح تسوية البنك (Bank Reconciliation) للمحاسبين: لماذا يختلف رصيد الدفاتر عن كشف البنك، بنود الفروق، مذكرة تسوية بمثال رقمي كامل، والقيود المحاسبية اللازمة." name="description"/>
+<title>تسوية البنك خطوة بخطوة: مذكرة التسوية بمثال رقمي كامل | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/bank-reconciliation-guide.html#article", "headline": "تسوية البنك خطوة بخطوة: مذكرة التسوية بمثال رقمي كامل | كبسولة المحاسب", "description": "شرح تسوية البنك (Bank Reconciliation) للمحاسبين: لماذا يختلف رصيد الدفاتر عن كشف البنك، بنود الفروق، مذكرة تسوية بمثال رقمي كامل، والقيود المحاسبية اللازمة.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://accounting-capsule.github.io/articles/bank-reconciliation-guide.html"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "قيود اليومية من الصفر"}]}]}</script>
+</head>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> &lsaquo;
+<a href="../blog.html">المدونة</a> &lsaquo;
+<span>تسوية البنك</span>
+</nav>
+<span class="article-category">أساسيات</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 14 دقيقة قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>تسوية البنك خطوة بخطوة: مذكرة التسوية بمثال رقمي كامل</h1>
+</div>
+<div class="article-content">
+
+<p>رصيد البنك في دفاترك ٨٤ ألف جنيه، وكشف حساب البنك يقول ٩١ ألفًا. أيهما الصحيح؟ غالبًا كلاهما، وكل واحد منهما ينظر إلى الحقيقة من زاوية زمنية مختلفة. المسافة بين الرقمين اسمها فروق التسوية، ومعالجتها الدورية اسمها <strong>تسوية البنك</strong> (Bank Reconciliation): أكثر إجراء رقابي بسيط وأكثر إجراء يكشف أخطاءً حقيقية في المحاسبة اليومية. في هذا المقال نشرح لماذا تختلف الأرصدة، وكيف تعد مذكرة التسوية خطوة بخطوة بمثال رقمي كامل.</p>
+
+<h2>ما تسوية البنك ولماذا هي إجراء رقابي؟</h2>
+<p>تسوية البنك هي عملية مطابقة رصيد حساب البنك في دفاتر المنشأة مع الرصيد الظاهر في كشف حساب البنك في تاريخ معين، وتحديد بنود الفرق وتفسيرها بندًا بندًا، ثم إثبات ما يلزم منها بقيود في الدفاتر.</p>
+<p>هي إجراء رقابي لأنها تقارن سجلك الداخلي بسجل طرف خارجي مستقل لا تسيطر عليه. أي فرق لا تستطيع تفسيره هو إشارة إنذار: خطأ في القيد، مبلغ مفقود، أو حركة لم تعلم بها. الشركات التي تؤجل التسوية لنهاية السنة تكتشف أخطاء عمرها شهور في وقت لا تصلح فيه الإجراءات السهلة.</p>
+
+<h2>لماذا يختلف الرصيدان؟ الأسباب الأربعة الشائعة</h2>
+<h3>1. شيكات صادرة لم تُصرف بعد</h3>
+<p>حررت شيكًا لمورد بعشرة آلاف جنيه وقيدته في دفاترك مخفضًا رصيد البنك، لكن المورد لم يقدم الشيك للصرف بعد. دفاترك خصمت المبلغ وكشف البنك لم يخصمه. الفرق ليس خطأ، بل فرق توقيت.</p>
+<h3>2. إيداعات في الطريق</h3>
+<p>أودعت شيكات عملاء في حسابك وقيدتها زيادةً في البنك، لكن البنك لم يضفها للرصيد بعد لأنها تحت التحصيل. مرة أخرى: فرق توقيت، يزول وحده بعد أيام.</p>
+<h3>3. حركات سجلها البنك ولم تسجلها أنت</h3>
+<p>عمولة إدارة حساب خصمها البنك، أو تحصيل ورقة تجارية أضافها لحسابك، أو فوائد دائنة. البنك حرك رصيدك وأنت لا تعلم إلا عند وصول كشف الحساب. هذه البنود تتطلب قيودًا في دفاترك، لا مجرد ملاحظة.</p>
+<h3>4. أخطاء فعلية</h3>
+<p>قيد بمبلغ خاطئ (٩٨٠٠ بدل ٨٩٠٠)، قيد مكرر، حركة نُسيت بالكامل، أو حتى خطأ من البنك نفسه. التسوية الدورية هي وسيلتك العملية الوحيدة لاكتشاف هذه الأخطاء مبكرًا.</p>
+
+<h2>مذكرة تسوية البنك: الشكل القياسي</h2>
+<p>المذكرة تبدأ من أحد الرصيدين وتصل بالتسوية إلى الآخر. الشكل الأكثر شيوعًا:</p>
+<table class="article-table">
+<thead><tr><th>البند</th><th>التأثير</th></tr></thead>
+<tbody>
+<tr><td>رصيد كشف البنك في تاريخ التسوية</td><td>نقطة البداية</td></tr>
+<tr><td>(+) إيداعات في الطريق</td><td>مبالغ قيدتها دفتريًا ولم يضفها البنك</td></tr>
+<tr><td>(-) شيكات صادرة لم تُصرف</td><td>مبالغ خصمتها دفتريًا ولم يخصمها البنك</td></tr>
+<tr><td>(+/-) أخطاء البنك إن وجدت</td><td>تصحح لدى البنك لا في الدفاتر</td></tr>
+<tr><td>= الرصيد المعدل وفق كشف البنك</td><td>يجب أن يساوي الرصيد الدفتري المعدل</td></tr>
+</tbody>
+</table>
+<p>وفي الجهة المقابلة: رصيد الدفاتر (+) المبالغ التي أضافها البنك ولم تقيدها (-) المبالغ التي خصمها البنك ولم تقيدها (+/-) أخطاء الدفاتر = نفس الرصيد المعدل. إذا التقى الطرفان عند رقم واحد، فالتسوية صحيحة.</p>
+
+<h2>مثال رقمي كامل</h2>
+<p>في 31 أكتوبر: رصيد حساب البنك في الدفاتر <strong>84,300 جنيه</strong>، ورصيد كشف البنك <strong>91,150 جنيهًا</strong>. بمراجعة الحركات وجدت:</p>
+<ul>
+<li>شيكات صادرة لم تصرف: شيك رقم 152 بمبلغ 12,000 جنيه، وشيك رقم 158 بمبلغ 7,500 جنيه (المجموع 19,500).</li>
+<li>إيداع في الطريق: شيكات عملاء بمبلغ 10,200 جنيه أودعت يوم 30 أكتوبر ولم تظهر في الكشف.</li>
+<li>عمولة بنكية خصمها البنك بمبلغ 350 جنيهًا لم تُقيد دفتريًا.</li>
+<li>تحصيل ورقة تجارية أضافها البنك بمبلغ 3,000 جنيه لم تُقيد دفتريًا.</li>
+<li>خطأ دفتري: سند صرف قيد بمبلغ 2,900 جنيه والصحيح 2,600 (فرق 300 زيادة خصم في الدفاتر).</li>
+</ul>
+<h3>الجهة الأولى: من كشف البنك</h3>
+<table class="article-table">
+<tbody>
+<tr><td>رصيد كشف البنك</td><td>91,150</td></tr>
+<tr><td>(+) إيداعات في الطريق</td><td>10,200</td></tr>
+<tr><td>(-) شيكات لم تُصرف</td><td>(19,500)</td></tr>
+<tr><td><strong>= الرصيد المعدل</strong></td><td><strong>81,850</strong></td></tr>
+</tbody>
+</table>
+<h3>الجهة الثانية: من الدفاتر</h3>
+<table class="article-table">
+<tbody>
+<tr><td>رصيد البنك في الدفاتر</td><td>84,300</td></tr>
+<tr><td>(+) تحصيل ورقة تجارية</td><td>3,000</td></tr>
+<tr><td>(-) عمولة بنكية</td><td>(350)</td></tr>
+<tr><td>(+) تصحيح خطأ سند الصرف (300 زيادة خصم سابقة)</td><td>300</td></tr>
+<tr><td><strong>= الرصيد المعدل</strong></td><td><strong>87,250</strong></td></tr>
+</tbody>
+</table>
+<p>الرقمان لا يتطابقان (81,850 مقابل 87,250، فرق 5,400). هنا تكمن قيمة التسوية: الفرق غير المفسر يعني أن بندًا ما زال مفقودًا. بإعادة المطابقة حركة حركة تبين أن سند قبض بمبلغ 5,400 جنيه قيد مرتين بالخطأ في الدفاتر. بعد عكس التكرار تصبح الجهة الثانية 81,850، وتكتمل التسوية. هذا بالضبط نوع الأخطاء الذي يظل خفيًا لشهور دون تسوية دورية.</p>
+
+<h2>القيود المحاسبية بعد التسوية</h2>
+<p>قاعدة أساسية: <strong>فروق التوقيت لا تحتاج قيودًا</strong> (الشيكات التي لم تصرف والإيداعات في الطريق تزول وحدها). القيود تخص فقط ما سجله البنك ولم تسجله أنت، وأخطاء دفاترك:</p>
+<table class="article-table">
+<thead><tr><th>القيد</th><th>مدين</th><th>دائن</th></tr></thead>
+<tbody>
+<tr><td>إثبات تحصيل الورقة التجارية: من ح/ البنك إلى ح/ أوراق القبض</td><td>3,000</td><td>3,000</td></tr>
+<tr><td>إثبات العمولة البنكية: من ح/ مصروفات بنكية إلى ح/ البنك</td><td>350</td><td>350</td></tr>
+<tr><td>تصحيح سند الصرف: من ح/ البنك إلى ح/ المصروف المعني</td><td>300</td><td>300</td></tr>
+<tr><td>عكس سند القبض المكرر: قيد عكسي للسند المكرر</td><td>5,400</td><td>5,400</td></tr>
+</tbody>
+</table>
+<p>بعد هذه القيود يصبح رصيد البنك الدفتري 81,850 جنيهًا، مطابقًا للرصيد المعدل من كشف البنك.</p>
+
+<h2>أخطاء شائعة في التسوية</h2>
+<ul>
+<li><strong>الاكتفاء بمقارنة الرصيدين دون مذكرة مكتوبة:</strong> التسوية الذهنية لا تترك دليلًا للمراجعة ولا تضمن اكتمال الفروق. المذكرة الموقعة جزء من مستندات الشركة.</li>
+<li><strong>قيد فروق التوقيت في الدفاتر:</strong> الشيك الذي لم يصرف ليس مصروفًا عائدًا؛ قيده مرة أخرى يضاعف الخطأ.</li>
+<li><strong>ترحيل فروق غير مفسرة إلى حساب «فروق تسوية» معلق:</strong> حساب معلق يكبر شهرًا بعد شهر هو اعتراف بأن أحدًا لا يعرف أين تذهب الأموال. كل فرق يجب أن يصل إلى تفسير.</li>
+<li><strong>التسوية مرة واحدة في السنة:</strong> كلما طالت الفترة تراكمت الحركات وصعب التتبع. التسوية الشهرية هي الحد الأدنى العملي، والأسبوعية أفضل للأنشطة كثيفة الحركة.</li>
+</ul>
+
+<h2>الأسئلة الشائعة</h2>
+<h3>كم مرة يجب إعداد تسوية البنك؟</h3>
+<p>شهريًا على الأقل لكل حساب بنكي، فور استلام كشف الحساب. الشركات التي تعتمد على المدفوعات الإلكترونية اليومية تستفيد من تسوية أسبوعية أو حتى يومية، لأن حجم الحركات يجعل الفرق المؤجل صعب التتبع.</p>
+<h3>هل تسوية البنك مطلوبة قانونًا؟</h3>
+<p>ليست إجراءً إلزاميًا بذاته، لكنها من أساسيات الرقابة الداخلية التي يتوقعها أي مراجع خارجي، وأول ورقة يطلبها عند فحص حساب البنك. غيابها يضعف مصداقية الرصيد النقدي في القوائم المالية كلها.</p>
+<h3>ماذا أفعل بشيك صادر قديم لم يصرف منذ شهور؟</h3>
+<p>تابعه مع المستفيد: قد يكون الشيك فقد أو قدم للصرف ورفض. إذا تقرر إلغاؤه، اعكس قيده بسند رسمي موثق، ولا تتركه بندًا دائمًا في التسوية.</p>
+<h3>هل الفرق بين الرصيدين يعني وجود خطأ دائمًا؟</h3>
+<p>لا. أغلب الفروق في أي منشأة منتظمة هي فروق توقيت طبيعية. الخطأ يُشتبه به فقط عندما يبقى الفرق غير مفسر بعد حصر كل بنود التوقيت والحركات البنكية.</p>
+<h3>من يعد التسوية داخل الشركة؟</h3>
+<p>يفضل أن يعدها شخص غير الذي يسجل حركات البنك وغير المخول بالصرف، لأن قيمتها الرقابية تأتي من استقلال من يراجع عن من سجل. في المنشآت الصغيرة جدًا حيث المحاسب واحد، تبقى التسوية واجبة مع مراجعة صاحب العمل لها.</p>
+
+<div class="saber-box">
+<div class="saber-header"><i class="fas fa-lightbulb"></i> كلمة عمي صابر</div>
+<p>تسوية البنك دي زي ما بتعد الفلوس اللي في جيبك آخر اليوم وتقارنها باللي صرفته. البنك عنده ورقة، وإنت عندك ورقة، ولازم الاتنين يتفقوا. أغلب الفرق هتلاقيه شيكات لسه متصرفتش وإيداعات لسه في السكة، ودي حاجة طبيعية. بس الفرق اللي مش عارف تفسيره هو اللي يخوف، وعشان كده متأجلهاش. اعملها كل شهر أول بأول، وحط قيودك على اللي البنك سجله وإنت نسيته، وسيب فروق التوقيت تمشي لوحدها. ولو الأرقام كترت عليك، برامج المكتبة عندنا فيها تدفق بنك وخزينة جاهز هيسهل عليك المطابقة جدًا.</p>
+</div>
+
+<div class="article-cta">
+<h3>نظّم حركة البنك والخزينة من مكان واحد</h3>
+<p>برامج كبسولة المحاسب الجاهزة تتضمن دفتر يومية متكامل وحركة بنك وخزينة وتقارير أرصدة تلقائية، وهي نقطة بداية عملية قبل الانتقال إلى نظام أكبر.</p>
+<a href="../downloads.html" class="cta-button"><i class="fas fa-download"></i> تصفح مكتبة البرامج</a>
+</div>
+
+</div>
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="../changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
