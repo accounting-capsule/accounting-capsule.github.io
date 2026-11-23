@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/income-statement-guide.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="قائمة الدخل خطوة بخطوة: كيف تقرأها وتعدّها بنفسك؟ | كبسولة المحاسب" property="og:title"/>
+<meta content="شرح عملي كامل لقائمة الدخل: من صافي المبيعات إلى صافي الربح بعد الضريبة، بمثال رقمي كامل، وطريقة قراءة أي قائمة في خمس دقائق بالهوامش والنسب." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/income-statement-guide.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="قائمة الدخل خطوة بخطوة: كيف تقرأها وتعدّها بنفسك؟ | كبسولة المحاسب" name="twitter:title"/>
+<meta content="قائمة الدخل بندًا ببند بمثال رقمي كامل: مجمل الربح، ربح التشغيل، صافي الربح، وكيف تقرأ أي قائمة في خمس دقائق." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="شرح عملي كامل لقائمة الدخل: من صافي المبيعات إلى صافي الربح بعد الضريبة، بمثال رقمي كامل، وطريقة قراءة أي قائمة في خمس دقائق بالهوامش والنسب." name="description"/>
+<title>قائمة الدخل خطوة بخطوة: كيف تقرأها وتعدّها بنفسك؟ | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/income-statement-guide.html#article", "headline": "قائمة الدخل خطوة بخطوة: كيف تقرأها وتعدّها بنفسك؟", "description": "شرح عملي كامل لقائمة الدخل: من صافي المبيعات إلى صافي الربح بعد الضريبة، بمثال رقمي كامل، وطريقة قراءة أي قائمة في خمس دقائق بالهوامش والنسب.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": "https://accounting-capsule.github.io/articles/income-statement-guide.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "قائمة الدخل خطوة بخطوة"}]}]}</script>
+</head>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> &lsaquo;
+<a href="../blog.html">المدونة</a> &lsaquo;
+<span>قائمة الدخل خطوة بخطوة</span>
+</nav>
+<span class="article-category">محاسبة مالية</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 13 دقيقة قراءة</span>
+</div>
+<h1>قائمة الدخل خطوة بخطوة: كيف تقرأها وتعدّها بنفسك؟</h1>
+</div>
+<div class="article-content">
+<p>قائمة الدخل هي إجابة السؤال الذي يسأله كل صاحب عمل: «هل أنا كسبان ولا خسران؟» لكنها تجيب عن أسئلة أعمق إذا قرأتها بندًا بندًا: هل المشكلة في البيع نفسه أم في التكلفة؟ هل تلتهم المصاريف الإدارية هامشك؟ هل ربحك الحقيقي يأتي من نشاطك أم من مصادر عرضية لن تتكرر؟ في هذا الدليل نبني قائمة دخل كاملة لشركة تجارية افتراضية، من أول سطر إيرادات حتى صافي الربح بعد الضريبة، ونتعلم قراءة كل رقم فيها وما يخفيه.</p>
+
+<h2>🧾 ما قائمة الدخل أصلًا؟</h2>
+<p>قائمة الدخل تقرير مالي يلخص <strong>إيرادات ومصروفات فترة زمنية معينة</strong> (شهر، ربع سنة، سنة مالية) ليصل إلى صافي الربح أو الخسارة. الفرق الجوهري بينها وبين قائمة المركز المالي: قائمة الدخل <em>فيلم</em> يصف ما حدث خلال الفترة، والمركز المالي <em>صورة فوتوغرافية</em> لوضع الشركة في لحظة معينة. ولهذا تبدأ قائمة الدخل دائمًا بعبارة مثل «عن السنة المالية المنتهية في 31 ديسمبر 2026».</p>
+<p>والقاعدة التي تبني عليها القائمة كلها هي مبدأ المقابلة: كل إيراد يقابله ما تكبدته للحصول عليه من مصروفات في نفس الفترة، بغض النظر عن توقيت القبض والدفع النقدي. (الفرق بين الربح والكاش موضوع <a href="profit-vs-cash-flow.html">مقال مستقل</a> لأهميته.)</p>
+
+<h2>🏗️ هيكل القائمة: ست محطات من الإيراد إلى الصافي</h2>
+
+<h3>المحطة 1: صافي المبيعات (الإيرادات)</h3>
+<p>أول سطر ليس إجمالي مبيعاتك بل <strong>صافيها</strong>: تطرح منها المردودات والمسموحات وخصومات العملاء. بعت بـ 2,000,000 جنيه ورجع لك عملاء بضاعة بـ 50,000 ومنحتهم خصومات 30,000؟ صافي مبيعاتك 1,920,000 جنيه. من يرفع تقريره بإجمالي المبيعات يخدع نفسه أولًا.</p>
+
+<h3>المحطة 2: تكلفة المبيعات ومجمل الربح</h3>
+<p>تكلفة المبيعات هي ما كلفتك به البضاعة المباعة تحديدًا: في الشركات التجارية = مخزون أول المدة + صافي المشتريات − مخزون آخر المدة. وفي شركاتنا الافتراضية: 1,150,000 جنيه.</p>
+<p><strong>مجمل الربح = صافي المبيعات − تكلفة المبيعات = 1,920,000 − 1,150,000 = 770,000 جنيه.</strong></p>
+<p>وهامش مجمل الربح (770,000 ÷ 1,920,000 = 40.1%) هو أول مؤشر صحي للنشاط: إذا كان هامش مجالك المعتاد 40% وأنت تحقق 25%، فالمشكلة في التسعير أو الشراء أو الفاقد، قبل أي مصروف آخر.</p>
+
+<h3>المحطة 3: مصروفات التشغيل وربح التشغيل</h3>
+<p>هنا تنزل المصروفات اليومية التي لا تدخل في تكلفة البضاعة نفسها، وتُقسم عادة إلى:</p>
+<ul>
+<li><strong>مصروفات البيع والتسويق:</strong> مرتبات البائعين والعمولات، الإعلانات، مصاريف التوصيل: 285,000 جنيه.</li>
+<li><strong>المصروفات الإدارية والعمومية:</strong> مرتبات الإدارة، إيجار المكتب، الكهرباء والتليفونات، القرطاسية، الأتعاب القانونية والمحاسبية: 220,000 جنيه.</li>
+<li><strong>مصروف الإهلاك:</strong> نصيب السنة من تكلفة الأصول: 65,000 جنيه.</li>
+</ul>
+<p><strong>ربح التشغيل = 770,000 − 570,000 = 200,000 جنيه.</strong> هذا أهم رقم في القائمة إطلاقًا: ربح نشاطك الأساسي قبل أي بنود عرضية أو تمويلية أو ضريبية. شركة ربحها التشغيلي موجب ومتنامٍ شركة صحية حتى لو تذبذب صافي الربح لأسباب مؤقتة.</p>
+
+<h3>المحطة 4: الإيرادات والمصروفات الأخرى</h3>
+<p>بنود خارج النشاط الأساسي: فوائد دائنة على الودائع (+12,000)، إيراد من بيع أصل قديم (+8,000)، مصروفات غير متكررة كغرامة (−5,000). صافيها +15,000 جنيه. تظهر منفصلة حتى لا تلوث صورة النشاط: لو بعت سيارة قديمة بربح 300,000 وأخفيته وسط المبيعات، سيبدو نشاطك أقوى مما هو عليه بكثير.</p>
+
+<h3>المحطة 5: مصروفات التمويل</h3>
+<p>فوائد القروض والتسهيلات البنكية: 35,000 جنيه. تُفصل لأنها نتيجة <em>قرار التمويل</em> (كيف تمول شركتك) لا قرار التشغيل (كيف تديرها). <strong>صافي الربح قبل الضريبة = 200,000 + 15,000 − 35,000 = 180,000 جنيه.</strong></p>
+
+<h3>المحطة 6: الضريبة وصافي الربح</h3>
+<p>ضريبة الدخل على الأرباح التجارية والصناعية في مصر 22.5%: 180,000 × 22.5% = 40,500 جنيه (عمليًا يُحسب الوعاء الضريبي بتعديلات على الربح المحاسبي، لكن المبدأ واحد). <strong>صافي الربح بعد الضريبة = 139,500 جنيه</strong>، وهو ما ينتقل إلى الأرباح المبقاة في قائمة المركز المالي.</p>
+
+<h2>📊 القائمة كاملة في جدول واحد</h2>
+<table>
+<thead>
+<tr><th>البند</th><th>المبلغ (ج.م)</th></tr>
+</thead>
+<tbody>
+<tr><td>إجمالي المبيعات</td><td>2,000,000</td></tr>
+<tr><td>(−) المردودات والمسموحات والخصومات</td><td>(80,000)</td></tr>
+<tr><td><strong>= صافي المبيعات</strong></td><td><strong>1,920,000</strong></td></tr>
+<tr><td>(−) تكلفة المبيعات</td><td>(1,150,000)</td></tr>
+<tr><td><strong>= مجمل الربح</strong></td><td><strong>770,000</strong> (هامش 40.1%)</td></tr>
+<tr><td>(−) مصروفات البيع والتسويق</td><td>(285,000)</td></tr>
+<tr><td>(−) المصروفات الإدارية والعمومية</td><td>(220,000)</td></tr>
+<tr><td>(−) مصروف الإهلاك</td><td>(65,000)</td></tr>
+<tr><td><strong>= ربح التشغيل</strong></td><td><strong>200,000</strong></td></tr>
+<tr><td>(+) إيرادات أخرى</td><td>20,000</td></tr>
+<tr><td>(−) مصروفات أخرى</td><td>(5,000)</td></tr>
+<tr><td>(−) مصروفات التمويل (فوائد)</td><td>(35,000)</td></tr>
+<tr><td><strong>= صافي الربح قبل الضريبة</strong></td><td><strong>180,000</strong></td></tr>
+<tr><td>(−) ضريبة الدخل (22.5%)</td><td>(40,500)</td></tr>
+<tr><td><strong>= صافي الربح بعد الضريبة</strong></td><td><strong>139,500</strong> (هامش 7.3%)</td></tr>
+</tbody>
+</table>
+
+<h2>🔍 كيف تقرأ أي قائمة دخل في خمس دقائق؟</h2>
+<h3>1. انزل بالهوامش لا بالأرقام المطلقة</h3>
+<p>احسب ثلاث نسب: هامش مجمل الربح، هامش ربح التشغيل (10.4% في مثالنا)، وهامش صافي الربح (7.3%). قارنها بالسنة السابقة وبمتوسط المجال. النسبة المنحدرة إنذار حتى لو الربح المطلق زاد.</p>
+<h3>2. اسأل: الربح من أين؟</h3>
+<p>قسّم صافي الربح إلى مصدره: هل ربح التشغيل يغطي كل شيء أم أن «الإيرادات الأخرى» هي التي أخرجت السنة موجبة؟ شركة ربحها التشغيلي سالب 50,000 وصافيها موجب بفضل بيع أصل قديم، شركة تخسر في نشاطها وتتجمّل.</p>
+<h3>3. راقب المصروف كنسبة من المبيعات</h3>
+<p>مصروفات البيع كانت 12% من المبيعات فصارت 14.8%؟ إما حملة تسويق مدروسة ستؤتي ثمارها، أو تسرب يحتاج وقفة. الرقم لا يحكي القصة، لكنه يقول لك أين تبحث عنها.</p>
+<h3>4. لا تقرأ سنة واحدة</h3>
+<p>قائمة دخل واحدة صورة، وثلاث سنوات متتالية قصة. الاتجاه أصدق من اللقطة: مبيعات تنمو 20% سنويًا مع هامش ثابت، قصة أفضل من قفزة واحدة مدفوعة بعميل استثنائي.</p>
+
+<h2>⚠️ أخطاء شائعة في إعدادها</h2>
+<ul>
+<li><strong>خلط المصروف الشخصي بمصروف الشركة:</strong> سيارة المالك الخاصة وسط مصروفات الشركة تخفض الربح زورًا وتعرضك لمشكلة ضريبية.</li>
+<li><strong>تحميل مشتريات البضاعة كاملة كمصروف:</strong> ما لم يُبع منها مخزون في المركز المالي، وإلا شوّهت مجمل الربح تمامًا. الفرق بين المخزون والمصروف راجعه في <a href="asset-vs-expense.html">مقال الأصل والمصروف</a>.</li>
+<li><strong>إغفال الإهلاك:</strong> قائمة دخل بلا إهلاك تبالغ في الربح وتستهلك الأصول صامتًا. احسبه من <a href="../calculators.html">حاسبة الإهلاك</a> إن لم يكن لديك سجل منتظم.</li>
+<li><strong>تجاهل الاستحقاق:</strong> مرتبات ديسمبر تخص ديسمبر حتى لو دُفعت في يناير، والإيراد المحقق يخص فترته حتى لو لم يُحصَّل.</li>
+</ul>
+
+<h2>❓ أسئلة شائعة</h2>
+<div class="faq-section">
+<details>
+<summary>ما الفرق بين مجمل الربح وصافي الربح؟</summary>
+<p>مجمل الربح هو ما يتبقى بعد خصم تكلفة البضاعة المباعة فقط، ويقيس كفاءة التسعير والشراء. صافي الربح هو ما يتبقى بعد كل المصروفات (تشغيل وتمويل وضريبة)، وهو النتيجة النهائية للفترة. الفجوة بينهما هي مصروفات إدارتك وتشغيلك.</p>
+</details>
+<details>
+<summary>هل المسحوبات الشخصية تظهر في قائمة الدخل؟</summary>
+<p>لا. المسحوبات ليست مصروفًا بل توزيع لحقوق الملكية، فتظهر في قائمة التغير في حقوق الملكية وتقلل رصيد المالك في المركز المالي، دون أن تمس الربح.</p>
+</details>
+<details>
+<summary>كيف تختلف القائمة في شركة خدمات عن شركة تجارية؟</summary>
+<p>لا توجد «تكلفة بضاعة مباعة» بالمعنى التجاري؛ يظهر بدلًا منها «تكلفة تقديم الخدمة» (مرتبات من يقدم الخدمة مباشرة ومصروفاتها المباشرة). الباقي بالمنطق نفسه: إيرادات، تكلفة مباشرة، مجمل ربح، مصروفات، صافي.</p>
+</details>
+<details>
+<summary>ما علاقة قائمة الدخل بالإقرار الضريبي؟</summary>
+<p>الإقرار يبدأ من ربحك المحاسبي ثم يجري عليه التعديلات الضريبية (استبعاد مصروفات غير واجبة الخصم، تطبيق الإهلاك الضريبي بدلًا من المحاسبي، وغيرها) للوصول إلى الوعاء الضريبي. قائمة دخل منتظمة وموثقة هي أساس إقرار مريح وفحص أقل إرهاقًا.</p>
+</details>
+<details>
+<summary>أحتاج قائمة دخل شهرية أم سنوية؟</summary>
+<p>شهريًا لمتابعتك الداخلية، حتى المبسطة منها، فهي كاشف المشاكل المبكر. وسنويًا للأغراض الرسمية والضريبية. برامج الحسابات الجاهزة على الموقع تخرجها لك تلقائيًا من قيودك اليومية.</p>
+</details>
+</div>
+
+<div class="cta-box">
+<h3>📊 جرّب أدواتنا المجانية</h3>
+<p>برامج حسابات Excel جاهزة لـ 19 نشاطًا تطلع لك قائمة الدخل من قيودك اليومية مباشرة، مع حاسبات الضريبة والقيمة المضافة والإهلاك</p>
+<a class="btn btn-gold" href="../downloads.html">
+<i class="fas fa-download"></i>
+                        حمّل برنامج حسابات نشاطك
+                    </a>
+</div>
+
+<div class="saber-box">
+<h3>☕ وببساطة على طريقة عمي صابر</h3>
+<p>قائمة الدخل يا بطل زي كشف حساب الشغل بتاعك في السنة: بتبدأ بالمبيعات اللي دخلت، تنقص منها تمن البضاعة اللي اتباعت فعلاً، يطلع لك مجمل الربح. ده فلوسك قبل ما تدفع أي حاجة تانية.</p>
+<p>وبعدين تنزل باقي المصاريف بالترتيب: البياعين والإعلانات، والإيجار والمرتبات والكهربا، وإهلاك الأجهزة والعربيات. اللي يفضل بعدهم اسمه ربح التشغيل، وده أهم رقم في القائمة على الإطلاق، لأنه بيقولك نشاطك الأساسي نفسه مكسب ولا لأ، من غير تجميل.</p>
+<p>وبعده الفوائد والضرايب، واللي يفضل في الآخر هو صافي الربح بتاعك الحقيقي.</p>
+<p>نصيحة عمك صابر: ما تبصش للرقم اللي تحت خالص وتفرح أو تزعل. بص على السطر اللي فوقه: لو ربح التشغيل كويس والصافي قليل بسبب فايدة قرض مؤقت، انت تمام. لكن لو نشاطك نفسه خسران وطلعت كسبان عشان بعت حتة أرض قديمة، فدي مش فرحة، دي إنذار. ولو لقيت مجمل ربحك قليل عن ناس مجالك، دور على التسعير والشرا والفاقد قبل ما تدور على أي حاجة تانية.</p>
+<p>اعملها عادة: أول كل شهر، ربع ساعة مع قائمة دخل الشهر اللي فات. اللي بيعمل كده ماتفاجئش أبدًا.</p>
+</div>
+
+<div class="related-articles">
+<h3>مقالات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="journal-entries-guide.html">
+<h4>قيود اليومية من الصفر</h4>
+<p>عشرون قيدًا متدرجًا بأمثلة رقمية</p>
+</a>
+<a class="related-card" href="profit-vs-cash-flow.html">
+<h4>الفرق بين الربح والتدفق النقدي</h4>
+<p>كيف تربح الشركة وتعجز عن الدفع؟</p>
+</a>
+<a class="related-card" href="asset-vs-expense.html">
+<h4>الأصل أم المصروف؟</h4>
+<p>قاعدة القرار في ثلاثة أسئلة</p>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
