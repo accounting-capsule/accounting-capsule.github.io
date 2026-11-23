@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/product-pricing-full-cost.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="كيف تسعّر منتجك خطوة بخطوة: التكلفة الكاملة أولًا | كبسولة المحاسب" property="og:title"/>
+<meta content="التسعير بتقليد المنافسين يخفي خسائر لا تظهر إلا آخر الشهر. خطوات عملية لحساب التكلفة الكاملة للمنتج (مباشرة + نصيب التكاليف الثابتة) ثم إضافة هامش الربح، بمثال رقمي كامل." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/product-pricing-full-cost.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="كيف تسعّر منتجك خطوة بخطوة: التكلفة الكاملة أولًا | كبسولة المحاسب" name="twitter:title"/>
+<meta content="التسعير بتقليد المنافسين يخفي خسائر لا تظهر إلا آخر الشهر. خطوات عملية لحساب التكلفة الكاملة للمنتج (مباشرة + نصيب التكاليف الثابتة) ثم إضافة هامش الربح، بمثال رقمي كامل." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="التسعير بتقليد المنافسين يخفي خسائر لا تظهر إلا آخر الشهر. خطوات عملية لحساب التكلفة الكاملة للمنتج (مباشرة + نصيب التكاليف الثابتة) ثم إضافة هامش الربح، بمثال رقمي كامل." name="description"/>
+<title>كيف تسعّر منتجك خطوة بخطوة: التكلفة الكاملة أولًا | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "كيف تسعّر منتجك خطوة بخطوة: التكلفة الكاملة أولًا",
+      "description": "التسعير بتقليد المنافسين يخفي خسائر لا تظهر إلا آخر الشهر. خطوات عملية لحساب التكلفة الكاملة للمنتج (مباشرة + نصيب التكاليف الثابتة) ثم إضافة هامش الربح، بمثال رقمي كامل.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "mainEntityOfPage": "https://accounting-capsule.github.io/articles/product-pricing-full-cost.html",
+      "image": "https://accounting-capsule.github.io/assets/og-image.png",
+      "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"},
+      "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}
+    }
+  ]
+}</script>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="../tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="../quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="../closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="../financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> ‹
+                    <a href="../blog.html">المدونة</a> ‹
+                    <span>تسعير المنتج</span>
+</nav>
+<span class="article-category">إدارة مالية</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 9 دقائق قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>كيف تسعّر منتجك خطوة بخطوة: التكلفة الكاملة أولًا</h1>
+</div>
+<div class="article-content">
+<p>اسأل صاحب محل كيف سعّر بضاعته وستسمع غالبًا: «نظرت إلى سعر المحل المجاور وزدت عليه قليلًا». النتيجة تظهر آخر الشهر: مبيعات كثيرة وربح لا يكفي الالتزامات، لأن السعر غطّى تكلفة البضاعة ولم يغطِّ الإيجار والمرتبات. التسعير السليم يبدأ من <strong>التكلفة الكاملة</strong> للمنتج، ثم يضيف هامش الربح، ثم يختبر السوق. هذا المقال يشرح الخطوات بمثال رقمي كامل.</p>
+
+<h2>الخطوة 1: التكلفة المباشرة للوحدة</h2>
+<p>كل ما دفعته لتصبح الوحدة جاهزة للبيع: سعر الشراء من المورد + الشحن إليك + التغليف + أي مصاريف جمركية أو نقل مرتبطة بالصنف نفسه. مثالنا: محل ملابس يشتري قميصًا بـ 150 جنيهًا، ونصيبه من الشحن والتغليف 10 جنيهات. <strong>التكلفة المباشرة = 150 + 10 = 160 جنيهًا</strong>. كثيرون يقفون هنا ويعتبرون الـ 160 هي «التكلفة»، وهذا هو الفخ.</p>
+
+<h2>الخطوة 2: نصيب الوحدة من التكاليف الثابتة</h2>
+<p>إيجارك ومرتباتك وكهرباؤك تُدفع سواء بعت قطعة أو ألف. لذلك لكل وحدة نصيب: <strong>التكاليف الثابتة الشهرية ÷ عدد الوحدات المتوقع بيعها شهريًا</strong>. بثوابت 15,000 جنيه شهريًا ومبيعات واقعية 500 قطعة، نصيب القطعة = <strong>15,000 ÷ 500 = 30 جنيهًا</strong>. استخدم رقم مبيعات واقعي (متوسط آخر 3-6 أشهر) لا رقمًا متفائلًا؛ فالمبالغة في الكمية تصنع نصيبًا وهميًا صغيرًا وسعرًا خاسرًا. (تصنيف مصروفاتك إلى ثابت ومتغير في مقال <a href="fixed-vs-variable-costs.html">التكاليف الثابتة والمتغيرة</a>).</p>
+
+<h2>الخطوة 3: التكلفة الكاملة ثم هامش الربح</h2>
+<p><strong>التكلفة الكاملة = 160 + 30 = 190 جنيهًا</strong>. هذا هو الحد الأدنى الحقيقي: أي بيع تحت 190 يخسر حتى لو كان فوق 160، لأنه يغطي البضاعة ويترك الإيجار بلا مصدر. أضف الآن هامشك: زيادة 25% على التكلفة الكاملة تعطي <strong>190 × 1.25 = 237.5 ≈ 238 جنيهًا</strong>. ربحك 48 جنيهًا للقطعة، أي هامش ربح من سعر البيع حوالي 20% - والفرق بين الحسبتين موضوع مقال قادم لأنه أكثر خطأ حسابي شيوعًا في التسعير. إن أردت التحقق من حجم المبيعات اللازم عند هذا السعر، راجع مقال <a href="break-even-point.html">نقطة التعادل</a>.</p>
+
+<h2>الخطوة 4: اختبار السوق</h2>
+<p>التكلفة الكاملة تحدد <strong>الأرضية</strong>، والسوق يحدد <strong>السقف</strong>. إن كان السعر السائد أعلى من أرضيتك فلديك مساحة للمنافسة أو لهامش أكبر. وإن كان أقل، فلديك ثلاثة خيارات صادقة: خفض التكلفة (مورد أرخص، شراء بكميات أكبر، تقليل الهالك)، أو التميّز بما يبرر سعرًا أعلى (جودة، خدمة، موقع)، أو الاعتذار عن الصنف لأن بيعه خسارة مؤجلة. ما لا يصح هو تجاهل الحساب والتسعير «على البركة».</p>
+
+<h2>أخطاء شائعة في الحساب</h2>
+<p>الأول: نسيان تكاليف غير مباشرة للصنف مثل العمولة أو التوصيل عند البيع أونلاين. الثاني: توزيع الثوابت على كمية موسم الذروة ثم البيع بالسعر نفسه طوال السنة. الثالث: إدخال ضريبة القيمة المضافة ضمن التكلفة وأنت مسجّل وتستردها - الضريبة هنا أمانة وليست تكلفة. الرابع: عدم تحديث الأرقام؛ راجع تكاليفك عند كل تغيير في الإيجار أو سعر الشراء، ويمكنك متابعة ذلك مع <a href="monthly-closing.html">قفل الشهر</a>. ومن يريد ضبط موازنته أولًا يبدأ بمقال <a href="small-shop-budget.html">موازنة المحل الصغير</a>.</p>
+
+<div class="saber-box">
+<h2>☕ وببساطة على طريقة عمي صابر</h2>
+<p>عمي صابر قال لي: «القميص واقف عليا بمية وستين، ببيعه بمية وتمانين، كسبان عشرين في القطعة، إيه المشكلة؟» قلت له: «المشكلة إن المية وستين دي فلوس القميص بس. الإيجار والمرتبات مين بيدفعهم؟ إنت بتبيع 500 قطعة في الشهر وثوابتك 15 ألف، يعني كل قطعة شايلة 30 جنيه منهم. يبقى القميص واقف عليك بمية وتسعين، وإنت بتبيعه بمية وتمانين، يعني بتخسر عشرة في كل قطعة وبتقول كسبان».</p>
+<p>اتخض وقال: «طب أعمل إيه؟» قلت له: «اجمع تكلفة القميص 160 زائد نصيبه من الثوابت 30، تطلع 190. ده أقل سعر تبيع بيه من غير ما تخسر. وبعدين حط هامشك: 25% زيادة يعني سعر 238. لو السوق بيشتري بالسعر ده تمام، لو أقل شوف تقلل تكلفتك من المورد أو تزود قيمة تستاهل عليها السعر».</p>
+<p>قال: «ولو المنافس بيبيع أرخص مني؟» قلت له: «ممكن يكون تكلفته أقل منك فعلًا، وممكن يكون غلطان زيك وبيخسر وهو مش حاسب. إنت مسؤول عن رقمك إنت: الأرضية عندك 190، تحتها خسارة مهما قال السوق».</p>
+<p>الخلاصة على لسان عمي صابر: <strong>"التسعير الصح: تكلفة البضاعة زائد نصيب القطعة من الإيجار والمرتبات تديك التكلفة الكاملة، وفوقها تحط هامشك. اللي بيسعّر من دماغه أو من سعر جاره بيشتغل في الضلمة، والحسبة بتنورله الطريق قبل ما يكتشف الخسارة آخر الشهر."</strong></p>
+</div>
+<div class="related-articles">
+<h3>📚 مقالات وأدوات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="break-even-point.html">
+<h4>نقطة التعادل</h4>
+<p>كم قطعة يجب أن تبيع عند سعرك الجديد؟</p>
+</a>
+<a class="related-card" href="fixed-vs-variable-costs.html">
+<h4>التكاليف الثابتة والمتغيرة</h4>
+<p>أساس حساب نصيب الوحدة من الثوابت</p>
+</a>
+<a class="related-card" href="../downloads.html">
+<h4>مكتبة برامج الحسابات</h4>
+<p>78 برنامج Excel يحسب تكلفتك وهامشك تلقائيًا</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>78 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+<div class="command-item" data-href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+
+
+
+
+<div class="command-item" data-href="../financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div><div class="command-item" data-href="../closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div><div class="command-item" data-href="../quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div><div class="command-item" data-href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div><div class="command-item" data-href="../tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div>
+<div class="command-item" data-href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div></div></div>
+<div class="command-item" data-href="../changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>78 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
