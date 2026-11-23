@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>محلل القوائم المالية: من ميزان المراجعة إلى قائمة الدخل والنسب | كبسولة المحاسب</title>
@@ -199,7 +200,7 @@
 <p>ارفع ميزان المراجعة (Excel أو CSV) واحصل فورًا على قائمة دخل مبسطة وأهم النسب المالية مع رسوم بيانية، جاهزة للطباعة. الملف يُعالج في متصفحك ولا يُرفع إلى أي خادم.</p>
 </div>
 <div class="calc-card" id="uploadCard">
-<h2><i class="fas fa-upload"></i> ارفع ميزان المراجعة</h2>
+<h2><i class="fas fa-upload"></i> افتح ميزان المراجعة محليًا</h2><p class="calc-note">يقرأ كود هذه الأداة الملف داخل المتصفح ولا يتضمن مسارًا لإرساله إلى خادم. الصفحة تحمل مكتبات خارجية؛ لا تستخدم بيانات سرية أو شخصية، واحتفظ بنسخة احتياطية. التصنيف آلي تقريبي ويحتاج مراجعة قبل أي اعتماد.</p>
 <p style="color:var(--gray-600); font-size:0.9rem;">الصيغة المطلوبة: جدول يتضمن أعمدة <strong>كود الحساب</strong> و<strong>اسم الحساب</strong> و<strong>مدين</strong> و<strong>دائن</strong> (حساب واحد في كل صف). يتعرف الأداة على العناوين العربية والإنجليزية، ويصنف الحسابات حسب الترقيم المتبع: 1 أصول، 2 خصوم، 3 حقوق ملكية، 4 إيرادات، 5 مصروفات.</p>
 <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center; margin-top:0.75rem;">
 <label class="btn btn-primary btn-sm" style="cursor:pointer;"><i class="fas fa-file-excel"></i> اختر الملف <input id="fsFile" type="file" accept=".xlsx,.xls,.csv" style="display:none;" onchange="handleFSFile(this)"></label>
@@ -347,6 +348,7 @@ function parseSheet(data){
 }
 function handleFSFile(inp){
   const f = inp.files[0]; if (!f) return;
+  if(f.size>5*1024*1024){alert('حجم الملف يتجاوز 5 ميجابايت. استخدم نسخة أصغر منزوعة البيانات الحساسة.');inp.value='';return;}
   const err = document.getElementById('fsErr');
   const rd = new FileReader();
   rd.onload = e => {
