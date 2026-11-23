@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="عشر معادلات Excel لا يستغني عنها أي محاسب | كبسولة المحاسب" property="og:title"/>
+<meta content="شرح عملي لأهم 10 معادلات إكسل للمحاسبين بالأمثلة: SUMIFS وXLOOKUP وIF وIFERROR وROUND وTEXT وEOMONTH وCOUNTIFS وSUBTOTAL وSUMPRODUCT وPMT - والأخطاء الشائعة لكل منها." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="عشر معادلات Excel لا يستغني عنها أي محاسب | كبسولة المحاسب" name="twitter:title"/>
+<meta content="أهم 10 معادلات إكسل للمحاسبين بشرح عملي وأمثلة من الشغل اليومي." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="شرح عملي لأهم 10 معادلات إكسل للمحاسبين بالأمثلة: SUMIFS وXLOOKUP وIF وIFERROR وROUND وTEXT وEOMONTH وCOUNTIFS وSUBTOTAL وSUMPRODUCT وPMT - والأخطاء الشائعة لكل منها." name="description"/>
+<title>عشر معادلات Excel لا يستغني عنها أي محاسب | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html#article", "headline": "عشر معادلات Excel لا يستغني عنها أي محاسب (شرح بالأمثلة العملية)", "description": "شرح عملي لأهم 10 معادلات إكسل للمحاسبين بالأمثلة: SUMIFS وXLOOKUP وIF وIFERROR وROUND وTEXT وEOMONTH وCOUNTIFS وSUBTOTAL وSUMPRODUCT وPMT - والأخطاء الشائعة لكل منها.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": "https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "معادلات إكسل للمحاسبين"}]}]}</script>
+</head>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<style>.article-content code{direction:ltr;unicode-bidi:embed;background:var(--gray-100,#f1f5f9);padding:0.15rem 0.45rem;border-radius:4px;font-family:ui-monospace,Consolas,monospace;font-size:0.88em;color:#b91c1c;display:inline-block}</style>
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> &lsaquo;
+<a href="../blog.html">المدونة</a> &lsaquo;
+<span>معادلات إكسل للمحاسبين</span>
+</nav>
+<span class="article-category">أدوات العمل</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 15 دقيقة قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>عشر معادلات Excel لا يستغني عنها أي محاسب (شرح بالأمثلة العملية)</h1>
+</div>
+<div class="article-content">
+<p>المحاسب لا يحتاج خمسمائة معادلة في إكسل؛ يحتاج عشرًا يتقنها. بها تجمع مبيعات عميل واحد من ألف سطر، وتطابق كشف البنك مع دفاترك، وتستخرج ضريبة شهر كامل في ثانية، وتكتشف الأخطاء قبل ترحيلها. هذا الدليل يشرح المعادلات العشر الأكثر استخدامًا في الشغل المحاسبي اليومي، كل معادلة بصيغتها الصحيحة ومثال محاسبي حقيقي عليها، والأخطاء التي تضيع وقت المبتدئين معها.</p>
+
+<h2>1️⃣ SUMIF وSUMIFS: التجميع بشرط</h2>
+<p>أشهر سؤال في أي قسم حسابات: «كام إجمالي مبيعات العميل الفلاني؟» أو «إجمالي مصروفات شهر معين؟»</p>
+<p><code>=SUMIFS(C:C, A:A, "شركة النور", B:B, "نقدي")</code></p>
+<p>تجمع عمود المبالغ (C) فقط للأسطر التي فيها اسم العميل «شركة النور» في العمود A وطريقة الدفع «نقدي» في العمود B. النسخة الأبسط SUMIF تكفي لشرط واحد: <code>=SUMIF(A:A, "شركة النور", C:C)</code>.</p>
+<p><strong>خطأ شائع:</strong> اختلاف كتابة الشرط عن البيانات (مسافة زائدة، همزة مختلفة). اجعل الشرط مرجعًا لخلية تحتوي الاسم بدلًا من كتابته يدويًا في المعادلة: <code>=SUMIF(A:A, F2, C:C)</code>.</p>
+
+<h2>2️⃣ VLOOKUP وXLOOKUP: البحث والمطابقة</h2>
+<p>عندك جدول أصناف بأكوادها وأسعارها، وتريد أن تجلب سعر كل صنف في فاتورة المبيعات تلقائيًا:</p>
+<p><code>=XLOOKUP(B2, Items!A:A, Items!C:C, "الكود غير موجود")</code></p>
+<p>تبحث عن الكود في B2 داخل عمود الأكواد بشيت الأصناف، وترجع السعر من العمود C، وإن لم تجده تكتب «الكود غير موجود» بدل الخطأ الشهير #N/A. أما VLOOKUP الأقدم فتعمل بالترتيب الرقمي للعمود: <code>=VLOOKUP(B2, Items!A:C, 3, FALSE)</code> — والكلمة FALSE هنا حياة أو موت: بدونها يستخدم إكسل بحثًا تقريبيًا يرجع أرقامًا خاطئة بصمت.</p>
+<p><strong>استخدام محاسبي يومي:</strong> مطابقة كشف حساب البنك مع دفتر اليومية: ابحث عن كل مبلغ من كشف البنك في الدفاتر، وما رجع «غير موجود» هو فروق التسوية.</p>
+
+<h2>3️⃣ IF: القرارات الشرطية</h2>
+<p>تريد تصنيف فواتير العملاء: متأخر أكثر من 30 يومًا = «متابعة عاجلة»، وإلا «طبيعي»:</p>
+<p><code>=IF(TODAY()-D2&gt;30, "متابعة عاجلة", "طبيعي")</code></p>
+<p>وللشروط المتداخلة استخدم IFS بدل تداخل IF المرهق: <code>=IFS(C2&gt;=90,"ممتاز", C2&gt;=75,"جيد جدًا", TRUE,"يحتاج مراجعة")</code>.</p>
+
+<h2>4️⃣ IFERROR: الدرع ضد الأخطاء القبيحة</h2>
+<p>أي قسمة على صفر أو بحث فاشل يطبع #DIV/0! أو #N/A في وسط تقريرك المقدم للإدارة. غلّف المعادلة:</p>
+<p><code>=IFERROR(B2/C2, 0)</code> أو للبحث: <code>=IFERROR(VLOOKUP(...), "راجع الكود")</code></p>
+<p><strong>تحذير:</strong> لا تستخدم IFERROR لدفن الأخطاء دون فهمها؛ اجعل قيمتها البديلة نصًا واضحًا ينبهك، لا صفرًا صامتًا في المعادلات الحرجة.</p>
+
+<h2>5️⃣ ROUND: التقريب قبل ما يفضحك الإكسل</h2>
+<p>إكسل يعرض رقمين عشريين لكنه يحسب بخمسة عشر. تجمع 100 بند ضريبة كل بند فيه كسور، فيطلع الإجمالي مختلفًا قرشًا عن مجموع ما يظهر على الشاشة، وتقف أنت حائرًا أمام المدير. الحل: قرّب كل بند في مصدره:</p>
+<p><code>=ROUND(B2*14%, 2)</code></p>
+<p>وهذه عادة إجبارية في أي شيت ضرائب أو مرتبات: القرش يجب أن يكون قرارًا واعيًا، لا صدفة عرض. <a href="../calculators.html">حاسبة المرتبات</a> على موقعنا تطبق قاعدة مشابهة (التقريب لأقرب عشرة قروش لأسفل وفق التعليمات).</p>
+
+<h2>6️⃣ TEXT وEOMONTH: ترويض التواريخ</h2>
+<p>لاستخراج الشهر من تاريخ في نص ثابت: <code>=TEXT(A2, "YYYY-MM")</code> ثم جمّع به بـ SUMIFS.</p>
+<p>ولمعرفة آخر يوم في الشهر (أساس قيود الاستحقاق والفوائد): <code>=EOMONTH(A2, 0)</code> ولآخر يوم في الشهر التالي: <code>=EOMONTH(A2, 1)</code>.</p>
+<p><strong>مثال عملي:</strong> تاريخ استحقاق فاتورة بعد 60 يومًا من نهاية شهر البيع: <code>=EOMONTH(A2, 0)+60</code>.</p>
+
+<h2>7️⃣ COUNTIFS: العد بشروط</h2>
+<p>كم فاتورة غير مسددة تجاوزت 30 يومًا لعميل معين؟</p>
+<p><code>=COUNTIFS(A:A,"شركة النور", E:E,"غير مسددة", F:F,"&gt;30")</code></p>
+<p>مفيدة للوحات المتابعة: عدد الشيكات تحت التحصيل، عدد بنود الجرد المتطابقة، عدد الموظفين في شريحة تأمينية معينة.</p>
+
+<h2>8️⃣ SUBTOTAL: الإجمالي الذي يحترم الفلتر</h2>
+<p>SUM تجمع كل شيء حتى الصفوف المخفية بالفلتر، فتفلتر مبيعات منطقة واحدة ويطلع إجماليك كأنه للشركة كلها. SUBTOTAL تجمع الظاهر فقط:</p>
+<p><code>=SUBTOTAL(9, C2:C1000)</code></p>
+<p>الرقم 9 يعني SUM للخلايا الظاهرة، و109 يعنيها مع تجاهل الصفوف المخفية يدويًا أيضًا. أي جدول ستفلتره يومًا، اجعل إجماليه بـ SUBTOTAL أو بجداول إكسل (Tables) التي تفعل ذلك تلقائيًا.</p>
+
+<h2>9️⃣ SUMPRODUCT: معادلة الوزن والقيمة</h2>
+<p>تريد قيمة المخزون: كمية كل صنف × سعره، ثم مجموع الكل. بدل عمود مساعد ثم SUM:</p>
+<p><code>=SUMPRODUCT(B2:B100, C2:C100)</code></p>
+<p>وتتعدد استخداماتها: متوسط مرجح لأسعار الشراء، إجمالي مبيعات مندوب × عمولته، قيمة أقساط × معاملاتها.</p>
+
+<h2>🔟 PMT: حساب القسط</h2>
+<p>قبل توقيع أي تمويل، احسب القسط الشهري بنفسك: مبلغ 500,000 جنيه بفائدة سنوية 18% على 3 سنوات:</p>
+<p><code>=PMT(18%/12, 36, -500000)</code> ≈ 18,076 جنيهًا شهريًا</p>
+<p>القاعدة: معدل الفائدة الشهري (السنوي ÷ 12)، وعدد الأقساط، والمبلغ بإشارة سالبة ليظهر القسط موجبًا. جرّب سيناريوهات المدة والفائدة قبل التفاوض، وستدخل الاجتماع وأنت تعرف حدودك.</p>
+
+<h2>🧰 ثلاث عادات تفوق أي معادلة</h2>
+<ul>
+<li><strong>سمِّ النطاقات:</strong> بدل Items!A:A اصنع اسمًا معرفًا مثل «الأصناف»؛ المعادلات تُقرأ ولا تُفكك.</li>
+<li><strong>جمّد الصف الأول والخلايا المرجعية:</strong> علامة $ في <code>$F$2</code> تمنع المرجع من الانزلاق عند السحب، وتجميد الصف العلوي يبقي العناوين أمامك.</li>
+<li><strong>ابنِ عمود تحقق:</strong> في أي شيت قيود، عمود «مدين − دائن» يجب أن يساوي صفرًا في كل سطر؛ شرط تنسيق أحمر على غير الصفر يمسك الأخطاء قبل الترحيل.</li>
+</ul>
+
+<h2>❓ أسئلة شائعة</h2>
+<div class="faq-section">
+<details>
+<summary>أستخدم النسخة العربية من إكسل، هل تختلف المعادلات؟</summary>
+<p>أسماء المعادلات تبقى إنجليزية في معظم النسخ المعربة حديثًا، لكن فاصل الوسائط قد يصبح فاصلة منقوطة (;) بدل الفاصلة (,) حسب إعدادات الويندوز الإقليمية. إذا رفضت المعادلة الفاصلة، جرّب الفاصلة المنقوطة.</p>
+</details>
+<details>
+<summary>هل أتعلم VLOOKUP أم XLOOKUP؟</summary>
+<p>تعلم الاثنين: XLOOKUP أقوى وأسهل لكنها لا توجد إلا في إكسل 2021 وMicrosoft 365 وما بعدهما، وكثير من أجهزة الشركات ما زالت على إصدارات أقدم لا تعرف سوى VLOOKUP. إن ملفك سيُفتح على أجهزة الآخرين فالأقدم أضمن.</p>
+</details>
+<details>
+<summary>متى أستخدم جداول Pivot بدل هذه المعادلات؟</summary>
+<p>عند التحليل السريع المتكرر: ملخصات مبيعات شهرية بمناديب ومناطق تتغير أسئلتها كل مرة. أما الروابط الثابتة داخل الشيتات (سعر صنف في فاتورة، إجمالي عميل في تقرير) فالمعادلات أنسب وأخف.</p>
+</details>
+<details>
+<summary>شيتات الموقع الجاهزة فيها هذه المعادلات؟</summary>
+<p>نعم، <a href="../downloads.html">برامج الحسابات الجاهزة</a> مبنية بهذه المعادلات نفسها (تجميع بشروط، بحث في دليل الحسابات، تحقق من توازن القيود)، وفتحها مدرسة عملية: اذهب لأي خلية محسوبة وانظر كيف كُتبت معادلتها.</p>
+</details>
+<details>
+<summary>كيف أتدرب دون أن أخرب شيتات الشغل؟</summary>
+<p>انسخ نسخة من الملف وسمّها «تجربة» واتمرن عليها، أو حمّل أي برنامج من مكتبة الموقع وافكه خلية خلية. التعلم على بيانات شركتك الحقيقية بملف أصلي واحد بلا نسخة احتياطية مغامرة لا تستحق.</p>
+</details>
+</div>
+
+<div class="cta-box">
+<h3>📥 جرّب أدواتنا المجانية</h3>
+<p>برامج حسابات Excel جاهزة لـ 19 نشاطًا مبنية بهذه المعادلات نفسها - حمّل برنامج نشاطك وشغّله فورًا</p>
+<a class="btn btn-gold" href="../downloads.html">
+<i class="fas fa-download"></i>
+                        حمّل برنامج حسابات نشاطك
+                    </a>
+</div>
+
+<div class="saber-box">
+<h3>☕ وببساطة على طريقة عمي صابر</h3>
+<p>إكسل ده يا بطل مش برنامج جداول، ده مساعدك الشخصي اللي مش بياخد مرتب. بس زي أي مساعد، لازم تتعلم تكلمه بلغته. واللغة دي فيها عشر كلمات بس يكفوك.</p>
+<p>أهمهم اتنين: SUMIFS اللي بتجمع لك "كام بعنا للعميل فلان الشهر ده" من ألف سطر في ثانية، و XLOOKUP اللي بتجيب لك سعر الصنف أو بيان الحساب لوحدها من غير ما تقلب بعينك. دول لوحدهم بيوفروا ساعة كل يوم.</p>
+<p>وخد عندك تلات مواعظ من شغل حقيقي: الأولانية، كلمة FALSE في الـ VLOOKUP دي مش رفاهية، لو نسيتها إكسل ممكن يجيب لك رقم غلط وهو مبسوط وانت تكتشف بعد ما المدير شاف التقرير. التانية، أي حساب فيه كسور، خصوصًا الضرايب، قرّبه بـ ROUND من أوله، عشان القرش اللي بيختلف في الإجمالي ده بيقفش المحاسبين أكتر ما بتتخيل. والتالتة، قبل ما تعدل في شيت شغل، اعمل منه نسخة، واللي مش بيعمل نسخ بيتعلم الدرس مرة واحدة بس بطريقة صعبة.</p>
+<p>وأحلى حاجة؟ شيتات موقعنا الجاهزة مكتوبة بنفس المعادلات دي. افتح أي خلية محسوبة وبص على المعادلة، هتلاقيها بتقرأ زي الوقت اللي اتعلمتها دلوقتي. كده الشيت مش بس شغال معاك، ده كمان بيعلمك.</p>
+</div>
+
+<div class="related-articles">
+<h3>مقالات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="journal-entries-guide.html">
+<h4>قيود اليومية من الصفر</h4>
+<p>عشرون قيدًا متدرجًا بأمثلة رقمية</p>
+</a>
+<a class="related-card" href="ai-in-accounting.html">
+<h4>الذكاء الاصطناعي في المحاسبة</h4>
+<p>اطلب المعادلة من AI بالوصف</p>
+</a>
+<a class="related-card" href="../downloads.html">
+<h4>مركز التحميلات</h4>
+<p>19 برنامج حسابات Excel جاهز</p>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
