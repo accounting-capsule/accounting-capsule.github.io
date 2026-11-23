@@ -403,7 +403,7 @@ function renderInv(){
  document.getElementById('pvDisc').textContent=fmt(disc);
  document.getElementById('pvVatRow').style.display=vatOn?'flex':'none';
  document.getElementById('pvVat').textContent=fmt(vat);
- document.getElementById('pvTotal').textContent=fmt(total)+' '+cur.label;
+ document.getElementById('pvTotal').textContent=fmt(total)+' '+cur.sg+' '+cur.label;
  const t=tafqit(Math.round(total*100)/100,cur);
  document.getElementById('pvTafqit').textContent=t?('التفقيط: '+t):'';
 }
