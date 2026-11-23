@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/tax-deductible-expenses.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="مصروف يُخصم ومصروف لا يُخصم: كيف تعرف الفرق قبل موسم الضريبة | كبسولة المحاسب" property="og:title"/>
+<meta content="لماذا يدفع محلان بنفس الربح ضريبة مختلفة؟ الاختبار الثلاثي للمصروف واجب الخصم: الارتباط بالنشاط، والمستند الصحيح، وألا يكون من البنود الممنوعة - شرح مبسط مع التحقق من القواعد الحالية مع محاسبك." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/tax-deductible-expenses.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="مصروف يُخصم ومصروف لا يُخصم: كيف تعرف الفرق قبل موسم الضريبة | كبسولة المحاسب" name="twitter:title"/>
+<meta content="لماذا يدفع محلان بنفس الربح ضريبة مختلفة؟ الاختبار الثلاثي للمصروف واجب الخصم: الارتباط بالنشاط، والمستند الصحيح، وألا يكون من البنود الممنوعة - شرح مبسط مع التحقق من القواعد الحالية مع محاسبك." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="لماذا يدفع محلان بنفس الربح ضريبة مختلفة؟ الاختبار الثلاثي للمصروف واجب الخصم: الارتباط بالنشاط، والمستند الصحيح، وألا يكون من البنود الممنوعة - شرح مبسط مع التحقق من القواعد الحالية مع محاسبك." name="description"/>
+<title>مصروف يُخصم ومصروف لا يُخصم: كيف تعرف الفرق قبل موسم الضريبة | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "مصروف يُخصم ومصروف لا يُخصم: كيف تعرف الفرق قبل موسم الضريبة",
+      "description": "لماذا يدفع محلان بنفس الربح ضريبة مختلفة؟ الاختبار الثلاثي للمصروف واجب الخصم: الارتباط بالنشاط، والمستند الصحيح، وألا يكون من البنود الممنوعة - شرح مبسط مع التحقق من القواعد الحالية مع محاسبك.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "mainEntityOfPage": "https://accounting-capsule.github.io/articles/tax-deductible-expenses.html",
+      "image": "https://accounting-capsule.github.io/assets/og-image.png",
+      "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"},
+      "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}
+    }
+  ]
+}</script>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="../tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="../quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="../closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="../financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> ‹
+                    <a href="../blog.html">المدونة</a> ‹
+                    <span>المصروفات والضريبة</span>
+</nav>
+<span class="article-category">ضرائب</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 8 دقائق قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>مصروف يُخصم ومصروف لا يُخصم: كيف تعرف الفرق قبل موسم الضريبة</h1>
+</div>
+<div class="article-content">
+<p>محلان في الشارع نفسه، بنفس المبيعات وبنفس الربح الدفتري، يخرج أحدهما من موسم الضريبة بفاتورة أعلى بكثير من جاره. الفرق غالبًا ليس في النشاط ولا في الحظ، بل في سؤال واحد: أي مصروفاتك «يُخصم» من الربح قبل حساب الضريبة وأيها يُرفض؟ من لا يعرف القاعدة يدفع ضريبة على مصاريف أنفقها فعلًا، أو يخصم مصاريف تُرفض عند الفحص فيدفعها مرتين. هذا المقال يشرح القاعدة ببساطة - وهو خريطة مفاهيم لا فتوى ضريبية: القواعد والحدود تتغير بالتعديلات التشريعية، فتحقق دائمًا من الوضع الحالي مع محاسبك أو من مصلحة الضرائب قبل أن تبني قرارًا على ما تقرأ.</p>
+
+<h2>الاختبار الثلاثي: ثلاثة أسئلة قبل أي خصم</h2>
+<p>قانون الضريبة على الدخل المصري يضع شروطًا عامة لقبول أي تكلفة (المادة 22 من القانون 91 لسنة 2005 وتعديلاته)، ويمكن اختصارها في ثلاثة أسئلة. <strong>السؤال الأول - هل المصروف مرتبط بالنشاط ولازم له؟</strong> إيجار المحل، مرتبات العاملين، بضاعة تبيعها، صيانة الثلاجة التي تحفظ بضاعتك: مرتبطة ولازمة. مصاريف بيتك ومدارس أولادك ومشاويرك الشخصية: غير مرتبطة ولو دفعتها من درج المحل - وهي أصلًا مسحوبات شخصية كما شرحنا في مقال <a href="owner-drawings-discipline.html">المسحوبات الشخصية للمالك</a>. <strong>السؤال الثاني - هل هو حقيقي ومؤيد بمستند صحيح؟</strong> مصروف «على قد الحساب» بلا مستند لا يُخصم حتى لو حدث فعلًا. <strong>السؤال الثالث - هل هو من البنود التي يمنع القانون خصمها صراحة؟</strong> توجد قائمة بالممنوعات (المادة 24) لا تنفع معها فاتورة ولا سداد فعلي. المصروف الذي يجتاز الأسئلة الثلاثة يُخصم؛ من يسقط في واحد منها يبقى داخل الربح الخاضع للضريبة.</p>
+
+<h2>مستندك هو بطاقة الدخول</h2>
+<p>بعد تعديلات السنوات الأخيرة لم يعد أي مستند يكفي: صار المستند المقبول لإثبات التكلفة هو الفاتورة الإلكترونية، ثم الإيصال الإلكتروني لعمليات البيع للمستهلك النهائي، وفق المراحل التي أعلنتها المصلحة. المعنى العملي: التكلفة التي لا تؤيدها فاتورة إلكترونية صحيحة من مورّد ملزَم بإصدارها قد تُرفض عند الفحص ولو سددت ثمنها فعلًا - فالمستند شرط للخصم لا مجرد دليل دفع. يستثنى من ذلك ما جرى العرف على عدم إثباته بمستندات، مثل بعض مصروفات الضيافة الداخلية والنظافة والانتقالات الصغيرة، بحد أقصى تحدده اللائحة التنفيذية - وتحقق من سقفه الحالي مع محاسبك لأنه عرضة للتعديل. القاعدة العملية: عند الشراء للنشاط اسأل نفسك «هل هذه الفاتورة تقبلها المصلحة بعد ثلاث سنوات عند الفحص؟» فإن شككت فعالج الأمر في الحال لا في موسم الضريبة.</p>
+
+<h2>مصروفات تبدو عادية ولا تُخصم</h2>
+<p>قائمة الممنوعات تفاجئ كثيرين، وأبرز ما فيها: <strong>المخصصات والاحتياطيات بأنواعها</strong> - أن تحجز مبلغًا «لديون مشكوك فيها» أو «لصيانة متوقعة» قرار محاسبي حكيم دفتريًا، لكنه مصروف تقديري لا يُخصم ضريبيًا لأنه ليس حقيقيًا بعد. <strong>الغرامات والعقوبات المالية عن الجنايات والجنح العمدية</strong> - المخالفة التي ترتكبها لا يشاركك المجتمع تكلفتها عبر خصمها من وعائك. <strong>ضريبة الدخل نفسها</strong> - لا تخصم الضريبة من الربح الذي تحسب منه الضريبة، فهذا منطق دائري يمنعه القانون صراحة. وإلى جوار القائمة الرسمية تقع أشهر حالة عملية: المصروف الشخصي الملبوس لباس النشاط - وقود سيارة العائلة في حساب المحل، اشتراك منصات البيت في مصاريف «الاتصالات». كلها مرتبطة بالسؤال الأول: لا علاقة لها بالنشاط، مهما كان شكل المستند.</p>
+
+<h2>المنطقة الرمادية: حيث تحتاج محاسبك</h2>
+<p>بين الأبيض والأسود مساحة واسعة لا يحسمها مقال بل محاسب يعرف نشاطك: المصروف المشترك بين العمل والبيت (سيارة تستخدم للتوصيل وللعائلة، هاتف شخصي وتجاري) يحتاج تخصيصًا معقولًا وموثقًا لا خصمًا كاملًا. التبرعات تُخصم في حدود تختلف بحسب الجهة - للجهات الحكومية بسقف، وللجمعيات الأهلية المشهرة بسقف آخر مرتبط بالربح - والحدود تتغير فتحقق منها قبل أن تبني عليها. فوائد القروض تُخصم بشروط منها ارتباط القرض بالنشاط وحدود على أسعار الفائدة في حالات بعينها. والإهلاك يُخصم بالنظام الذي يحدده القانون لا بأي نسبة تختارها. في كل هذه الحالات القاعدة الذهبية: لا تقدّر من عندك ولا تنسخ معاملة صديق؛ اسأل محاسبك عن المعاملة الحالية لبندك بالذات.</p>
+
+<h2>عادة عملية: ملف «المشكوك فيه»</h2>
+<p>لا تحسم كل بند في لحظة صرفه. اعمل ملفًا أو مجلدًا اسمه «مصاريف محل سؤال»: كل مصروف لا تتيقن من وضعه - مشترك، شخصي جزئيًا، بلا فاتورة إلكترونية، تبرع، غرامة - يدخل فيه مع مستنده وسطر يشرح ظرفه. عند إعداد الإقرار السنوي تعرض الملف على محاسبك بندًا بندًا: ما يقبله يُخصم وأنت مطمئن، وما يرفضه يخرج وأنت تعرف السبب. هذه العادة تحول الخصم من اجتهاد عشوائي في موسم الضريبة إلى قرار موثق على مدار السنة، وتجعل موقعك عند أي فحص قويًا: كل بند له مستند، ولكل مستند قصة مكتوبة. وتذكر أن الخصم الصحيح نصف القصة؛ النصف الآخر هو دورتك الشهرية التي شرحناها في مقال <a href="monthly-tax-obligations.html">سجّلت في الضريبة، وبعدين؟</a>.</p>
+
+<div class="saber-box">
+<h2>☕ وببساطة على طريقة عمي صابر</h2>
+<p>عمي صابر جالي شايل كيس فواتير: «السنة دي هخصم كل حاجة، حتى بنزين عربية البيت داخل فيها، كلها مصاريف في الآخر». قلت له: «لأ يا عم صابر، مش كل مصروف بيتخصم. اسأل نفسك تلات أسئلة: المصروف ده للمحل ولا ليك؟ معاك فاتورته الصح ولا بتفتكره؟ والقانون بيسمح بيه ولا مانعه أصلًا؟ بنزين مشاوير البيت مش من مصاريف المحل ولو جبناله ميه فاتورة».</p>
+<p>قال: «طيب أنا محجز مبلغ على جنب للديون اللي ممكن متتحصلش، ده مصروف عاقل». قلت له: «عاقل دفتريًا أيوه، بس ضريبيًا لأ، لأنه تقدير مش مصروف حقيقي حصل. الغرامات كمان مش بتتخصم، وضريبة الدخل نفسها مش بتنزل من الحساب. دي قايمة ممنوعات مهما كانت الفاتورة سليمة».</p>
+<p>قال: «يبقى أعمل إيه مع الحاجات اللي في النص، زي عربية للشغل وللبيت؟» قلت له: «دي منطقة محاسبك، مش منطقة الاجتهاد. اعمل مجلد اسمه محل سؤال، ارمي فيه كل مصروف مش متأكد منه مع ورقته، وفي آخر السنة اقعد مع محاسبك يفصلها لك بند بند. اللي اتقبل كسبان، واللي اترفض عارف سببه».</p>
+<p>الخلاصة على لسان عمي صابر: <strong>"مش كل اللي بتصرفه بيتخصم من الضريبة. ثلاثة أسئلة بتحكم: للمحل ولا ليك؟ معاك مستنده الصح ولا لأ؟ والقانون سامح بيه ولا مانعه؟ واللي في النص بينهم متفتيش فيه من دماغك، خليه لمحاسبك. والقواعد بتتغير، فاسأل عن الحالي دايمًا قبل ما تحسب على قديم."</strong></p>
+</div>
+<div class="related-articles">
+<h3>📚 مقالات وأدوات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="monthly-tax-obligations.html">
+<h4>سجّلت في الضريبة، وبعدين؟</h4>
+<p>التزاماتك الشهرية بعد التسجيل ببساطة</p>
+</a>
+<a class="related-card" href="owner-drawings-discipline.html">
+<h4>المسحوبات الشخصية للمالك</h4>
+<p>افصل جيبك عن خزينة المحل</p>
+</a>
+<a class="related-card" href="../tax-codes.html">
+<h4>دليل الضرائب</h4>
+<p>شرح مبسط للأكواد والمفاهيم الضريبية</p>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>86 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+<div class="command-item" data-href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+
+
+
+
+<div class="command-item" data-href="../financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div><div class="command-item" data-href="../closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div><div class="command-item" data-href="../quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div><div class="command-item" data-href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div><div class="command-item" data-href="../tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div>
+<div class="command-item" data-href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div></div></div>
+<div class="command-item" data-href="../changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>86 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
