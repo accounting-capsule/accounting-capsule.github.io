@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>جديد الموقع: آخر الإضافات والتحديثات | كبسولة المحاسب</title>
+<meta content="تابع كل جديد على موقع كبسولة المحاسب: برامج حسابات Excel جديدة، أدوات وحاسبات، ومقالات تعليمية - بتاريخ كل إضافة." name="description"/>
+<link href="https://accounting-capsule.github.io/changelog.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="جديد الموقع: آخر الإضافات والتحديثات | كبسولة المحاسب" property="og:title"/>
+<meta content="برامج وأدوات ومقالات جديدة تضاف باستمرار - تابع آخر الإضافات بتاريخها." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/changelog.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/layout.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "جديد موقع كبسولة المحاسب",
+        "url": "https://accounting-capsule.github.io/changelog.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "ar",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EGP" },
+        "description": "مولّد خطابات ومحاضر محاسبية مجاني: مطابقة رصيد، مطالبة بمديونية، جرد خزينة، إعدام مخزون، تفويض بنكي."
+    }
+    </script>
+<style>
+        .calc-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .calc-header h1 { color: white; font-size: 1.75rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .calc-header p { color: rgba(255,255,255,0.85); margin: 0; }
+        .calc-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .calc-card h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .calc-card h2 i { color: var(--primary-600); }
+        .calc-card .calc-sub { color: var(--gray-600); font-size: 0.875rem; margin-bottom: 1.25rem; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+        .calc-field label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--gray-700); margin-bottom: 0.35rem; }
+        .calc-field input, .calc-field select {
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            border: 1.5px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.15s;
+        }
+        .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--primary-500); }
+        .calc-result {
+            background: var(--primary-50, #eff6ff);
+            border: 1px solid var(--primary-200, #bfdbfe);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+        .calc-result-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--gray-300);
+            font-size: 0.95rem;
+        }
+        .calc-result-line:last-child { border-bottom: none; }
+        .calc-result-line .val { font-weight: 800; font-variant-numeric: tabular-nums; }
+        .calc-result-line.highlight { font-size: 1.1rem; color: var(--primary-700); }
+        .calc-result-line.highlight .val { font-size: 1.2rem; }
+        .calc-note { color: var(--gray-500); font-size: 0.8rem; margin-top: 0.75rem; line-height: 1.7; }
+        .calc-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; }
+        .calc-table th, .calc-table td { padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid var(--gray-200); font-variant-numeric: tabular-nums; }
+        .calc-table th { background: var(--gray-100); font-weight: 700; }
+        .mode-toggle { display: inline-flex; background: var(--gray-100); border-radius: var(--radius-md); padding: 0.25rem; margin-bottom: 1rem; }
+        .mode-toggle button {
+            border: none; background: transparent; padding: 0.5rem 1.25rem; border-radius: var(--radius-md);
+            font-family: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; color: var(--gray-600);
+        }
+        .mode-toggle button.active { background: white; color: var(--primary-700); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) {
+            .calc-header { padding: 1.25rem; }
+            .calc-header h1 { font-size: 1.35rem; }
+        }
+    </style>
+<style>
+.letter-templates { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:0.75rem; }
+.letter-tpl { border:2px solid var(--gray-200); border-radius:var(--radius-md); padding:0.9rem 1rem; cursor:pointer; text-align:center; transition:all .15s; background:#fff; }
+.letter-tpl:hover { border-color:var(--primary-400); }
+.letter-tpl.active { border-color:var(--primary-600); background:var(--primary-50); }
+.letter-tpl i { font-size:1.4rem; color:var(--primary-600); display:block; margin-bottom:0.4rem; }
+.letter-tpl span { font-weight:600; font-size:0.9rem; }
+.letter-fields { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; }
+.letter-field label { display:block; font-weight:600; margin-bottom:0.35rem; font-size:0.9rem; }
+.letter-field input, .letter-field select, .letter-field textarea { width:100%; padding:0.6rem 0.75rem; border:1.5px solid var(--gray-300); border-radius:var(--radius-sm); font-family:inherit; font-size:0.95rem; }
+.letter-field textarea { min-height:110px; resize:vertical; }
+.letter-field.full { grid-column:1 / -1; }
+.letter-preview-head { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; }
+.letter-actions { display:flex; gap:0.5rem; }
+.letter-paper { background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius-sm); box-shadow:0 2px 12px rgba(0,0,0,.06); max-width:800px; margin:1.25rem auto 0; padding:2.5rem 2.25rem; line-height:2.1; font-size:1.02rem; color:#111; }
+.letter-paper .lp-head { text-align:center; border-bottom:2px solid #333; padding-bottom:0.9rem; margin-bottom:1.4rem; }
+.letter-paper .lp-head h3 { margin:0; font-size:1.3rem; }
+.letter-paper .lp-head .lp-type { font-size:1.1rem; font-weight:700; margin-top:0.35rem; }
+.letter-paper .lp-date { text-align:left; margin-bottom:1rem; }
+.letter-paper .lp-to { margin-bottom:1rem; font-weight:600; }
+.letter-paper .lp-subject { text-align:center; font-weight:700; text-decoration:underline; margin:1.2rem 0; }
+.letter-paper .lp-body p { margin:0 0 0.8rem; }
+.letter-paper table.lp-table { width:100%; border-collapse:collapse; margin:1rem 0; }
+.letter-paper table.lp-table th, .letter-paper table.lp-table td { border:1px solid #444; padding:0.4rem 0.6rem; text-align:center; }
+.letter-paper .lp-sign { margin-top:2.2rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+.letter-paper .lp-sign div { text-align:center; min-width:180px; }
+.copy-toast { position:fixed; bottom:1.5rem; right:50%; transform:translateX(50%); background:var(--primary-700); color:#fff; padding:0.6rem 1.2rem; border-radius:99px; font-size:0.9rem; z-index:9999; display:none; }
+@media print {
+  aside, .top-header, .no-print, .mobile-overlay, .command-palette-overlay, footer, .whatsapp-float { display:none !important; }
+  main, .main, .page-content { margin:0 !important; padding:0 !important; max-width:none !important; }
+  .calc-card { border:none !important; box-shadow:none !important; padding:0 !important; margin:0 !important; }
+  .letter-paper { box-shadow:none !important; border:none !important; margin:0 !important; max-width:none !important; padding:0.5rem !important; }
+}
+</style>
+</head>
+<body>
+<div class="mobile-overlay"></div>
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">
+                    كبسولة المحاسب
+                    <span>حلول محاسبية احترافية</span>
+</div>
+</a>
+<button aria-label="Toggle Sidebar" class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item" href="blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a>
+<a class="nav-item" href="calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">التعلم</div>
+<a class="nav-item" href="downloads.html"><i class="fas fa-file-excel"></i><span>شيتات Excel</span></a>
+<a class="nav-item" href="downloads.html"><i class="fas fa-laptop-code"></i><span>البرامج</span></a>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="main">
+<header class="top-header">
+<button aria-label="Menu" class="mobile-menu-btn header-btn no-print"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+<a aria-label="WhatsApp" class="header-btn" href="https://wa.me/201092445639" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</header>
+<div class="page-content"><div class="calc-header">
+<h1><i class="fas fa-bullhorn" style="margin-left: 0.5rem;"></i> جديد الموقع</h1>
+<p>كل إضافة جديدة على كبسولة المحاسب - برامج وأدوات ومقالات - بتاريخها. الموقع يكبر كل أسبوع، فراجع هذه الصفحة أو تابعنا لتعرف الجديد أولًا.</p>
+</div>
+<div class="calc-card">
+<h2><i class="fas fa-calendar-day"></i> 23 نوفمبر 2026</h2>
+<ul class="changelog-list">
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/excel-formulas-for-accountants.html">عشر معادلات Excel لا يستغني عنها أي محاسب</a> - شرح عملي بالأمثلة والأخطاء الشائعة.</li>
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/income-statement-guide.html">قائمة الدخل خطوة بخطوة</a> - من صافي المبيعات إلى صافي الربح بمثال رقمي كامل.</li>
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/journal-entries-guide.html">قيود اليومية من الصفر</a> - المحتوى الركيزة: عشرون قيدًا متدرجًا بأمثلة رقمية.</li>
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/asset-vs-expense.html">الفرق بين الأصل والمصروف</a> - قاعدة القرار في ثلاثة أسئلة.</li>
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/ai-in-accounting.html">الذكاء الاصطناعي في المحاسبة</a> - دليل عملي ببرومبتات جاهزة.</li>
+<li><span class="changelog-tag tag-tool">أداة</span> <a href="letters.html">مولّد الخطابات والمحاضر المحاسبية</a> - خمسة نماذج رسمية جاهزة للطباعة في دقيقة.</li>
+<li><span class="changelog-tag tag-tool">أداة</span> <a href="calculators.html">الحاسبات السريعة</a> - مرتب الموظف (ضريبة وتأمينات 2026)، القيمة المضافة، الإهلاك.</li>
+<li><span class="changelog-tag tag-wb">مكتبة</span> <a href="downloads.html">اكتمال مكتبة البرامج: 19 برنامج Excel</a> - 11 نشاطًا تجاريًا و8 أنشطة خدمية، كلها مجانية.</li>
+</ul>
+</div>
+<div class="calc-card">
+<h2><i class="fas fa-calendar-day"></i> 22 نوفمبر 2026</h2>
+<ul class="changelog-list">
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/profit-vs-cash-flow.html">الفرق بين الربح والتدفق النقدي</a> - كيف تربح الشركة وتعجز عن الدفع؟</li>
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/fresh-accountant-interview.html">أشهر 35 سؤال إنترفيو للمحاسب حديث التخرج</a> - وإجاباتها النموذجية.</li>
+<li><span class="changelog-tag tag-article">مقال</span> <a href="articles/depreciation-explained.html">الإهلاك في المحاسبة</a> - الدليل العملي بطرق الحساب وأمثلة رقمية.</li>
+<li><span class="changelog-tag tag-wb">مكتبة</span> إطلاق الموقع بأول حزمة من برامج الحسابات الجاهزة.</li>
+</ul>
+</div>
+<style>
+.changelog-list { list-style:none; padding:0; margin:0; }
+.changelog-list li { padding:0.65rem 0; border-bottom:1px solid var(--gray-100); display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; }
+.changelog-list li:last-child { border-bottom:none; }
+.changelog-tag { font-size:0.75rem; font-weight:700; padding:0.15rem 0.6rem; border-radius:99px; white-space:nowrap; }
+.tag-article { background:#ede9fe; color:#6d28d9; }
+.tag-tool { background:#fef3c7; color:#b45309; }
+.tag-wb { background:#d1fae5; color:#047857; }
+</style>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer>
+</main>
+<script src="js/app.js"></script>
+<script>
+(function(){
+const fmt = n => (isFinite(n)? n : 0).toLocaleString('en-EG', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const today = new Date().toLocaleDateString('ar-EG', { year:'numeric', month:'long', day:'numeric' });
+const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+
+const TEMPLATES = {
+  balance: {
+    name: 'مطابقة رصيد عميل', icon: 'fa-scale-balanced',
+    fields: [
+      {id:'company', label:'اسم منشأتك', ph:'مثال: شركة النيل للتجارة'},
+      {id:'client', label:'اسم العميل (الجهة المرسل إليها)', ph:'مثال: شركة الأمل للصناعات'},
+      {id:'amount', label:'الرصيد المستحق (ج.م)', type:'number', ph:'125000'},
+      {id:'asof', label:'الرصيد في تاريخ', ph:'مثال: 31 ديسمبر 2026'},
+      {id:'manager', label:'اسم المسؤول الموقّع', ph:'مثال: أحمد محمد'},
+      {id:'title', label:'وظيفة الموقّع', ph:'مثال: مدير الحسابات'},
+    ],
+    render: v => `
+      <div class="lp-head"><h3>${esc(v.company)||'اسم المنشأة'}</h3><div class="lp-type">خطاب مطابقة رصيد</div></div>
+      <div class="lp-date">التاريخ: ${today}</div>
+      <div class="lp-to">السادة / ${esc(v.client)||'........................'} &nbsp;&nbsp; المحترمين</div>
+      <div class="lp-subject">الموضوع: مطابقة رصيد حسابكم لدينا في ${esc(v.asof)||'.... / .... / ........'}</div>
+      <div class="lp-body">
+      <p>تحية طيبة وبعد،،،</p>
+      <p>في إطار أعمال المراجعة الدورية لحساباتنا، نرجو من سيادتكم التكرم بمراجعة رصيد حسابكم المستحق لكم في دفاترنا في ${esc(v.asof)||'.... / .... / ........'} والبالغ <strong>${fmt(parseFloat(v.amount))} جنيهًا مصريًا</strong> (فقط ${fmt(parseFloat(v.amount))} ج.م لا غير).</p>
+      <p>فإن كان الرصيد مطابقًا لدفاتركم نرجو التوقيع والختم بالموافقة في المكان المخصص أدناه وإعادة نسخة لنا، وإن وُجد أي اختلاف نرجو موافاتنا ببيان مفصل به خلال أسبوع من تاريخ استلام هذا الخطاب.</p>
+      <p>وتفضلوا بقبول فائق الاحترام والتقدير،،،</p>
+      </div>
+      <div class="lp-sign">
+        <div>توقيع العميل بالموافقة على الرصيد<br><br><br>........................</div>
+        <div>${esc(v.title)||'........................'}<br>${esc(v.manager)||'........................'}<br><br>........................</div>
+      </div>`
+  },
+  claim: {
+    name: 'مطالبة بمديونية', icon: 'fa-file-invoice-dollar',
+    fields: [
+      {id:'company', label:'اسم منشأتك', ph:'مثال: شركة النيل للتجارة'},
+      {id:'client', label:'اسم المدين (الجهة المرسل إليها)', ph:'مثال: شركة الأمل للصناعات'},
+      {id:'amount', label:'قيمة المديونية (ج.م)', type:'number', ph:'85000'},
+      {id:'invoice', label:'رقم الفاتورة / المستند', ph:'مثال: 1042'},
+      {id:'invdate', label:'تاريخ الفاتورة', ph:'مثال: 15 سبتمبر 2026'},
+      {id:'deadline', label:'مهلة السداد (بالأيام)', type:'number', ph:'7'},
+      {id:'manager', label:'اسم المسؤول الموقّع', ph:'مثال: أحمد محمد'},
+      {id:'title', label:'وظيفة الموقّع', ph:'مثال: المدير المالي'},
+    ],
+    render: v => `
+      <div class="lp-head"><h3>${esc(v.company)||'اسم المنشأة'}</h3><div class="lp-type">خطاب مطالبة بمديونية</div></div>
+      <div class="lp-date">التاريخ: ${today}</div>
+      <div class="lp-to">السادة / ${esc(v.client)||'........................'} &nbsp;&nbsp; المحترمين</div>
+      <div class="lp-subject">الموضوع: مطالبة بسداد مديونية مستحقة</div>
+      <div class="lp-body">
+      <p>تحية طيبة وبعد،،،</p>
+      <p>نحيط سيادتكم علمًا بأن حسابكم مدين لدينا بمبلغ <strong>${fmt(parseFloat(v.amount))} جنيهًا مصريًا</strong> (فقط ${fmt(parseFloat(v.amount))} ج.م لا غير)، وذلك قيمة الفاتورة رقم ${esc(v.invoice)||'........'} بتاريخ ${esc(v.invdate)||'.... / .... / ........'}، والتي استحقت ولم تُسدد حتى تاريخه.</p>
+      <p>لذلك نرجو من سيادتكم التكرم بسداد المبلغ المستحق خلال ${esc(v.deadline)||'........'} أيام من تاريخ استلام هذا الخطاب، مع تقديرنا للتعاون المستمر بيننا وحرصنا على استمراره.</p>
+      <p>وتفضلوا بقبول فائق الاحترام والتقدير،،،</p>
+      </div>
+      <div class="lp-sign">
+        <div></div>
+        <div>${esc(v.title)||'........................'}<br>${esc(v.manager)||'........................'}<br><br>........................</div>
+      </div>`
+  },
+  cashcount: {
+    name: 'محضر جرد خزينة', icon: 'fa-vault',
+    fields: [
+      {id:'company', label:'اسم المنشأة', ph:'مثال: شركة النيل للتجارة'},
+      {id:'cashier', label:'اسم أمين الخزينة', ph:'مثال: محمود سيد'},
+      {id:'member1', label:'عضو لجنة الجرد (1)', ph:'مثال: أحمد محمد - مدير الحسابات'},
+      {id:'member2', label:'عضو لجنة الجرد (2)', ph:'مثال: سارة علي - المراجع الداخلي'},
+      {id:'book', label:'الرصيد الدفتري (ج.م)', type:'number', ph:'50000'},
+      {id:'actual', label:'الرصيد الفعلي المعدود (ج.م)', type:'number', ph:'49850'},
+      {id:'notes', label:'ملاحظات (اختياري)', type:'textarea', ph:'مثال: يوجد إيصالات صرف مؤقتة بقيمة 150 ج.م'},
+    ],
+    render: v => {
+      const book = parseFloat(v.book)||0, actual = parseFloat(v.actual)||0, diff = actual - book;
+      let diffLine;
+      if (Math.abs(diff) < 0.005) diffLine = '<p>وبعد العد الفعلي تبين <strong>مطابقة الرصيد الفعلي للرصيد الدفتري</strong> دون عجز أو زيادة.</p>';
+      else if (diff < 0) diffLine = `<p>وبعد العد الفعلي تبين وجود <strong>عجز قدره ${fmt(Math.abs(diff))} جنيهًا مصريًا</strong> (الرصيد الفعلي ${fmt(actual)} ج.م مقابل رصيد دفتري ${fmt(book)} ج.م)، وتحفظت اللجنة على العجز لحين تقديم أمين الخزينة ما يبرره.</p>`;
+      else diffLine = `<p>وبعد العد الفعلي تبين وجود <strong>زيادة قدرها ${fmt(diff)} جنيهًا مصريًا</strong> (الرصيد الفعلي ${fmt(actual)} ج.م مقابل رصيد دفتري ${fmt(book)} ج.م)، وتحفظت اللجنة على الزيادة لحين بحث أسبابها وقيدها.</p>`;
+      return `
+      <div class="lp-head"><h3>${esc(v.company)||'اسم المنشأة'}</h3><div class="lp-type">محضر جرد خزينة</div></div>
+      <div class="lp-body">
+      <p>في يوم ${today}، اجتمعت لجنة الجرد المشكلة من كلٍ من:</p>
+      <p>1- ${esc(v.member1)||'........................'}<br>2- ${esc(v.member2)||'........................'}</p>
+      <p>وبحضور أمين الخزينة السيد / ${esc(v.cashier)||'........................'}، تم جرد عهدة الخزينة جردًا فعليًا مفاجئًا، وكانت النتيجة كما يلي:</p>
+      <table class="lp-table">
+        <tr><th>الرصيد الدفتري</th><th>الرصيد الفعلي</th><th>الفرق</th></tr>
+        <tr><td>${fmt(book)} ج.م</td><td>${fmt(actual)} ج.م</td><td>${diff>=0?'+':'−'} ${fmt(Math.abs(diff))} ج.م</td></tr>
+      </table>
+      ${diffLine}
+      ${v.notes ? `<p><strong>ملاحظات:</strong> ${esc(v.notes)}</p>` : ''}
+      <p>وحرر هذا المحضر بذلك، ووقّع عليه أعضاء اللجنة وأمين الخزينة، والله ولي التوفيق.</p>
+      </div>
+      <div class="lp-sign">
+        <div>عضو اللجنة<br><br><br>........................</div>
+        <div>عضو اللجنة<br><br><br>........................</div>
+        <div>أمين الخزينة<br><br><br>........................</div>
+      </div>`;
+    }
+  },
+  stockwriteoff: {
+    name: 'محضر إعدام مخزون', icon: 'fa-boxes-stacked',
+    fields: [
+      {id:'company', label:'اسم المنشأة', ph:'مثال: شركة النيل للتجارة'},
+      {id:'member1', label:'عضو اللجنة (1)', ph:'مثال: أحمد محمد - مدير المخازن'},
+      {id:'member2', label:'عضو اللجنة (2)', ph:'مثال: سارة علي - مدير الحسابات'},
+      {id:'member3', label:'عضو اللجنة (3) - اختياري', ph:'مثال: كريم حسن - الشؤون القانونية'},
+      {id:'items', label:'الأصناف (سطر لكل صنف: الصنف - الكمية - سبب الإعدام)', type:'textarea', ph:'مثال:\nزيت طعام 1 لتر - 40 عبوة - انتهاء صلاحية\nأرز فاخر 5 كجم - 12 كيس - تلف بالرطوبة'},
+      {id:'method', label:'طريقة الإعدام', ph:'مثال: التلفيف والتخلص عبر شركة متخصصة'},
+    ],
+    render: v => {
+      const rows = (v.items||'').split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{
+        const parts = l.split('-').map(x=>x.trim());
+        return `<tr><td>${esc(parts[0]||'')}</td><td>${esc(parts[1]||'')}</td><td>${esc(parts[2]||'')}</td></tr>`;
+      }).join('');
+      return `
+      <div class="lp-head"><h3>${esc(v.company)||'اسم المنشأة'}</h3><div class="lp-type">محضر إعدام مخزون</div></div>
+      <div class="lp-body">
+      <p>في يوم ${today}، اجتمعت اللجنة المشكلة من كلٍ من:</p>
+      <p>1- ${esc(v.member1)||'........................'}<br>2- ${esc(v.member2)||'........................'}${v.member3?'<br>3- '+esc(v.member3):''}</p>
+      <p>وبعد المعاينة الفعلية للأصناف التالية، ثبت للجنة عدم صلاحيتها للاستخدام أو البيع، وقررت إعدامها على مسؤوليتها:</p>
+      <table class="lp-table">
+        <tr><th>الصنف</th><th>الكمية</th><th>سبب الإعدام</th></tr>
+        ${rows || '<tr><td>........................</td><td>........................</td><td>........................</td></tr>'}
+      </table>
+      <p>وتم الإعدام بطريقة ${esc(v.method)||'........................'} بمعرفة اللجنة وتحت إشرافها، وتُحمَّل تكلفة الأصناف المعدومة على نتيجة نشاط المنشأة وفق الأصول المحاسبية.</p>
+      <p>وحرر هذا المحضر بذلك، ووقّع عليه أعضاء اللجنة، والله ولي التوفيق.</p>
+      </div>
+      <div class="lp-sign">
+        <div>عضو اللجنة<br><br><br>........................</div>
+        <div>عضو اللجنة<br><br><br>........................</div>
+        ${v.member3?'<div>عضو اللجنة<br><br><br>........................</div>':''}
+      </div>`;
+    }
+  },
+  bankauth: {
+    name: 'تفويض بنكي', icon: 'fa-building-columns',
+    fields: [
+      {id:'company', label:'اسم المنشأة', ph:'مثال: شركة النيل للتجارة'},
+      {id:'bank', label:'اسم البنك والفرع', ph:'مثال: البنك الأهلي المصري - فرع سموحة'},
+      {id:'account', label:'رقم الحساب', ph:'مثال: 1234567890'},
+      {id:'agent', label:'اسم المفوَّض', ph:'مثال: أحمد محمد محمود'},
+      {id:'nid', label:'الرقم القومي للمفوَّض', ph:'14 رقمًا'},
+      {id:'scope', label:'الصلاحيات', type:'select', options:['السحب والإيداع والاستعلام','الإيداع والاستعلام فقط','الاستعلام فقط','السحب والإيداع']},
+      {id:'duration', label:'مدة التفويض', ph:'مثال: سنة من تاريخه'},
+      {id:'manager', label:'اسم المفوِّض (المدير المسؤول)', ph:'مثال: عمر البدري'},
+      {id:'title', label:'صفة المفوِّض', ph:'مثال: المدير العام'},
+    ],
+    render: v => `
+      <div class="lp-head"><h3>${esc(v.company)||'اسم المنشأة'}</h3><div class="lp-type">خطاب تفويض</div></div>
+      <div class="lp-date">التاريخ: ${today}</div>
+      <div class="lp-to">السيد المحترم / مدير ${esc(v.bank)||'........................'}</div>
+      <div class="lp-subject">الموضوع: تفويض بالتعامل على الحساب رقم ${esc(v.account)||'........................'}</div>
+      <div class="lp-body">
+      <p>تحية طيبة وبعد،،،</p>
+      <p>نفيد سيادتكم بأننا قد فوّضنا السيد / ${esc(v.agent)||'........................'}، بطاقة رقم قومي ${esc(v.nid)||'........................'}، في إجراء عمليات <strong>${esc(v.scope)||'........................'}</strong> على حسابنا الجاري لدى فرعكم رقم ${esc(v.account)||'........................'}، وذلك لمدة ${esc(v.duration)||'........................'}.</p>
+      <p>ويعتبر توقيعه المرفق معتمدًا لديكم في حدود هذا التفويض، ولا تتحمل المنشأة أي تعاملات تتجاوز نطاقه أو تليه بعد انتهائه أو إلغائه بخطاب رسمي.</p>
+      <p>وتفضلوا بقبول فائق الاحترام والتقدير،،،</p>
+      </div>
+      <div class="lp-sign">
+        <div>توقيع المفوَّض معتمدًا<br><br><br>........................</div>
+        <div>${esc(v.title)||'........................'}<br>${esc(v.manager)||'........................'}<br><br>........................</div>
+      </div>`
+  },
+};
+
+const values = {};
+let current = 'balance';
+const listEl = document.getElementById('templateList');
+const fieldsEl = document.getElementById('fieldArea');
+const paperEl = document.getElementById('letterPaper');
+
+function buildPicker(){
+  listEl.innerHTML = Object.entries(TEMPLATES).map(([k,t]) =>
+    `<div class="letter-tpl${k===current?' active':''}" data-tpl="${k}"><i class="fas ${t.icon}"></i><span>${t.name}</span></div>`
+  ).join('');
+  listEl.querySelectorAll('.letter-tpl').forEach(el => el.addEventListener('click', () => { current = el.dataset.tpl; buildPicker(); buildFields(); render(); }));
+}
+function buildFields(){
+  fieldsEl.innerHTML = TEMPLATES[current].fields.map(f => {
+    const val = values[f.id] || '';
+    if (f.type === 'textarea') return `<div class="letter-field full"><label>${f.label}</label><textarea data-fid="${f.id}" placeholder="${f.ph||''}">${esc(val)}</textarea></div>`;
+    if (f.type === 'select') return `<div class="letter-field"><label>${f.label}</label><select data-fid="${f.id}">${f.options.map(o=>`<option${o===val?' selected':''}>${o}</option>`).join('')}</select></div>`;
+    return `<div class="letter-field"><label>${f.label}</label><input data-fid="${f.id}" type="${f.type||'text'}" placeholder="${f.ph||''}" value="${esc(val)}"/></div>`;
+  }).join('');
+  fieldsEl.querySelectorAll('[data-fid]').forEach(el => el.addEventListener('input', () => { values[el.dataset.fid] = el.value; render(); }));
+}
+function render(){
+  const sel = fieldsEl.querySelector('select[data-fid]');
+  if (sel) values[sel.dataset.fid] = sel.value;
+  paperEl.innerHTML = TEMPLATES[current].render(values);
+}
+buildPicker(); buildFields(); render();
+
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+document.getElementById('copyBtn').addEventListener('click', () => {
+  const txt = paperEl.innerText;
+  const done = () => { let t = document.querySelector('.copy-toast'); if(!t){ t=document.createElement('div'); t.className='copy-toast'; document.body.appendChild(t);} t.textContent='تم نسخ النص'; t.style.display='block'; setTimeout(()=>t.style.display='none', 1800); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done).catch(done); else done();
+});
+})();
+</script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>19 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
