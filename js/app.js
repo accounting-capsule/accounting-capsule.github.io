@@ -871,3 +871,12 @@ if (location.hostname === 'accounting-capsule.github.io') {
     a.innerHTML = '<i class="fab fa-whatsapp"></i>';
     document.body.appendChild(a);
 })();
+
+// Availability source: static verified status, shared by all page views.
+(function(){
+ const base=new URL('../',document.currentScript.src);
+ fetch(new URL('assets/download-status.json',base)).then(r=>{if(!r.ok)throw Error('status unavailable');return r.json()}).then(s=>{
+  document.querySelectorAll('[data-download-count]').forEach(e=>e.textContent=s.available_workbooks);
+  document.querySelectorAll('[data-article-count]').forEach(e=>e.textContent=s.published_articles);
+ }).catch(()=>{});
+})();
