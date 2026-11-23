@@ -233,6 +233,70 @@
 <div class="calc-result" id="dep-result"></div>
 <p class="calc-note">ضريبيًا تطبق مصر القسط الثابت بهذه المعدلات، ولا يهلاك الأرض. القسط المتناقص متاح هنا لأغراض الإدارة والدراسة. تُعرض أول 10 سنوات من الجدول.</p>
 </div>
+<!-- WHT Calculator -->
+<div class="calc-card" id="wht">
+<h2><i class="fas fa-hand-holding-dollar"></i> حاسبة الخصم من المنبع (تحت حساب الضريبة)</h2>
+<p class="calc-sub">وفق القرار 405 لسنة 2018: 1% للتوريدات والمقاولات، 3% للخدمات، 5% للعمولات والسمسرة. يُحسب الخصم على قيمة المستحق قبل ضريبة القيمة المضافة.</p>
+<div class="calc-grid">
+<div class="calc-field">
+<label for="wht-amount">قيمة المستحق قبل ض.ق.م (ج.م)</label>
+<input id="wht-amount" inputmode="decimal" min="0" step="0.01" type="number" value="10000"/>
+</div>
+<div class="calc-field">
+<label for="wht-rate">نوع التعامل</label>
+<select id="wht-rate">
+<option value="1" selected>توريدات ومقاولات (1%)</option>
+<option value="3">خدمات (3%)</option>
+<option value="5">عمولات وسمسرة (5%)</option>
+<option value="custom">نسبة مخصصة</option>
+</select>
+</div>
+<div class="calc-field" id="wht-custom-field" style="display:none;">
+<label for="wht-custom">النسبة المخصصة (%)</label>
+<input id="wht-custom" inputmode="decimal" min="0" max="100" step="0.1" type="number" value="2"/>
+</div>
+</div>
+<div class="calc-result" id="wht-result"></div>
+<p class="calc-note">المنشأة الملتزمة بالخصم تخصم النسبة من المستحق للمورّد أو مقدم الخدمة وتورّدها للمصلحة بنموذج 41 ربع السنوي. الالتزام يسري على الجهات المنصوص عليها قانونًا، ولا يطبق على معاملات الأفراد العادية. النتيجة استرشادية.</p>
+</div>
+<!-- Margin Calculator -->
+<div class="calc-card" id="margin">
+<h2><i class="fas fa-scale-balanced"></i> حاسبة هامش الربح (هامش × إضافة)</h2>
+<p class="calc-sub">الفرق بين هامش الربح (من سعر البيع) ونسبة الإضافة (من التكلفة) - أكثر خلط شائع في التسعير.</p>
+<div class="calc-grid">
+<div class="calc-field">
+<label for="m-cost">التكلفة (ج.م)</label>
+<input id="m-cost" inputmode="decimal" min="0" step="0.01" type="number" value="80"/>
+</div>
+<div class="calc-field">
+<label for="m-price">سعر البيع (ج.م)</label>
+<input id="m-price" inputmode="decimal" min="0" step="0.01" type="number" value="100"/>
+</div>
+</div>
+<div class="calc-result" id="margin-result"></div>
+<p class="calc-note">هامش الربح = الربح ÷ سعر البيع. نسبة الإضافة = الربح ÷ التكلفة. بيع سلعة تكلفتها 80 بسعر 100 يعطي هامشًا 20% وإضافة 25%.</p>
+</div>
+<!-- Break-even Calculator -->
+<div class="calc-card" id="breakeven">
+<h2><i class="fas fa-equals"></i> حاسبة نقطة التعادل</h2>
+<p class="calc-sub">كم وحدة يجب أن تبيع حتى تغطي تكاليفك الثابتة؟</p>
+<div class="calc-grid">
+<div class="calc-field">
+<label for="be-fixed">التكاليف الثابتة الشهرية (ج.م)</label>
+<input id="be-fixed" inputmode="decimal" min="0" step="100" type="number" value="50000"/>
+</div>
+<div class="calc-field">
+<label for="be-price">سعر بيع الوحدة (ج.م)</label>
+<input id="be-price" inputmode="decimal" min="0" step="0.01" type="number" value="200"/>
+</div>
+<div class="calc-field">
+<label for="be-var">التكلفة المتغيرة للوحدة (ج.م)</label>
+<input id="be-var" inputmode="decimal" min="0" step="0.01" type="number" value="120"/>
+</div>
+</div>
+<div class="calc-result" id="be-result"></div>
+<p class="calc-note">نقطة التعادل = التكاليف الثابتة ÷ (سعر الوحدة - التكلفة المتغيرة للوحدة). ما يزيد عن هذه الكمية يبدأ تحقيق ربح بمقدار هامش المساهمة عن كل وحدة.</p>
+</div>
 </div>
 <footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
 <div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
@@ -355,7 +419,60 @@
 
     // initial render
     calcPayroll(); calcVat(); calcDep();
-    </script>
+    
+    // ===== WHT (Decree 405/2018) =====
+    const whtRateSel = document.getElementById('wht-rate');
+    whtRateSel.addEventListener('change', () => {
+        document.getElementById('wht-custom-field').style.display = whtRateSel.value === 'custom' ? 'block' : 'none';
+        calcWht();
+    });
+    function calcWht() {
+        const amt = parseFloat(document.getElementById('wht-amount').value) || 0;
+        let rate = whtRateSel.value === 'custom' ? (parseFloat(document.getElementById('wht-custom').value) || 0) : parseFloat(whtRateSel.value);
+        const ded = amt * rate / 100, net = amt - ded;
+        const r = [];
+        r.push(line('قيمة المستحق قبل الضريبة', amt));
+        r.push(line('المخصوم من المنبع (' + rate + '%)', ded));
+        r.push(line('الصافي المستحق للمورّد', net, true));
+        document.getElementById('wht-result').innerHTML = r.join('');
+    }
+    ['wht-amount', 'wht-custom'].forEach(id => document.getElementById(id).addEventListener('input', calcWht));
+    calcWht();
+
+    // ===== Margin / markup =====
+    function calcMargin() {
+        const c = parseFloat(document.getElementById('m-cost').value) || 0;
+        const p = parseFloat(document.getElementById('m-price').value) || 0;
+        const profit = p - c;
+        const r = [];
+        r.push(line('صافي الربح للوحدة', profit, profit < 0));
+        const margin = p > 0 ? profit / p * 100 : 0;
+        const markup = c > 0 ? profit / c * 100 : 0;
+        r.push(`<div class="calc-result-line"><span>هامش الربح (من سعر البيع)</span><span class="val">${margin.toFixed(1)}%</span></div>`);
+        r.push(`<div class="calc-result-line highlight"><span>نسبة الإضافة (من التكلفة)</span><span class="val">${markup.toFixed(1)}%</span></div>`);
+        document.getElementById('margin-result').innerHTML = r.join('');
+    }
+    ['m-cost', 'm-price'].forEach(id => document.getElementById(id).addEventListener('input', calcMargin));
+    calcMargin();
+
+    // ===== Break-even =====
+    function calcBE() {
+        const f = parseFloat(document.getElementById('be-fixed').value) || 0;
+        const p = parseFloat(document.getElementById('be-price').value) || 0;
+        const v = parseFloat(document.getElementById('be-var').value) || 0;
+        const box = document.getElementById('be-result');
+        const cm = p - v;
+        if (cm <= 0) { box.innerHTML = '<div class="calc-result-line"><span>سعر البيع يجب أن يتجاوز التكلفة المتغيرة للوحدة</span></div>'; return; }
+        const units = Math.ceil(f / cm);
+        const r = [];
+        r.push(line('هامش المساهمة للوحدة', cm));
+        r.push(`<div class="calc-result-line"><span>نقطة التعادل (وحدة/شهر)</span><span class="val">${units.toLocaleString('en-EG')}</span></div>`);
+        r.push(line('مبيعات التعادل بالجنيه', units * p, true));
+        box.innerHTML = r.join('');
+    }
+    ['be-fixed', 'be-price', 'be-var'].forEach(id => document.getElementById(id).addEventListener('input', calcBE));
+    calcBE();
+</script>
 <div class="command-palette-overlay">
 <div class="command-palette">
 <div class="command-input-wrapper">
