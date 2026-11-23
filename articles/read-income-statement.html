@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/articles/read-income-statement.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="كيف تقرأ قائمة الدخل: ماذا يقول لك كل سطر | كبسولة المحاسب" property="og:title"/>
+<meta content="قائمة دخل واحدة كاملة بأرقامها، ونفككها سطرًا سطرًا: مجمل الربح والربح التشغيلي وصافي الربح، هوامش كل مستوى، وإشارات الخطر التي تكشفها القراءة الصحيحة." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/articles/read-income-statement.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="كيف تقرأ قائمة الدخل: ماذا يقول لك كل سطر | كبسولة المحاسب" name="twitter:title"/>
+<meta content="قائمة دخل واحدة كاملة بأرقامها، ونفككها سطرًا سطرًا: مجمل الربح والربح التشغيلي وصافي الربح، هوامش كل مستوى، وإشارات الخطر التي تكشفها القراءة الصحيحة." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="قائمة دخل واحدة كاملة بأرقامها، ونفككها سطرًا سطرًا: مجمل الربح والربح التشغيلي وصافي الربح، هوامش كل مستوى، وإشارات الخطر التي تكشفها القراءة الصحيحة." name="description"/>
+<title>كيف تقرأ قائمة الدخل: ماذا يقول لك كل سطر | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "كيف تقرأ قائمة الدخل: ماذا يقول لك كل سطر",
+      "description": "قائمة دخل واحدة كاملة بأرقامها، ونفككها سطرًا سطرًا: مجمل الربح والربح التشغيلي وصافي الربح، هوامش كل مستوى، وإشارات الخطر التي تكشفها القراءة الصحيحة.",
+      "inLanguage": "ar",
+      "datePublished": "2026-11-23",
+      "dateModified": "2026-11-23",
+      "mainEntityOfPage": "https://accounting-capsule.github.io/articles/read-income-statement.html",
+      "image": "https://accounting-capsule.github.io/assets/og-image.png",
+      "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"},
+      "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}
+    }
+  ]
+}</script>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item active" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="../tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="../quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="../closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="../financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+</div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb">
+<a href="../index.html">الرئيسية</a> ‹
+                    <a href="../blog.html">المدونة</a> ‹
+                    <span>قراءة قائمة الدخل</span>
+</nav>
+<span class="article-category">محاسبة مالية</span>
+<div class="article-meta">
+<span><i class="far fa-calendar"></i> 23 نوفمبر 2026</span>
+<span><i class="far fa-clock"></i> 9 دقائق قراءة</span>
+</div>
+<div class="article-byline" style="margin-top:0.5rem; color:var(--gray-600); font-size:0.9rem;"><i class="fas fa-user-check" style="color:var(--primary-600);"></i> إعداد ومراجعة: عمر البدري - محاسب</div>
+<h1>كيف تقرأ قائمة الدخل: ماذا يقول لك كل سطر</h1>
+</div>
+<div class="article-content">
+<p>أمامك قائمة دخل جاهزة: إيرادات 500,000 جنيه وصافي ربح في الآخر 50,375. هل هذه نتيجة جيدة؟ لا يمكن الحكم من الرقم الأخير وحده. <strong>قائمة الدخل تُقرأ سطرًا سطرًا</strong>، وكل سطر يجيب عن سؤال مختلف عن صحة النشاط. سنأخذ قائمة واحدة كاملة ونفككها معًا.</p>
+
+<h2>القائمة التي سنعمل عليها</h2>
+<table>
+<tr><th>البند</th><th>المبلغ (جنيه)</th></tr>
+<tr><td>الإيرادات (المبيعات)</td><td>500,000</td></tr>
+<tr><td>تكلفة البضاعة المباعة</td><td>(320,000)</td></tr>
+<tr><td><strong>مجمل الربح</strong></td><td><strong>180,000</strong></td></tr>
+<tr><td>المصروفات التشغيلية (إيجار، مرتبات، كهرباء، تسويق)</td><td>(110,000)</td></tr>
+<tr><td><strong>الربح التشغيلي</strong></td><td><strong>70,000</strong></td></tr>
+<tr><td>إيرادات ومصروفات أخرى (صافي)</td><td>(5,000)</td></tr>
+<tr><td><strong>صافي الربح قبل الضريبة</strong></td><td><strong>65,000</strong></td></tr>
+<tr><td>ضريبة الدخل (22.5%)</td><td>(14,625)</td></tr>
+<tr><td><strong>صافي الربح</strong></td><td><strong>50,375</strong></td></tr>
+</table>
+
+<h2>السطر الأول: الإيرادات</h2>
+<p>رأس القائمة يقول كم بعت. مفيد وحده؟ لا. نصف مليون مبيعات قد تخفي نشاطًا خاسرًا أو تعلن نشاطًا ممتازًا. قيمته تظهر بالمقارنة: بالشهر الماضي وبنفس الشهر من العام الماضي وبالخطة. نمو الإيرادات خبر جيد فقط إذا لم تكن الهوامش تنهار تحته.</p>
+
+<h2>السطر الثاني: مجمل الربح وهامشه</h2>
+<p>مجمل الربح = الإيرادات - تكلفة ما بعته = 500,000 - 320,000 = <strong>180,000 جنيه</strong>. هذا ربح «الصفقة نفسها» قبل أي مصروف تشغيل. والأهم هو هامشه: 180,000 ÷ 500,000 = <strong>36%</strong>. الهامش يجيب: هل أسعاري تغطي تكلفتي وتترك فائضًا؟ هامش مجمل يتناقص شهرًا بعد شهر (36% ثم 33% ثم 30%) إشارة خطر مبكرة: إما أن التكلفة ترتفع ولا تمررها للأسعار، وإما أنك تخفض أسعارك لتبيع. راقب اتجاه الهامش، لا رقمه في شهر واحد.</p>
+
+<h2>السطر الثالث: الربح التشغيلي وهامشه</h2>
+<p>الربح التشغيلي = مجمل الربح - مصروفات التشغيل = 180,000 - 110,000 = <strong>70,000 جنيه</strong>، بهامش 70,000 ÷ 500,000 = <strong>14%</strong>. هذا ربح النشاط الأساسي بكل تكاليفه الجارية، قبل أي بند استثنائي أو ضريبي. إذا كان مجمل الربح جيدًا والتشغيلي ضعيفًا، فالمشكلة في المصروفات الثابتة: إيجار أكبر من حجم النشاط، مرتبات تتضخم، تسويق لا يعود بمبيعات. المقارنة الصحيحة هنا: هل تنمو المصروفات التشغيلية أسرع من الإيرادات؟ إن نمت المبيعات 10% والمصروفات 20%، فأنت تشتري النمو من ربحك.</p>
+
+<h2>السطر الرابع: البنود الأخرى وصافي الربح</h2>
+<p>بند «أخرى» يجمع ما ليس من صلب النشاط: بيع أصل قديم، فوائد، غرامات. هنا خصم صافي 5,000 فيصل الربح قبل الضريبة إلى <strong>65,000</strong>. احذر الاتجاه المعاكس: ربح تشغيلي ضعيف تجمّله إيرادات «أخرى» كبيرة (ربح بيع سيارة مثلًا)؛ هذا ربح لا يتكرر، والقراءة الصحيحة تستبعده عند الحكم على النشاط. بعد الضريبة يبقى صافي الربح <strong>50,375 جنيهًا</strong> بهامش 10.1% تقريبًا: من كل 100 جنيه مبيعات يبقى لصاحب العمل نحو 10 جنيهات.</p>
+
+<h2>إشارات الخطر في القراءة</h2>
+<ul>
+<li><strong>هامش مجمل يتناقص</strong> عبر الفترات: تكلفة تتقدم على الأسعار.</li>
+<li><strong>مصروفات تنمو أسرع من المبيعات:</strong> النمو يؤكل من الداخل.</li>
+<li><strong>ربح يعتمد على بنود «أخرى»</strong> غير متكررة.</li>
+<li><strong>صافي ربح موجب مع خزينة فارغة:</strong> الربح رقم دفتري والسيولة حياة؛ الفرق بينهما موضوع مقال <a href="profit-vs-cash-flow.html">الربح مقابل التدفق النقدي</a>.</li>
+</ul>
+
+<h2>من القراءة إلى القرار</h2>
+<p>الهوامش الثلاثة معًا ترسم قصة النشاط: 36% مجملًا ثم 14% تشغيليًا ثم 10% صافيًا تعني أن 22 نقطة تذهب للتشغيل ونحو 4 للضريبة والبنود الأخرى. حوّل هذه الأرقام إلى نسبك الخاصة عبر <a href="../financial-analyzer.html">محلل القوائم المالية</a> في الموقع: أدخل قوائمك فيعطيك الهوامش والمؤشرات جاهزة للمقارنة بين الفترات. ولبناء القائمة نفسها بندًا بندًا راجع مقال <a href="income-statement-guide.html">دليل قائمة الدخل</a>، ولمعرفة حجم المبيعات الذي يغطي تكاليفك راجع <a href="break-even-point.html">نقطة التعادل</a>.</p>
+
+<div class="saber-box">
+<h2>☕ وببساطة على طريقة عمي صابر</h2>
+<p>عمي صابر ورّاني قائمة الدخل بتاعته وقال بفخر: «بعت بنص مليون جنيه السنة دي!» قلت له: «مبروك، بس النص مليون دول أول السطر. تعالى ننزل سطر سطر. بعد ما دفعنا تمن البضاعة اللي اتباعت فضل 180 ألف، يعني من كل 100 جنيه مبيعات بيفضل 36. وبعد الإيجار والمرتبات والكهرباء فضل 70 ألف، يعني 14 من كل 100. وبعد البنود التانية والضريبة فضل 50 ألف شوية، يعني 10 جنيه بس من كل 100 داخلة المحل».</p>
+<p>عمي صابر اتفاجئ: «إزاي؟ أنا بعت بنص مليون!» قلت له: «المبيعات بتقولك إنت بتبيع قد إيه، مش بتقولك إنت كسبان قد إيه. اللي يهمني تلاتة أرقام: هامش مجمل الربح لو بينزل شهر ورا شهر يبقى تكلفتك بتاكل أسعارك، والمصروفات لو بتكبر أسرع من المبيعات يبقى النمو بيكلفك أكتر مما بيدخل، والربح لو جاي من حاجة استثنائية مش من شغلك يبقى مش مضمون يتكرر».</p>
+<p>الخلاصة على لسان عمي صابر: <strong>"متقراش السطر الأخير وبس. اسأل كل سطر: مجمل الربح بيقولك البيعة نفسها كسبانة ولا لأ، والربح التشغيلي بيقولك المحل بكل مصاريفه كسبان ولا لأ، وصافي الربح بيقولك اللي فضلك في الآخر. ولو الربح كبير والخزينة فاضية، يبقى الفلوس راجعة في البضاعة أو عند العملاء، مش في إيدك."</strong></p>
+</div>
+<div class="related-articles">
+<h3>📚 مقالات وأدوات ذات صلة</h3>
+<div class="related-grid">
+<a class="related-card" href="../financial-analyzer.html">
+<h4>محلل القوائم المالية</h4>
+<p>أدخل أرقامك واحصل على الهوامش والمؤشرات فورًا</p>
+</a>
+<a class="related-card" href="income-statement-guide.html">
+<h4>دليل قائمة الدخل</h4>
+<p>كيف تبني القائمة بندًا بندًا</p>
+</a>
+<a class="related-card" href="profit-vs-cash-flow.html">
+<h4>الربح مقابل التدفق النقدي</h4>
+<p>لماذا قد تربح وتفلس في نفس الوقت؟</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Newsletter Signup -->
+<section class="newsletter-section">
+<div class="newsletter-content">
+<div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+<h2>كبسولة المحاسب في إيميلك 📬</h2>
+<p>اشترك بإيميلك ويوصلك كل جديد: شيتات إكسل جاهزة، مقالات محاسبية عملية، ونصايح بسيطة تفرق معاك في شغلك. مرة في الأسبوع، من غير سبام.</p>
+<form class="newsletter-form">
+<input class="newsletter-input" placeholder="اكتب إيميلك هنا" required="" type="email"/>
+<input autocomplete="off" class="newsletter-honey" name="_honey" tabindex="-1" type="text"/>
+<button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i> اشترك</button>
+</form>
+<small class="newsletter-note"><i class="fas fa-lock"></i> بنحترم خصوصيتك، وتقدر تلغي الاشتراك في أي وقت</small>
+</div>
+</section>
+</div>
+</div>
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section">
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="../index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>74 برنامج Excel جاهز</p>
+</div>
+</div>
+<div class="command-item" data-href="../blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="../calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="../letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+<div class="command-item" data-href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+
+
+
+
+<div class="command-item" data-href="../financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div><div class="command-item" data-href="../closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div><div class="command-item" data-href="../quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div><div class="command-item" data-href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div><div class="command-item" data-href="../tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div>
+<div class="command-item" data-href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div></div></div>
+<div class="command-item" data-href="../changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="../downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>74 برنامج Excel جاهز</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="../contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="../about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
