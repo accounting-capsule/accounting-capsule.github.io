@@ -810,8 +810,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }).then(function(res) {
                     if (!res.ok) throw new Error('send failed');
                     return res.json();
-                }).then(function() {
-                    launchToast('تم إرسال رسالتك بنجاح ✅ هنرد عليك قريب', 'success');
+                }).then(function(data) {
+                    if (!data || (data.success !== true && data.success !== 'true')) throw new Error('provider rejected request');
+                    launchToast('قبلت خدمة الإرسال الطلب. وصوله إلى البريد لم يُؤكد بعد.', 'success');
                     contactForm.reset();
                 }).catch(function() {
                     launchToast('حصلت مشكلة في الإرسال، جرب تاني أو ابعتلنا على البريد مباشرة', 'error');
@@ -824,7 +825,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 7. Newsletter signup forms (FormSubmit, same approach as the contact form)
-    // Recipient: site owner email (FormSubmit activation confirmed on this address).
+    // Recipient: existing site owner address. Inbox delivery still requires an end-to-end test.
     var NEWSLETTER_ENDPOINT = 'https://formsubmit.co/ajax/omarelbadry300@gmail.com';
     document.querySelectorAll('.newsletter-form').forEach(function(newsForm) {
         newsForm.addEventListener('submit', function(e) {
@@ -853,8 +854,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }).then(function(res) {
                 if (!res.ok) throw new Error('send failed');
                 return res.json();
-            }).then(function() {
-                launchToast('تم الاشتراك بنجاح ✅ أهلاً بيك في الكبسولة', 'success');
+            }).then(function(data) {
+                if (!data || (data.success !== true && data.success !== 'true')) throw new Error('provider rejected request');
+                launchToast('قبلت خدمة الإرسال طلب التحديثات. هذا ليس تأكيد اشتراك بريدي آلي.', 'success');
                 newsForm.reset();
             }).catch(function() {
                 launchToast('حصلت مشكلة في الاشتراك، جرب تاني', 'error');
@@ -899,5 +901,6 @@ if (location.hostname === 'accounting-capsule.github.io') {
  fetch(new URL('assets/download-status.json',base)).then(r=>{if(!r.ok)throw Error('status unavailable');return r.json()}).then(s=>{
   document.querySelectorAll('[data-download-count]').forEach(e=>e.textContent=s.available_workbooks);
   document.querySelectorAll('[data-article-count]').forEach(e=>e.textContent=s.published_articles);
+  document.querySelectorAll('[data-review-date]').forEach(e=>{const v=s.review_dates && s.review_dates[e.dataset.reviewDate];if(v)e.textContent=v;});
  }).catch(()=>{});
 })();

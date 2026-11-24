@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html dir="rtl" lang="ar">
 <head>
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co"/>
+<meta content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" http-equiv="Content-Security-Policy"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>حاسبة زكاة المنشآت (السعودية): الوعاء والنسبة وفق لائحة زاتكا 1445هـ | كبسولة المحاسب</title>
-<meta content="احسب الوعاء الزكوي بطريقة مصادر الأموال والزكاة المستحقة (2.5% بالأيام الفعلية) وفق اللائحة التنفيذية لجباية الزكاة 1445هـ - مجانًا وبدون رفع بيانات." name="description"/>
+<meta content="نموذج تعليمي قيد المراجعة. عرض النتيجة متوقف مؤقتًا لحين استكمال أحكام الوعاء الزكوي. راجع النص الرسمي لدى زاتكا." name="description"/>
 <link href="https://accounting-capsule.github.io/saudi-zakat-calculator.html" rel="canonical"/>
 <meta content="ar_AR" property="og:locale"/>
 <meta content="كبسولة المحاسب" property="og:site_name"/>
 <meta content="حاسبة زكاة المنشآت (السعودية): الوعاء والنسبة وفق لائحة زاتكا 1445هـ | كبسولة المحاسب" property="og:title"/>
-<meta content="احسب الوعاء الزكوي بطريقة مصادر الأموال والزكاة المستحقة (2.5% بالأيام الفعلية) وفق اللائحة التنفيذية لجباية الزكاة 1445هـ - مجانًا وبدون رفع بيانات." property="og:description"/>
+<meta content="نموذج تعليمي قيد المراجعة. عرض النتيجة متوقف مؤقتًا لحين استكمال أحكام الوعاء الزكوي. راجع النص الرسمي لدى زاتكا." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://accounting-capsule.github.io/saudi-zakat-calculator.html" property="og:url"/>
 <meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
@@ -32,7 +33,7 @@
         "operatingSystem": "Any",
         "inLanguage": "ar",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EGP" },
-        "description": "احسب الوعاء الزكوي بطريقة مصادر الأموال والزكاة المستحقة (2.5% بالأيام الفعلية) وفق اللائحة التنفيذية لجباية الزكاة 1445هـ - مجانًا وبدون رفع بيانات."
+        "description": "احسب الوعاء الزكوي بطريقة مصادر الأموال ونتيجة النموذج التعليمي (متوقفة للمراجعة) (2.5% بالأيام الفعلية) وفق اللائحة التنفيذية لجباية الزكاة 1445هـ - مجانًا وبدون رفع بيانات."
     }
     </script>
 <style>
@@ -143,7 +144,7 @@
   .letter-paper { box-shadow:none !important; border:none !important; margin:0 !important; max-width:none !important; padding:0.5rem !important; }
 }
 </style>
-</head>
+<style>@media(max-width:600px){#wa-float{position:static!important;display:flex!important;margin:1rem auto!important;width:44px!important;height:44px!important;font-size:1.4rem!important}.legal-section{padding:1.1rem!important}}</style></head>
 <body>
 <div class="mobile-overlay"></div>
 <!-- Sidebar -->
@@ -196,43 +197,43 @@
 </header>
 <div class="page-content"><div class="calc-header">
 <h1><i class="fas fa-scale-balanced" style="margin-left: 0.5rem;"></i> حاسبة زكاة المنشآت (السعودية)</h1>
-<p>احسب الوعاء الزكوي لمنشأتك بطريقة مصادر الأموال والزكاة المستحقة وفق اللائحة التنفيذية لجباية الزكاة 1445هـ الصادرة عن هيئة الزكاة والضريبة والجمارك (زاتكا). الحساب يتم في متصفحك ولا تُرسل أي بيانات.</p>
+<p>نموذج تعليمي قيد المراجعة. عرض المبلغ النهائي متوقف مؤقتًا لأن المدخلات الحالية لا تغطي جميع أحكام تحديد الوعاء، وخاصة البديل المشروط في المادة 27. لا تستخدمه لإعداد الإقرار أو تحديد مبلغ للسداد. الحساب يتم في متصفحك ولا تُرسل أي بيانات.</p>
 </div>
 <div class="calc-card">
 <h2><i class="fas fa-coins"></i> بيانات المنشأة (بالريال السعودي)</h2>
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:0.75rem; margin-top:0.75rem;">
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">حقوق الملكية بالقيمة الدفترية</label>
-<input id="zkEquity" type="number" min="0" step="0.01" placeholder="مثال: 500000" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkEquity" min="0" oninput="renderZk()" placeholder="مثال: 500000" step="0.01" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">صافي الربح الدفتري</label>
-<input id="zkBookProfit" type="number" step="0.01" placeholder="مثال: 80000" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkBookProfit" oninput="renderZk()" placeholder="مثال: 80000" step="0.01" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">صافي الربح المعدل (الزكوي)</label>
-<input id="zkAdjProfit" type="number" step="0.01" placeholder="مثال: 95000" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkAdjProfit" oninput="renderZk()" placeholder="مثال: 95000" step="0.01" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">مصادر أموال خارجية مؤهلة (خصوم طويلة الأجل ونحوها)</label>
-<input id="zkExternal" type="number" min="0" step="0.01" placeholder="مثال: 120000" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkExternal" min="0" oninput="renderZk()" placeholder="مثال: 120000" step="0.01" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">الأصول غير الزكوية المحسومة (ثابتة وما في حكمها)</label>
-<input id="zkDeducted" type="number" min="0" step="0.01" placeholder="مثال: 300000" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkDeducted" min="0" oninput="renderZk()" placeholder="مثال: 300000" step="0.01" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">أصول سبقت جباية زكاتها في منشآت أخرى</label>
-<input id="zkZakated" type="number" min="0" step="0.01" placeholder="مثال: 0" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkZakated" min="0" oninput="renderZk()" placeholder="مثال: 0" step="0.01" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">عدد أيام السنة المالية الفعلية</label>
-<input id="zkFiscalDays" type="number" min="1" max="366" step="1" value="354" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" oninput="renderZk()">
+<input id="zkFiscalDays" max="366" min="1" oninput="renderZk()" step="1" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" type="number" value="354"/>
 </div>
 <div>
 <label style="display:block; margin-bottom:0.4rem; font-weight:600; font-size:0.9rem;">عدد أيام السنة الهجرية</label>
-<select id="zkHijriDays" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;" onchange="renderZk()">
-<option value="354" selected>354 يومًا</option>
+<select id="zkHijriDays" onchange="renderZk()" style="width:100%; padding:0.85rem 1rem; border:1px solid var(--gray-300); border-radius:0.75rem; font-size:1rem; font-family:inherit;">
+<option selected="" value="354">354 يومًا</option>
 <option value="355">355 يومًا</option>
 </select>
 </div>
@@ -245,7 +246,7 @@
 <tr style="border-bottom:1px solid var(--primary-100);"><td style="padding:0.5rem 0; color:var(--gray-700);">المصادر الخارجية المضافة (بحد الأصول المحسومة)</td><td id="zkRExternal" style="padding:0.5rem 0; font-weight:700; text-align:left;"></td></tr>
 <tr style="border-bottom:1px solid var(--primary-100);"><td style="padding:0.5rem 0; color:var(--gray-700);">الوعاء الزكوي (بعد الحدين الأدنى والأعلى)</td><td id="zkRBase" style="padding:0.5rem 0; font-weight:700; text-align:left; color:var(--primary-800);"></td></tr>
 <tr style="border-bottom:1px solid var(--primary-100);"><td style="padding:0.5rem 0; color:var(--gray-700);">نسبة الزكاة المطبقة</td><td id="zkRRate" style="padding:0.5rem 0; font-weight:700; text-align:left;"></td></tr>
-<tr><td style="padding:0.6rem 0; color:var(--gray-900); font-weight:800; font-size:1.05rem;">الزكاة المستحقة</td><td id="zkRDue" style="padding:0.6rem 0; font-weight:800; font-size:1.15rem; text-align:left; color:var(--primary-700);"></td></tr>
+<tr><td style="padding:0.6rem 0; color:var(--gray-900); font-weight:800; font-size:1.05rem;">نتيجة النموذج التعليمي (متوقفة للمراجعة)</td><td id="zkRDue" style="padding:0.6rem 0; font-weight:800; font-size:1.15rem; text-align:left; color:var(--primary-700);"></td></tr>
 </tbody>
 </table>
 </div>
@@ -254,17 +255,20 @@
 <h2><i class="fas fa-circle-info"></i> كيف يُحسب؟</h2>
 <ul style="line-height:2; color:var(--gray-700);">
 <li>الوعاء = مصادر الأموال الداخلية (حقوق الملكية معدلة بفرق صافي الربح الزكوي عن الدفتري) + المصادر الخارجية المؤهلة بما لا يتجاوز الأصول المحسومة − الأصول غير الزكوية − الأصول التي سبقت زكاتها (المادة 21 من اللائحة).</li>
-<li>لا يقل الوعاء عن صافي الربح المعدل، ولا يتجاوز مصادر الأموال الداخلية.</li>
+<li>الحد الأدنى ليس قاعدة مطلقة بصافي الربح المعدل؛ تتضمن المادة 27 حالات وبديلًا مشروطًا يتطلب بيانات لا تجمعها هذه الواجهة. كما أن الحد الأعلى يخضع لتصنيف حقوق الملكية وما في حكمها وفق المادة 28.</li>
 <li>النسبة: 2.5% للسنة الهجرية، وللسنة المختلفة تُحسب بالأيام الفعلية: (2.5% ÷ أيام السنة الهجرية) × أيام السنة المالية (المادة 15).</li>
 <li>الحاسبة للمنشآت ماسكة الدفاتر التجارية الخاضعة للزكاة؛ لا تشمل ضريبة الدخل على حصص غير السعوديين (20%) ولا تقدير الربح المعدل ببنوده التفصيلية.</li>
 <li>النتيجة تقديرية لأغراض التوعية ولا تغني عن إقرارك الرسمي عبر بوابة زاتكا أو عن مستشارك الزكوي.</li>
 </ul>
-<p style="color:var(--gray-500); font-size:0.8rem;"><i class="fas fa-calendar-check"></i> أداة محدثة حتى 23 نوفمبر 2026، وفق اللائحة التنفيذية لجباية الزكاة 1445هـ بآخر تعديلاتها.</p>
+<p style="color:var(--gray-500); font-size:0.8rem;"><i class="fas fa-calendar-check"></i> مراجعة المصدر والنطاق: 24 نوفمبر 2026. لا تمثل هذه المراجعة اعتمادًا لجميع الأحكام أو المدخلات. <a href="https://zatca.gov.sa/ar/RulesRegulations/Taxes/Documents/ZakatRegulation_1445.pdf">النص الرسمي للائحة لدى زاتكا</a>، خاصة المواد 15 و21 و23 و27 و28. يلزم استكمال النموذج واختباره قبل إعادة عرض النتائج.</p>
 </div>
 <script src="js/zakat-calc.js"></script>
 <script>
 const fmtZk = n => (isFinite(n)? n : 0).toLocaleString('en-EG', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 function renderZk() {
+  document.getElementById('zkOut').style.display = 'none';
+  return; // Final amount paused until Article 27 and input coverage are reviewed.
+
   const g = id => document.getElementById(id).value;
   const out = document.getElementById('zkOut');
   const equity = ZakatCalc && parseFloat(g('zkEquity'));
@@ -295,7 +299,7 @@ function renderZk() {
 <a href="terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
 </div>
 </footer>
-</main>
+</div></main>
 <script src="js/app.js"></script>
 <script>
 (function(){

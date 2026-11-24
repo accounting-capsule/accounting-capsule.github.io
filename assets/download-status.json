@@ -3,5 +3,12 @@
   "status": "withdrawn_for_review",
   "updated": "2026-11-24",
   "message_ar": "تحميلات Excel متوقفة مؤقتًا للمراجعة",
-  "published_articles": 103
+  "published_articles": 103,
+  "review_dates": {
+    "egypt_calculators_arithmetic": "2026-11-23",
+    "egypt_calculators_sources_checked": "2026-11-24",
+    "egypt_calculators_legal_coverage": "incomplete",
+    "saudi_zakat_status": "output_paused_pending_legal_review",
+    "saudi_zakat_sources_checked": "2026-11-24"
+  }
 }
