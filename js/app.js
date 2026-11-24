@@ -23,7 +23,28 @@
         initApp();
     });
 
+    function initStartNavigation() {
+        const home = document.querySelector('.sidebar-nav a[href$="index.html"]');
+        if (!home) return;
+        const href = home.getAttribute('href').replace(/index\.html$/, 'start-here.html');
+        if (!document.querySelector('.sidebar-nav a[href$="start-here.html"]')) {
+            const a = document.createElement('a'); a.className = 'nav-item'; a.href = href;
+            const icon = document.createElement('i'); icon.className = 'fas fa-route';
+            const label = document.createElement('span'); label.textContent = 'ابدأ من هنا';
+            a.append(icon, label); home.parentNode.prepend(a);
+        }
+        const section = document.querySelector('.command-section');
+        if (section && !document.querySelector('.command-item[data-href$="start-here.html"]')) {
+            const item = document.createElement('div'); item.className = 'command-item'; item.dataset.href = href;
+            const info = document.createElement('div'); info.className = 'command-item-info';
+            const title = document.createElement('h4'); title.textContent = 'ابدأ من هنا';
+            const desc = document.createElement('p'); desc.textContent = 'مسار للتعلم أو لفهم أرقام مشروعك';
+            info.append(title, desc); item.append(info); section.prepend(item);
+        }
+    }
+
     function initApp() {
+        initStartNavigation();
         initSidebar();
         initCommandPalette();
         initChatbot();

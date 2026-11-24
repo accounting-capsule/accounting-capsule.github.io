@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" http-equiv="Content-Security-Policy"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/start-here.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="ابدأ من هنا | كبسولة المحاسب" property="og:title"/>
+<meta content="اختر مسارًا للتعلم أو لفهم أرقام مشروعك، باستخدام مقالات وأدوات كبسولة المحاسب المتاحة." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/start-here.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="كبسولة المحاسب | شيتات إكسل وكورسات وبرامج محاسبية" name="twitter:title"/>
+<meta content="منصة كبسولة المحاسب: شيتات إكسل محاسبية جاهزة، كورسات وبرامج محاسبة، ومقالات عملية للمحاسبين وطلاب المحاسبة وأصحاب المشاريع في العالم العربي." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="اختر مسارًا للتعلم أو لفهم أرقام مشروعك، باستخدام مقالات وأدوات كبسولة المحاسب المتاحة." name="description"/>
+<meta content="محاسبة, Excel, شيتات, كورسات, برامج محاسبية, ضرائب, تحليل مالي" name="keywords"/>
+<meta content="كبسولة المحاسب" name="author"/>
+<title>ابدأ من هنا | كبسولة المحاسب</title>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/layout.css" rel="stylesheet"/>
+<style>
+        /* Page-specific styles */
+        .welcome-banner {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+
+        .welcome-content h1 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .welcome-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9375rem;
+        }
+
+        .welcome-banner .btn-gold {
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-action {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .quick-action:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+            border-color: var(--primary-300);
+        }
+
+        .quick-action-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin: 0 auto 0.75rem;
+        }
+
+        .quick-action-icon.blue { background: #dbeafe; color: var(--primary-600); }
+        .quick-action-icon.green { background: var(--secondary-100); color: var(--secondary-700); }
+        .quick-action-icon.gold { background: var(--gold-100); color: var(--gold-600); }
+        .quick-action-icon.purple { background: #f3e8ff; color: #7c3aed; }
+
+        .quick-action h4 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.25rem;
+        }
+
+        .quick-action p {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+        }
+    </style>
+<style>.start-hero{background:linear-gradient(135deg,var(--primary-700),var(--primary-900));color:white;border-radius:18px;padding:2rem;margin-bottom:1.5rem}.start-hero h1{color:white;font-size:2rem;margin:.4rem 0}.start-hero p{color:white;line-height:1.9}.start-label{font-size:.85rem;font-weight:700;color:var(--primary-600)}.start-hero .start-label{color:#f4d786}.start-choices{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}.start-choices a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.65rem 1rem;background:#fff;color:var(--primary-800);border:1px solid #b9c7d7;border-radius:8px;font-weight:700;text-decoration:none}.start-route{background:white;border:1px solid var(--gray-200);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;scroll-margin-top:90px}.start-route h2,.start-note h2{font-size:1.35rem;line-height:1.6;margin:.4rem 0 1rem}.start-route h3{font-size:1.05rem;line-height:1.7;margin:.2rem 0}.start-route p,.start-note p{line-height:1.9;margin:.4rem 0}.start-route a:not(.start-choices a),.start-note a{display:inline-flex;align-items:center;min-height:44px;margin:.25rem 0 .25rem .75rem;color:#1e4774;font-weight:700;text-decoration:underline;text-underline-offset:4px}.start-steps{padding-right:1.4rem;margin:0}.start-steps li{padding:.8rem .4rem;border-bottom:1px solid #e2e8f0}.start-steps li:last-child{border:0}.start-business{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.start-business article{padding:.8rem;border:1px solid #dce4ed;border-radius:10px}.start-note{padding:1.5rem;background:#fff7e4;border-right:4px solid #b57912;border-radius:10px;margin-bottom:1.5rem}a:focus-visible,button:focus-visible{outline:3px solid #b57912;outline-offset:3px}@media(max-width:700px){.start-business{grid-template-columns:1fr}.start-hero,.start-route,.start-note{padding:1.1rem}.start-hero h1{font-size:1.6rem}#wa-float{position:static!important;display:flex!important;margin:1rem auto!important;width:44px!important;height:44px!important;font-size:1.4rem!important}}</style></head>
+<body>
+<!-- Mobile Overlay -->
+<div class="mobile-overlay"></div>
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="index.html">
+<div class="logo-icon">
+<i class="fas fa-capsules"></i>
+</div>
+<div class="logo-text">
+                    كبسولة المحاسب
+                    <span>حلول محاسبية احترافية</span>
+</div>
+</a>
+<button aria-label="Toggle Sidebar" class="sidebar-toggle">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+<nav class="sidebar-nav"><a class="nav-item active" href="start-here.html">ابدأ من هنا</a><a class="nav-item" href="projects.html"><i class="fas fa-briefcase"></i><span>قسم المشاريع</span></a>
+<div class="nav-section">
+<div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="index.html">
+<i class="fas fa-home"></i>
+<span>الرئيسية</span>
+</a>
+<a class="nav-item" href="downloads.html">
+<i class="fas fa-download"></i>
+<span>التحميلات</span>
+</a>
+<a class="nav-item" href="blog.html">
+<i class="fas fa-blog"></i>
+<span>المدونة</span>
+<span class="nav-badge">جديد</span>
+</a><a class="nav-item" href="calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="saudi-zakat-calculator.html"><i class="fas fa-coins"></i><span>حاسبة الزكاة</span></a>
+<a class="nav-item" href="invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">التعلم</div>
+<a class="nav-item" href="downloads.html">
+<i class="fas fa-file-excel"></i>
+<span>شيتات Excel</span>
+</a>
+<a class="nav-item" href="downloads.html">
+<i class="fas fa-laptop-code"></i>
+<span>البرامج</span>
+</a>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="about.html">
+<i class="fas fa-info-circle"></i>
+<span>عنّا</span>
+</a>
+<a class="nav-item" href="contact.html">
+<i class="fas fa-envelope"></i>
+<span>تواصل معنا</span>
+</a>
+</div>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="main"><div role="status" style="background:#fef3c7;border:1px solid #f59e0b;color:#92400e;padding:1rem;border-radius:12px;margin:1rem 0;line-height:1.8;"><strong>تنبيه مراجعة:</strong> تحميل ملفات Excel متوقف مؤقتًا حتى اكتمال مراجعة المعادلات. لا تعتمد على أرقام الربح في النسخ السابقة أو صورها حتى صدور النسخ المعتمدة.</div>
+<!-- Top Header -->
+<header class="top-header">
+<button aria-label="Menu" class="mobile-menu-btn header-btn no-print">
+<i class="fas fa-bars"></i>
+</button>
+<div class="header-search">
+<button class="search-trigger">
+<i class="fas fa-search"></i>
+<span>ابحث في الموقع...</span>
+<kbd>Ctrl + K</kbd>
+</button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<!-- Page Content -->
+<div class="page-content"><section class="start-hero"><p class="start-label">دليلك لاختيار نقطة البداية</p><h1>ابدأ من هنا</h1><p>لا تحتاج إلى قراءة كل شيء. اختر المسار الأقرب إلى حاجتك، وابدأ بخطوة واحدة.</p><nav aria-label="اختر مسارك" class="start-choices"><a href="#learn">أتعلم المحاسبة</a><a href="#business">أدير مشروعًا</a></nav></section>
+<section class="start-route" id="learn"><p class="start-label">للمحاسب المبتدئ والطالب</p><h2>افهم العملية، ثم اقرأ أثرها</h2><ol class="start-steps">
+<li><h3>كيف تتحول العملية إلى قيد؟</h3><p>ابدأ بفهم المدين والدائن، ثم تابع الأمثلة التطبيقية.</p><a href="articles/journal-entries-guide.html">اقرأ دليل قيود اليومية</a></li>
+<li><h3>كيف تتكون نتيجة النشاط؟</h3><p>انتقل من القيود إلى الإيرادات والمصروفات وقائمة الدخل.</p><a href="articles/income-statement-guide.html">اقرأ دليل قائمة الدخل</a></li>
+<li><h3>لماذا يختلف الربح عن السيولة؟</h3><p>افصل بين نتيجة النشاط وحركة النقد قبل تفسير الأرقام.</p><a href="articles/profit-vs-cash-flow.html">افهم الفرق بين الربح والتدفق النقدي</a></li>
+<li><h3>طبّق أداة واحدة في عملك</h3><p>راجع أمثلة معادلات Excel، أو ابدأ بمذكرة تسوية البنك.</p><a href="articles/excel-formulas-for-accountants.html">معادلات Excel بالأمثلة</a><a href="articles/bank-reconciliation-guide.html">دليل تسوية البنك</a></li></ol></section>
+<section class="start-route" id="business"><p class="start-label">لصاحب المشروع</p><h2>ابدأ بالسؤال الذي يؤثر في قرارك</h2><div class="start-business"><article><h3>أين تذهب السيولة؟</h3><p>راجع الفرق بين الربح والتدفق النقدي قبل الحكم على قدرة المشروع على الدفع.</p><a href="articles/profit-vs-cash-flow.html">اقرأ عن الربح والسيولة</a></article><article><h3>كم أحتاج إلى البيع؟</h3><p>تعرّف إلى نقطة التعادل لكل منتج، وافحص افتراضات السعر والتكلفة.</p><a href="articles/product-break-even.html">افهم نقطة التعادل</a></article><article><h3>كيف أتابع خطتي؟</h3><p>ابنِ موازنة مبسطة، ثم قارن النتائج الفعلية بما خططت له.</p><a href="articles/small-shop-budget.html">ابدأ بموازنة المشروع</a></article></div></section>
+<aside class="start-note"><h2>قبل أن تستخدم أداة أو ملفًا</h2><p>تحميل ملفات Excel متوقف مؤقتًا لمراجعة المعادلات. مقالة معادلات Excel شرح تعليمي، وليست ملفًا معتمدًا للتحميل. لا تعتمد على نتائج النسخ القديمة في قرار مالي.</p><p>اقرأ افتراضات كل أداة وحدودها، واستخدم بيانات افتراضية أو منزوعة الهوية عند التجربة.</p><a href="methodology.html">اطّلع على منهجنا في المراجعة</a></aside>
+<section class="start-route"><h2>لديك سؤال محدد؟</h2><p>استخدم البحث لاختيار مقال أو أداة. ويمكنك تصفح المقالات أو الحاسبات مباشرة.</p><div class="start-choices"><a href="blog.html">تصفح المقالات</a><a href="calculators.html">تصفح الحاسبات وحدودها</a></div></section><footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="methodology.html" style="color:var(--primary-600); text-decoration:none;">منهجنا في المراجعة</a>
+<a href="privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></div>
+</main>
+<!-- Command Palette -->
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section"><div class="command-item" data-href="start-here.html"><i class="fas fa-route"></i><div class="command-item-info"><h4>ابدأ من هنا</h4><p>مسار للتعلم أو لفهم أرقام مشروعك</p></div></div><div class="command-item" data-href="projects.html"><i class="fas fa-briefcase"></i><div class="command-item-info"><h4>قسم المشاريع</h4><p>دراسات جدوى تعليمية ومصادر وافتراضات معلنة</p></div></div>
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>تحميلات Excel متوقفة مؤقتًا للمراجعة</p>
+</div>
+</div>
+<div class="command-item" data-href="blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="calculators.html"><i class="fas fa-calculator gold"></i><div class="command-item-info"><h4>حاسبات سريعة</h4><p>مرتبات وقيمة مضافة وإهلاك</p></div></div>
+<div class="command-item" data-href="letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+<div class="command-item" data-href="tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+<div class="command-item" data-href="financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div>
+<div class="command-item" data-href="tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div>
+<div class="command-item" data-href="saudi-zakat-calculator.html"><i class="fas fa-coins"></i><div class="command-item-info"><div class="command-item-title">حاسبة زكاة المنشآت</div><div class="command-item-desc">الوعاء الزكوي والزكاة المستحقة وفق لائحة زاتكا</div></div></div>
+<div class="command-item" data-href="invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div>
+<div class="command-item" data-href="quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div>
+<div class="command-item" data-href="closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div>
+<div class="command-item" data-href="financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div></div></div>
+<div class="command-item" data-href="changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>تحميلات Excel متوقفة مؤقتًا للمراجعة</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div>
+<!-- Chatbot Widget -->
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" style="display: none;">
+<p>
+            نستخدم ملفات الكوكيز لتحسين تجربتك. باستخدامك للموقع، فإنك توافق على 
+            <a href="privacy.html">سياسة الخصوصية</a> و
+            <a href="terms.html">شروط الاستخدام</a>.
+        </p>
+<button class="btn btn-gold btn-sm cookie-accept">
+<i class="fas fa-check"></i>
+            موافق
+        </button>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
