@@ -904,3 +904,31 @@ if (location.hostname === 'accounting-capsule.github.io') {
   document.querySelectorAll('[data-review-date]').forEach(e=>{const v=s.review_dates && s.review_dates[e.dataset.reviewDate];if(v)e.textContent=v;});
  }).catch(()=>{});
 })();
+
+// Verified social profiles, shared footer links.
+(function () {
+    function addSocialLinks() {
+        document.querySelectorAll('footer').forEach(function (footer) {
+            if (footer.querySelector('.footer-social-links')) return;
+            var nav = document.createElement('nav');
+            nav.className = 'footer-social-links';
+            nav.setAttribute('aria-label', 'تابعنا على مواقع التواصل');
+            nav.style.cssText = 'margin-top:1rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;';
+            [
+                ['Facebook', 'https://www.facebook.com/OmarElbadryAccounting'],
+                ['YouTube', 'https://www.youtube.com/@ElMohasbaFiKabsola']
+            ].forEach(function (profile) {
+                var link = document.createElement('a');
+                link.textContent = profile[0];
+                link.href = profile[1];
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.style.cssText = 'color:var(--primary-600);padding:.5rem;text-decoration:underline;';
+                nav.appendChild(link);
+            });
+            footer.appendChild(nav);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addSocialLinks);
+    else addSocialLinks();
+})();
