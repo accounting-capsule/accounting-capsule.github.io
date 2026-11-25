@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded',()=>{
+'use strict';const $=id=>document.getElementById(id);const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+function render(){const result=$('shorts-results'),loop=$('shorts-loop');result.replaceChildren();loop.replaceChildren();let a;
+try{a=Shorts.analyze($('script-text').value,+$('duration').value,+$('speed').value);}catch{result.append(el('p','تعذر التحليل. الحد الأقصى 20 ألف محرف.'));return;}
+result.append(el('h2','نتيجة تقديرية'),el('p',a.total?`عدد الكلمات: ${a.total} ≈ ${a.seconds.toFixed(1)} ثانية`:'لم يُدخل نص قابل للتحليل بعد.','shorts-total'),el('p',`الهدف التقريبي: ${a.target} كلمة لمدة ${$('duration').value} ثانية.`));
+const verdict={empty:'اكتب نصًا لبدء التحليل.',ok:'الطول قريب من المدة المستهدفة (بهامش 7٪).',long:`النص أطول من الهدف. جرّب حذف نحو ${a.delta} كلمة.`,short:`النص أقصر من الهدف. جرّب إضافة نحو ${a.delta} كلمة أو تقليل المدة.`};result.append(el('p',verdict[a.verdict],'shorts-verdict '+a.verdict));
+if(a.lines.length){const list=el('ol');a.lines.forEach(l=>{const li=el('li');const stamp=el('b',`${l.start.toFixed(1)}–${(l.start+l.seconds).toFixed(1)} ث`);stamp.dir='ltr';li.append(stamp,document.createTextNode(' '+l.text),el('small',` (عدد الكلمات: ${l.count}؛ المدة: ${l.seconds.toFixed(1)} ثانية)`));if(l.hook)li.append(el('p','ملاحظة: الافتتاحية تتجاوز 3 ثوانٍ تقديريًا.','shorts-warning'));if(l.long)li.append(el('p','اقتراح: الجملة تتجاوز 14 كلمة، وقد يناسبها التقسيم.','shorts-warning'));if(l.short)li.append(el('p','اقتراح: هذا السطر أقل من 3 كلمات. راجع إيقاعه في التسجيل.','shorts-warning'));list.append(li);});result.append(list);}
+loop.append(el('h2','فحص مبدئي للنهاية الدائرية'),el('p','تشابه الكلمات وغياب علامة النهاية إشارتان شكليتان فقط. لا يثبتان اتصال المعنى أو جودة المونتاج. استمع إلى النهاية متبوعة بالبداية.'));
+if(a.lines.length<2){loop.append(el('p','اكتب سطرين على الأقل لفحص البداية والنهاية.'));return;}
+loop.append(el('p','البداية: '+a.first),el('p','النهاية: '+a.last),el('p',a.open?'لا توجد علامة إغلاق نهائية. راجع اكتمال المعنى عند العودة إلى البداية.':'توجد علامة ترقيم نهائية. يمكن الإبقاء عليها إذا كان الانتقال طبيعيًا.'),el('p',a.shared.length?'كلمات مشتركة: '+a.shared.join('، '):'لم تُرصد كلمات مشتركة واضحة. تكرار الكلمات اختياري وليس شرطًا لنجاح النهاية.'));
+loop.append(el('h3','قوالب للتجربة'));const list=el('ul');['اختم بسبب معلّق يصل إلى النتيجة التي بدأت بها.','اختم بسؤال تعيد الجملة الأولى الإجابة عنه.','كرّر فكرة البداية في النهاية مع تغيير منظورها.'].forEach(t=>list.append(el('li',t)));loop.append(list);
+}
+['script-text','duration','speed'].forEach(id=>$(id).addEventListener('input',render));$('clear-script').addEventListener('click',()=>{$('script-text').value='';render();$('script-text').focus();});render();
+});

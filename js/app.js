@@ -43,7 +43,30 @@
         }
     }
 
+    function initShortsNavigation() {
+        const home = document.querySelector('.sidebar-nav a[href$="index.html"]');
+        if (!home) return;
+        const href = home.getAttribute('href').replace(/index\.html$/, 'shorts-tool.html');
+        if (!document.querySelector('.sidebar-nav a[href$="shorts-tool.html"]')) {
+            const a = document.createElement('a'); a.className = 'nav-item'; a.href = href;
+            const icon = document.createElement('i'); icon.className = 'fas fa-video';
+            const label = document.createElement('span'); label.textContent = 'أداة الشورتس';
+            a.append(icon, label);
+            const tools = document.querySelector('.sidebar-nav a[href$="calculators.html"]');
+            (tools ? tools.parentNode : home.parentNode).append(a);
+        }
+        const section = document.querySelector('.command-section');
+        if (section && !document.querySelector('.command-item[data-href$="shorts-tool.html"]')) {
+            const item = document.createElement('div'); item.className = 'command-item'; item.dataset.href = href;
+            const info = document.createElement('div'); info.className = 'command-item-info';
+            const title = document.createElement('h4'); title.textContent = 'أداة الشورتس';
+            const desc = document.createElement('p'); desc.textContent = 'الكلمات والمدة والنهاية الدائرية';
+            info.append(title, desc); item.append(info); section.append(item);
+        }
+    }
+
     function initApp() {
+        initShortsNavigation();
         initStartNavigation();
         initSidebar();
         initCommandPalette();
