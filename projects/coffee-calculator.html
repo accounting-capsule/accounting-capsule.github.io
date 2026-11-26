@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" http-equiv="Content-Security-Policy"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://accounting-capsule.github.io/projects/coffee-calculator.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="حاسبة دراسة جدوى ماكينة قهوة ذاتية الخدمة: أدخل أرقامك" property="og:title"/>
+<meta content="أدخل أرقامك في حاسبة مشروع ماكينة القهوة واحصل على ملخص دراسة جدوى: الفائض الشهري ومدة الاسترداد ونقطة التعادل وحساسية عدد الأكواب. أداة تعليمية." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/projects/coffee-calculator.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="حاسبة دراسة جدوى ماكينة قهوة ذاتية الخدمة: أدخل أرقامك" name="twitter:title"/>
+<meta content="أدخل أرقامك في حاسبة مشروع ماكينة القهوة واحصل على ملخص دراسة جدوى: الفائض الشهري ومدة الاسترداد ونقطة التعادل وحساسية عدد الأكواب. أداة تعليمية." name="twitter:description"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<meta content="أدخل أرقامك في حاسبة مشروع ماكينة القهوة واحصل على ملخص دراسة جدوى: الفائض الشهري ومدة الاسترداد ونقطة التعادل وحساسية عدد الأكواب. أداة تعليمية." name="description"/>
+<title>حاسبة دراسة جدوى ماكينة قهوة ذاتية الخدمة: أدخل أرقامك | كبسولة المحاسب</title>
+<link href="../css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<style>
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 160, 23, 0.1);
+            border-radius: 50%;
+        }
+        .article-breadcrumb {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .article-breadcrumb a { color: var(--gold-400); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            position: relative;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.375rem; }
+        .article-category {
+            display: inline-block;
+            background: var(--gold-500);
+            color: white;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .article-header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            position: relative;
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            padding: 2.5rem;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            padding-right: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content li {
+            color: var(--gray-700);
+            line-height: 1.9;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .article-content blockquote {
+            background: var(--gray-50);
+            border-right: 4px solid var(--gold-500);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+        .article-content blockquote p { margin: 0; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+        }
+        .article-content th {
+            background: var(--primary-700);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: right;
+            font-weight: 700;
+        }
+        .article-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .article-content tr:nth-child(even) td { background: var(--gray-50); }
+        .saber-box {
+            background: linear-gradient(135deg, var(--gold-100), #fff8e1);
+            border: 2px solid var(--gold-500);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .saber-box h2 {
+            color: var(--gold-600) !important;
+            border-bottom: none !important;
+            margin-top: 0 !important;
+        }
+        .saber-box p { color: var(--gray-800); }
+        .faq-section { margin: 2rem 0; }
+        .faq-section details {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .faq-section summary {
+            padding: 1rem 1.25rem;
+            font-weight: 700;
+            color: var(--primary-700);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-section summary::before {
+            content: '\002B';
+            margin-left: 0.75rem;
+            color: var(--gold-500);
+            font-weight: 900;
+        }
+        .faq-section details[open] summary::before { content: '\2212'; }
+        .faq-section details p { padding: 0 1.25rem 1.25rem; margin: 0; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-500));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .cta-box h3 { color: white; font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+        .related-articles {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .related-articles h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .related-card {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            padding: 1.25rem;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: block;
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .related-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+            .article-header h1 { font-size: 1.5rem; }
+            .article-content { padding: 1.5rem; }
+            .article-content table { font-size: 0.8125rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"حاسبة دراسة جدوى ماكينة قهوة ذاتية الخدمة: أدخل أرقامك","url":"https://accounting-capsule.github.io/projects/coffee-calculator.html","inLanguage":"ar","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"EGP"},"publisher":{"@type":"Organization","name":"كبسولة المحاسب","url":"https://accounting-capsule.github.io/"}}</script>
+<style>.newsletter-section h3,.newsletter-box h3{color:#fff!important}.newsletter-section p,.newsletter-box p{color:#f1f5f9!important}</style><style>@media(max-width:600px){#wa-float{position:static!important;display:flex!important;margin:1rem auto!important;width:44px!important;height:44px!important;font-size:1.4rem!important}}</style></head>
+<body>
+<div class="mobile-overlay"></div>
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="../index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">كبسولة المحاسب<span>حلول محاسبية احترافية</span></div>
+</a>
+<button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section"><div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="../downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item" href="../blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a><a class="nav-item" href="../calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="../letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="../tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="../tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="../financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="../tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="../invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="../quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="../closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="../financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+<a class="nav-item active" href="../projects.html">قسم المشاريع</a></div>
+<div class="nav-section"><div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="../about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="../contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<main class="main">
+<header class="top-header">
+<button class="mobile-menu-btn header-btn"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+</div>
+</header>
+<div class="page-content">
+<div class="article-header">
+<nav class="article-breadcrumb"><a href="../index.html">الرئيسية</a> ‹ <a href="../projects.html">قسم المشاريع</a> ‹ <a href="coffee-vending.html">ماكينة القهوة</a> ‹ <span>الحاسبة</span></nav>
+<span class="article-category">قسم المشاريع</span>
+<h1>حاسبة دراسة جدوى ماكينة قهوة ذاتية الخدمة</h1>
+</div>
+<div class="article-content">
+<style>.cc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.75rem}.cc-f label{display:block;font-size:.85rem;color:#1b2430;margin-bottom:.2rem}.cc-f input{width:100%;padding:.5rem;border:1px solid #9fb0bf;border-radius:6px;font-size:1rem;background:#fff9e6}.cc-f input.bad{border-color:#b00020;background:#fdecee}.cc-err{color:#b00020;font-weight:700;margin:.5rem 0}.cc-btn{display:inline-block;padding:.75rem 1.5rem;background:#0b3d5c;color:#fff;border:0;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;margin:.5rem .25rem 0 0}.cc-out table{width:100%;border-collapse:collapse;text-align:center;margin:.5rem 0}.cc-out th,.cc-out td{border:1px solid #d5dde5;padding:.5rem;color:#1b2430}.cc-out th{background:#0b3d5c;color:#fff}.cc-out .neg{color:#b00020;font-weight:700}.cc-box{background:#f6f3ec;border-radius:10px;padding:.5rem 1.25rem;margin:1rem 0}.tw{overflow-x:auto}@media print{.cc-in,.cc-btn,nav,header,.cc-noprint{display:none!important}}</style>
+<p>أدخل أرقامك أنت في الحقول الصفراء (الأرقام الجاهزة هي السيناريو الأساسي في <a href="coffee-vending.html">دراسة القهوة المنشورة</a>)، ثم اضغط «احسب». تحصل على ملخص دراسة جدوى من أرقامك. الأداة تعليمية وليست عرضًا استثماريًا ولا وعدًا بعائد، وتعمل في متصفحك ولا ترسل أرقامك لأحد.</p>
+<div class="cc-in" id="cc-form"><h3>المبيعات</h3><div class="cc-grid" data-g="g1"></div><h3>التكلفة المتغيرة للكوب</h3><div class="cc-grid" data-g="g2"></div><h3>المصروفات الثابتة الشهرية</h3><div class="cc-grid" data-g="g3"></div><h3>الاستثمار والتمويل</h3><div class="cc-grid" data-g="g4"></div></div>
+<div class="cc-err" id="cc-err" role="alert"></div>
+<button class="cc-btn" id="cc-go" type="button">احسب</button><button class="cc-btn cc-noprint" id="cc-reset" type="button" style="background:#5a6b7a">أعد الأرقام الافتراضية</button><button class="cc-btn cc-noprint" id="cc-print" type="button" style="background:#2f6b3f">طباعة / حفظ PDF</button>
+<div class="cc-out" id="cc-out" hidden>
+<h2>ملخص دراسة الجدوى من أرقامك</h2>
+<div class="tw"><table><tr><th>البند</th><th>القيمة</th></tr><tbody id="cc-rows"></tbody></table></div>
+<p class="cc-box" id="cc-verdict"></p>
+<h3>حساسية عدد الأكواب اليومي (بسعرك وتكاليفك)</h3>
+<div class="tw"><table><tr><th>أكواب/يوم</th><th>الفائض النقدي الشهري</th></tr><tbody id="cc-sens"></tbody></table></div>
+<h3>ملاحظات</h3>
+<ul id="cc-notes"></ul>
+</div>
+<h3>حدود الأداة</h3>
+<ul><li>الفائض النقدي هنا قبل ضريبة الدخل وقبل التمويل وليس صافي ربح. ضريبة القيمة المضافة غير محسوبة.</li><li>مدة الاسترداد مقربة إلى أعلى لأشهر كاملة، والتعادل مقرب إلى أعلى لعدد أكواب صحيح، على نفس طريقة الدراسة المنشورة.</li><li>الاحتياطي النقدي يُحسب شهرين من المصروفات الثابتة، والإهلاك على 5 سنوات بالقسط الثابت (افتراض توضيحي).</li><li>الأرقام الافتراضية معظمها افتراض توضيحي لا يستند إلى مصدر، فاستبدلها بأرقام موقعك الفعلية وعدّ الحركة بنفسك قبل أي قرار.</li><li>ملف Excel المقابل متاح من <a href="coffee-vending.html">صفحة المشروع</a>.</li></ul>
+<div class="sabir"><p><b>عمي صابر، شرح محاسبي بالمصري</b></p><p>الحاسبة دي زي الميزان: بتقولك الرقم اللي إنت كتبته بيطلع إيه. لو كتبت رقم متفائل هتطلع نتيجة متفائلة. اقعد في المكان يومين تلاتة وعدّ الكوبايات بنفسك، وبعدين حط الرقم الحقيقي.</p></div>
+</div>
+<script src="../assets/js/coffee-calc.js"></script>
+<script>
+(function(){
+var C=window.CoffeeCalc,vals={};
+function fmt(n){return Math.round(n).toLocaleString('en-US');}
+C.FIELDS.forEach(function(f){var box=document.querySelector('[data-g="'+f[5]+'"]');var d=document.createElement('div');d.className='cc-f';var l=document.createElement('label');l.htmlFor='f-'+f[0];l.textContent=f[1];var i=document.createElement('input');i.id='f-'+f[0];i.type='number';i.inputMode='decimal';i.step='any';i.min=f[3];i.max=f[4];i.value=f[2];d.appendChild(l);d.appendChild(i);box.appendChild(d);});
+function read(){var v={},bad=[];C.FIELDS.forEach(function(f){var el=document.getElementById('f-'+f[0]);var s=el.value.trim();v[f[0]]=s===''?NaN:Number(s);el.classList.remove('bad');});var errs=C.validate(v);C.FIELDS.forEach(function(f){var x=v[f[0]];if(typeof x!=='number'||!isFinite(x)||x<f[3]||x>f[4])document.getElementById('f-'+f[0]).classList.add('bad');});return{v:v,errs:errs};}
+function row(t,b,neg){var tr=document.createElement('tr');var a=document.createElement('td');a.textContent=t;var c=document.createElement('td');c.textContent=b;if(neg)c.className='neg';tr.appendChild(a);tr.appendChild(c);return tr;}
+function clear(id){var e=document.getElementById(id);while(e.firstChild)e.removeChild(e.firstChild);return e;}
+function go(){var r=read(),err=document.getElementById('cc-err');var out=document.getElementById('cc-out');
+if(r.errs.length){err.textContent=r.errs.join(' ');out.hidden=true;return;}err.textContent='';
+var v=r.v,k=C.calc(v);out.hidden=false;var t=clear('cc-rows');
+t.appendChild(row('الإيراد الشهري',fmt(k.revenue)+' جنيه'));
+t.appendChild(row('التكلفة المتغيرة للكوب',k.varCup.toFixed(2)+' جنيه'));
+t.appendChild(row('الخامات والتشغيل المتغير الشهري',fmt(k.variable)+' جنيه'));
+t.appendChild(row('المصروفات الثابتة الشهرية',fmt(k.fixed)+' جنيه'));
+t.appendChild(row('الفائض النقدي التشغيلي الشهري (قبل الضرائب والتمويل)',(k.surplus<0?'خسارة ':'')+fmt(Math.abs(k.surplus))+' جنيه',k.surplus<0));
+t.appendChild(row('الاستثمار الرأسمالي',fmt(k.capex)+' جنيه'));
+t.appendChild(row('الاحتياج التمويلي الكلي',fmt(k.funding)+' جنيه'));
+t.appendChild(row('استرداد الاستثمار الرأسمالي وحده',k.paybackCapex===null?'لا يُسترد':k.paybackCapex+' شهرًا',k.paybackCapex===null));
+t.appendChild(row('استرداد الاحتياج التمويلي الكلي',k.paybackFunding===null?'لا يُسترد':k.paybackFunding+' شهرًا',k.paybackFunding===null));
+t.appendChild(row('نقطة التعادل',k.breakeven===null?'لا يتحقق (سعر الكوب لا يغطي تكلفته المتغيرة)':k.breakeven+' كوب/يوم',k.breakeven===null));
+var vd=document.getElementById('cc-verdict');
+if(k.surplus<=0)vd.textContent='بأرقامك الحالية يخسر المشروع '+fmt(Math.abs(k.surplus))+' جنيه شهريًا قبل الضرائب والتمويل، ولا يُسترد الاستثمار. راجع سعر الكوب وعدد الأكواب والمصروفات الثابتة.';
+else vd.textContent='بأرقامك الحالية يحقق المشروع فائضًا نقديًا تشغيليًا نحو '+fmt(k.surplus)+' جنيه شهريًا قبل الضرائب والتمويل، ويسترد الاستثمار الرأسمالي في نحو '+k.paybackCapex+' شهرًا والاحتياج التمويلي الكلي في نحو '+k.paybackFunding+' شهرًا، إذا تحققت أرقامك فعلًا.';
+var s=clear('cc-sens');[15,30,45,60,80,100,150].forEach(function(c){if(c>250)return;var x=C.surplusAt(v,c);s.appendChild(row(String(c)+(c===v.cups?' (رقمك)':''),(x<0?'خسارة ':'')+fmt(Math.abs(x))+' جنيه',x<0));});
+var n=clear('cc-notes');function note(x){var li=document.createElement('li');li.textContent=x;n.appendChild(li);}
+if(k.breakeven!==null&&k.breakeven>v.cups)note('تحتاج '+k.breakeven+' كوبًا يوميًا للتعادل، وأنت تفترض '+v.cups+'.');
+if(k.breakeven!==null&&k.breakeven>250)note('نقطة التعادل أعلى من السعة المعلنة للماكينة المرجعية (250 كوبًا يوميًا).');
+note('الإهلاك الشهري التقريبي '+fmt(k.depreciation)+' جنيه، فيكون الفائض بعد الإهلاك نحو '+(k.afterDep<0?'خسارة ':'')+fmt(Math.abs(k.afterDep))+' جنيه. الإهلاك غير نقدي.');
+note('الأرقام تعتمد كلها على مدخلاتك. تحقق من الأسعار الحالية قبل أي قرار.');
+out.scrollIntoView&&out.scrollIntoView({behavior:'smooth'});}
+document.getElementById('cc-go').addEventListener('click',go);
+document.getElementById('cc-print').addEventListener('click',function(){go();window.print();});
+document.getElementById('cc-reset').addEventListener('click',function(){C.FIELDS.forEach(function(f){var e=document.getElementById('f-'+f[0]);e.value=f[2];e.classList.remove('bad');});document.getElementById('cc-err').textContent='';document.getElementById('cc-out').hidden=true;});
+})();
+</script>
+</div>
+
+<footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="../about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="../contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="../changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="../methodology.html" style="color:var(--primary-600); text-decoration:none;">منهجنا في المراجعة</a>
+<a href="../privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="../terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></main>
+<script src="../js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section"><div class="command-item" data-href="../projects.html"><i class="fas fa-briefcase"></i><div class="command-item-info"><h4>قسم المشاريع</h4><p>دراسات جدوى تعليمية ومصادر وافتراضات معلنة</p></div></div>
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>تحميلات Excel متوقفة مؤقتًا للمراجعة</p>
+</div>
+</div>
+<div class="command-item" data-href="blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+<div class="command-item" data-href="tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+<div class="command-item" data-href="financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div><div class="command-item" data-href="closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div><div class="command-item" data-href="quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div><div class="command-item" data-href="invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div><div class="command-item" data-href="tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div>
+<div class="command-item" data-href="financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div></div></div>
+<div class="command-item" data-href="changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>تحميلات Excel متوقفة مؤقتًا للمراجعة</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
