@@ -331,7 +331,7 @@ t.appendChild(row('نقطة التعادل',k.breakeven===null?'لا يتحقق 
 var vd=document.getElementById('cc-verdict');
 if(k.surplus<=0)vd.textContent='بأرقامك الحالية يخسر المشروع '+fmt(Math.abs(k.surplus))+' جنيه شهريًا قبل الضرائب والتمويل، ولا يُسترد الاستثمار. راجع سعر الكوب وعدد الأكواب والمصروفات الثابتة.';
 else vd.textContent='بأرقامك الحالية يحقق المشروع فائضًا نقديًا تشغيليًا نحو '+fmt(k.surplus)+' جنيه شهريًا قبل الضرائب والتمويل، ويسترد الاستثمار الرأسمالي في نحو '+k.paybackCapex+' شهرًا والاحتياج التمويلي الكلي في نحو '+k.paybackFunding+' شهرًا، إذا تحققت أرقامك فعلًا.';
-var s=clear('cc-sens');[15,30,45,60,80,100,150].forEach(function(c){if(c>250)return;var x=C.surplusAt(v,c);s.appendChild(row(String(c)+(c===v.cups?' (رقمك)':''),(x<0?'خسارة ':'')+fmt(Math.abs(x))+' جنيه',x<0));});
+var s=clear('cc-sens');[15,30,45,60,80,100,150,v.cups].filter(function(c,i,a){return a.indexOf(c)===i&&c<=250;}).sort(function(x,y){return x-y;}).forEach(function(c){var x=C.surplusAt(v,c);s.appendChild(row(String(c)+(c===v.cups?' (رقمك)':''),(x<0?'خسارة ':'')+fmt(Math.abs(x))+' جنيه',x<0));});
 var n=clear('cc-notes');function note(x){var li=document.createElement('li');li.textContent=x;n.appendChild(li);}
 if(k.breakeven!==null&&k.breakeven>v.cups)note('تحتاج '+k.breakeven+' كوبًا يوميًا للتعادل، وأنت تفترض '+v.cups+'.');
 if(k.breakeven!==null&&k.breakeven>250)note('نقطة التعادل أعلى من السعة المعلنة للماكينة المرجعية (250 كوبًا يوميًا).');
