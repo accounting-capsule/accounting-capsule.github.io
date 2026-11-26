@@ -242,7 +242,7 @@
             .article-content table { font-size: 0.8125rem; }
         }
     </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html#article", "headline": "عشر معادلات Excel لا يستغني عنها أي محاسب (شرح بالأمثلة العملية)", "description": "شرح عملي لأهم 10 معادلات إكسل للمحاسبين بالأمثلة: SUMIFS وXLOOKUP وIF وIFERROR وROUND وTEXT وEOMONTH وCOUNTIFS وSUBTOTAL وSUMPRODUCT وPMT - والأخطاء الشائعة لكل منها.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": "https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "معادلات إكسل للمحاسبين"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html#article", "headline": "عشر معادلات Excel لا يستغني عنها أي محاسب (شرح بالأمثلة العملية)", "description": "شرح عملي لأهم 10 معادلات إكسل للمحاسبين بالأمثلة: SUMIFS وXLOOKUP وIF وIFERROR وROUND وTEXT وEOMONTH وCOUNTIFS وSUBTOTAL وSUMPRODUCT وPMT - والأخطاء الشائعة لكل منها.", "inLanguage": "ar", "datePublished": "2026-11-23", "dateModified":"2026-11-26", "author": {"@type": "Person", "name": "عمر البدري"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "mainEntityOfPage": "https://accounting-capsule.github.io/articles/excel-formulas-for-accountants.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://accounting-capsule.github.io/"}, {"@type": "ListItem", "position": 2, "name": "المدونة", "item": "https://accounting-capsule.github.io/blog.html"}, {"@type": "ListItem", "position": 3, "name": "معادلات إكسل للمحاسبين"}]}]}</script>
 </head>
 <body>
 <div class="mobile-overlay"></div>
@@ -324,7 +324,7 @@
 <h2>5️⃣ ROUND: التقريب قبل ما يفضحك الإكسل</h2>
 <p>إكسل يعرض رقمين عشريين لكنه يحسب بخمسة عشر. تجمع 100 بند ضريبة كل بند فيه كسور، فيطلع الإجمالي مختلفًا قرشًا عن مجموع ما يظهر على الشاشة، وتقف أنت حائرًا أمام المدير. الحل: قرّب كل بند في مصدره:</p>
 <p><code>=ROUND(B2*14%, 2)</code></p>
-<p>وهذه عادة إجبارية في أي شيت ضرائب أو مرتبات: القرش يجب أن يكون قرارًا واعيًا، لا صدفة عرض. <a href="../calculators.html">حاسبة المرتبات</a> على موقعنا تطبق قاعدة مشابهة (التقريب لأقرب عشرة قروش لأسفل وفق التعليمات).</p>
+<p>وهذه عادة مفيدة في شيتات الضرائب والمرتبات، على أن تتبع قاعدة التقريب وعدد المنازل التي تحددها المنظومة أو التعليمات التي ستقدم لها: القرش يجب أن يكون قرارًا واعيًا، لا صدفة عرض. <a href="../calculators.html">حاسبة المرتبات</a> على موقعنا تطبق قاعدة مشابهة (التقريب لأقرب عشرة قروش لأسفل وفق التعليمات).</p>
 
 <h2>6️⃣ TEXT وEOMONTH: ترويض التواريخ</h2>
 <p>لاستخراج الشهر من تاريخ في نص ثابت: <code>=TEXT(A2, "YYYY-MM")</code> ثم جمّع به بـ SUMIFS.</p>
