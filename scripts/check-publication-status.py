@@ -18,5 +18,6 @@ assert blog==site,'Blog/sitemap article targets disagree'
 assert len(blog)==status['published_articles'],'Published article count disagrees'
 assert all((ROOT/x).is_file() for x in blog),'Missing article file'
 assert status['available_workbooks']==0 and status['status']=='withdrawn_for_review','Workbook release requires separate review'
-assert not list(ROOT.rglob('*.xlsx')),'Unexpected workbook restored'
+ALLOWED_XLSX={'assets/studies/coffee-vending-financial-model-2026-11-26.xlsx'}  # Omar 27 Nov 2026: keep as is
+assert {str(x.relative_to(ROOT)) for x in ROOT.rglob('*.xlsx')}<=ALLOWED_XLSX,'Unexpected workbook restored'
 print(f'PASS: {len(blog)} articles; workbook downloads remain paused; dates: {status.get("review_dates",{})}')
