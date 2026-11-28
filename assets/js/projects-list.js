@@ -2,7 +2,8 @@
   'use strict';
   // Add each new project page here (title, path from the site root).
   var PROJECTS = [
-    { t: 'ماكينة قهوة ذاتية الخدمة', u: 'projects/coffee-vending.html' }
+    { t: 'ماكينة قهوة ذاتية الخدمة', u: 'projects/coffee-vending.html' },
+    { t: 'استلام وتوصيل ملابس بمغسلة شريكة', u: 'projects/laundry-delivery.html' }
   ];
   var cs = document.currentScript;
   var base = cs && cs.src ? cs.src.replace(/assets\/js\/projects-list\.js.*$/, '') : '/';
