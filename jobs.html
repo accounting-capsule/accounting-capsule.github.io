@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" http-equiv="Content-Security-Policy"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>وظائف المحاسبين في مصر: روابط رسمية ووظائف حية من Careerjet | كبسولة المحاسب</title>
+<meta content="وظائف محاسبين في مصر: روابط الجهات الحكومية ومواقع التوظيف الكبرى، وقائمة وظائف حية تعرضها Careerjet. الإعلان يفتح عند صاحبه، ولا تدفع مقابل التوظيف." name="description"/>
+<link href="https://accounting-capsule.github.io/jobs.html" rel="canonical"/>
+<meta content="ar_AR" property="og:locale"/>
+<meta content="كبسولة المحاسب" property="og:site_name"/>
+<meta content="وظائف المحاسبين في مصر: روابط رسمية ووظائف حية من Careerjet | كبسولة المحاسب" property="og:title"/>
+<meta content="وظائف محاسبين في مصر: روابط الجهات الحكومية ومواقع التوظيف الكبرى، وقائمة وظائف حية تعرضها Careerjet. الإعلان يفتح عند صاحبه، ولا تدفع مقابل التوظيف." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://accounting-capsule.github.io/jobs.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a1628" name="theme-color"/>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/layout.css" rel="stylesheet"/>
+<style>
+        .calc-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .calc-header h1 { color: white; font-size: 1.75rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .calc-header p { color: rgba(255,255,255,0.85); margin: 0; }
+        .calc-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .calc-card h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .calc-card h2 i { color: var(--primary-600); }
+        .calc-card .calc-sub { color: var(--gray-600); font-size: 0.875rem; margin-bottom: 1.25rem; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+        .calc-field label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--gray-700); margin-bottom: 0.35rem; }
+        .calc-field input, .calc-field select {
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            border: 1.5px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.15s;
+        }
+        .calc-field input:focus, .calc-field select:focus { outline: none; border-color: var(--primary-500); }
+        .calc-result {
+            background: var(--primary-50, #eff6ff);
+            border: 1px solid var(--primary-200, #bfdbfe);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+        .calc-result-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--gray-300);
+            font-size: 0.95rem;
+        }
+        .calc-result-line:last-child { border-bottom: none; }
+        .calc-result-line .val { font-weight: 800; font-variant-numeric: tabular-nums; }
+        .calc-result-line.highlight { font-size: 1.1rem; color: var(--primary-700); }
+        .calc-result-line.highlight .val { font-size: 1.2rem; }
+        .calc-note { color: var(--gray-500); font-size: 0.8rem; margin-top: 0.75rem; line-height: 1.7; }
+        .calc-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; }
+        .calc-table th, .calc-table td { padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid var(--gray-200); font-variant-numeric: tabular-nums; }
+        .calc-table th { background: var(--gray-100); font-weight: 700; }
+        .mode-toggle { display: inline-flex; background: var(--gray-100); border-radius: var(--radius-md); padding: 0.25rem; margin-bottom: 1rem; }
+        .mode-toggle button {
+            border: none; background: transparent; padding: 0.5rem 1.25rem; border-radius: var(--radius-md);
+            font-family: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; color: var(--gray-600);
+        }
+        .mode-toggle button.active { background: white; color: var(--primary-700); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) {
+            .calc-header { padding: 1.25rem; }
+            .calc-header h1 { font-size: 1.35rem; }
+        }
+    </style>
+<style>
+.letter-templates { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:0.75rem; }
+.letter-tpl { border:2px solid var(--gray-200); border-radius:var(--radius-md); padding:0.9rem 1rem; cursor:pointer; text-align:center; transition:all .15s; background:#fff; }
+.letter-tpl:hover { border-color:var(--primary-400); }
+.letter-tpl.active { border-color:var(--primary-600); background:var(--primary-50); }
+.letter-tpl i { font-size:1.4rem; color:var(--primary-600); display:block; margin-bottom:0.4rem; }
+.letter-tpl span { font-weight:600; font-size:0.9rem; }
+.letter-fields { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; }
+.letter-field label { display:block; font-weight:600; margin-bottom:0.35rem; font-size:0.9rem; }
+.letter-field input, .letter-field select, .letter-field textarea { width:100%; padding:0.6rem 0.75rem; border:1.5px solid var(--gray-300); border-radius:var(--radius-sm); font-family:inherit; font-size:0.95rem; }
+.letter-field textarea { min-height:110px; resize:vertical; }
+.letter-field.full { grid-column:1 / -1; }
+.letter-preview-head { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; }
+.letter-actions { display:flex; gap:0.5rem; }
+.letter-paper { background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius-sm); box-shadow:0 2px 12px rgba(0,0,0,.06); max-width:800px; margin:1.25rem auto 0; padding:2.5rem 2.25rem; line-height:2.1; font-size:1.02rem; color:#111; }
+.letter-paper .lp-head { text-align:center; border-bottom:2px solid #333; padding-bottom:0.9rem; margin-bottom:1.4rem; }
+.letter-paper .lp-head h3 { margin:0; font-size:1.3rem; }
+.letter-paper .lp-head .lp-type { font-size:1.1rem; font-weight:700; margin-top:0.35rem; }
+.letter-paper .lp-date { text-align:left; margin-bottom:1rem; }
+.letter-paper .lp-to { margin-bottom:1rem; font-weight:600; }
+.letter-paper .lp-subject { text-align:center; font-weight:700; text-decoration:underline; margin:1.2rem 0; }
+.letter-paper .lp-body p { margin:0 0 0.8rem; }
+.letter-paper table.lp-table { width:100%; border-collapse:collapse; margin:1rem 0; }
+.letter-paper table.lp-table th, .letter-paper table.lp-table td { border:1px solid #444; padding:0.4rem 0.6rem; text-align:center; }
+.letter-paper .lp-sign { margin-top:2.2rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+.letter-paper .lp-sign div { text-align:center; min-width:180px; }
+.copy-toast { position:fixed; bottom:1.5rem; right:50%; transform:translateX(50%); background:var(--primary-700); color:#fff; padding:0.6rem 1.2rem; border-radius:99px; font-size:0.9rem; z-index:9999; display:none; }
+@media print {
+  aside, .top-header, .no-print, .mobile-overlay, .command-palette-overlay, footer, .whatsapp-float { display:none !important; }
+  main, .main, .page-content { margin:0 !important; padding:0 !important; max-width:none !important; }
+  .calc-card { border:none !important; box-shadow:none !important; padding:0 !important; margin:0 !important; }
+  .letter-paper { box-shadow:none !important; border:none !important; margin:0 !important; max-width:none !important; padding:0.5rem !important; }
+}
+</style>
+<style>#script-text{width:100%;box-sizing:border-box;resize:vertical;min-height:180px;font:inherit;padding:1rem;border:1px solid #94a3b8;border-radius:10px;line-height:1.8}.shorts-settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}.shorts-settings label{display:block;margin-bottom:.5rem}.shorts-settings select{width:100%;font:inherit;padding:.6rem;border:1px solid #94a3b8;border-radius:8px}.shorts-total{font-size:1.5rem;font-weight:800;color:#12344e}.shorts-note{border-right:4px solid #c69817}.shorts-warning{color:#744900}.shorts-verdict{padding:.7rem;background:#f1f5f9;border-radius:8px}.shorts-verdict.ok{color:#126133}.shorts-verdict.long{color:#9b2424}#shorts-results li{margin:1rem 0;line-height:1.8;overflow-wrap:anywhere}#shorts-loop p{overflow-wrap:anywhere}.calc-card p{line-height:1.9}.calc-header p{color:#fff}@media(max-width:480px){.shorts-settings{grid-template-columns:1fr}.calc-card{padding:1rem}.calc-header{padding:1.3rem}.calc-header h1{font-size:1.4rem}}</style><style>.logo-text{font-size:1rem!important;white-space:normal!important;overflow:visible!important;line-height:1.5!important}.logo-text span{font-size:.65rem!important}</style><style>@media(max-width:600px){#wa-float{position:static!important;display:flex!important;margin:1rem auto!important;width:44px!important;height:44px!important;font-size:1.4rem!important}}</style><style>
+.job-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-top:1rem}
+.job-card{border:1px solid var(--gray-200);border-radius:12px;padding:1rem;background:#fff;display:flex;flex-direction:column;gap:.6rem}
+.job-card h3{margin:0;font-size:1.05rem;line-height:1.5}
+.job-co{color:var(--gray-500);font-size:.9rem}
+.job-row{display:flex;gap:.5rem;font-size:.9rem;border-top:1px dashed var(--gray-200);padding-top:.45rem}
+.job-row b{min-width:5.5rem;color:var(--gray-500);font-weight:600}
+.job-desc{background:var(--gray-100,#f3f4f6);border-radius:8px;padding:.6rem;font-size:.88rem;line-height:1.7;direction:ltr;text-align:left;max-height:7.5rem;overflow:hidden}
+.job-empty{padding:1rem;border:1px dashed var(--gray-200);border-radius:10px;color:var(--gray-500)}
+.cj-box{padding:1rem;border:1px dashed #b45309;border-radius:10px;background:#fffbeb;font-size:.92rem;line-height:1.8}
+</style></head>
+<body>
+<div class="mobile-overlay"></div>
+<!-- Sidebar -->
+<aside class="sidebar">
+<div class="sidebar-header">
+<a class="logo" href="index.html">
+<div class="logo-icon"><i class="fas fa-capsules"></i></div>
+<div class="logo-text">
+                    كبسولة المحاسب
+                    <span>حلول محاسبية احترافية</span>
+</div>
+</a>
+<button aria-label="Toggle Sidebar" class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<div class="nav-section-title">الرئيسية</div>
+<a class="nav-item" href="index.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+<a class="nav-item" href="downloads.html"><i class="fas fa-download"></i><span>التحميلات</span></a>
+<a class="nav-item" href="blog.html"><i class="fas fa-blog"></i><span>المدونة</span></a>
+<a class="nav-item" href="calculators.html"><i class="fas fa-calculator"></i><span>حاسبات سريعة</span></a><a class="nav-item" href="letters.html"><i class="fas fa-file-signature"></i><span>مولّد الخطابات</span></a><a class="nav-item" href="tax-codes.html"><i class="fas fa-scale-balanced"></i><span>دليل الضرائب</span></a><a class="nav-item" href="tax-calendar.html"><i class="fas fa-calendar-days"></i><span>التقويم الضريبي</span></a><a class="nav-item" href="financial-analyzer.html"><i class="fas fa-chart-pie"></i><span>محلل القوائم</span></a>
+<a class="nav-item" href="tafqit.html"><i class="fas fa-money-check"></i><span>تفقيط</span></a>
+<a class="nav-item" href="saudi-zakat-calculator.html"><i class="fas fa-coins"></i><span>حاسبة الزكاة</span></a>
+<a class="nav-item" href="invoice-maker.html"><i class="fas fa-file-invoice"></i><span>منشئ الفواتير</span></a>
+<a class="nav-item" href="quiz.html"><i class="fas fa-graduation-cap"></i><span>اختبر نفسك</span></a>
+<a class="nav-item" href="closing-checklist.html"><i class="fas fa-list-check"></i><span>الإقفال الشهري</span></a>
+<a class="nav-item" href="financial-health.html"><i class="fas fa-heart-pulse"></i><span>صحتك المالية</span></a>
+<a class="nav-item active" href="projects.html">قسم المشاريع</a></div>
+<div class="nav-section">
+<div class="nav-section-title">التعلم</div>
+<a class="nav-item" href="downloads.html"><i class="fas fa-file-excel"></i><span>شيتات Excel</span></a>
+<a class="nav-item" href="downloads.html"><i class="fas fa-laptop-code"></i><span>البرامج</span></a>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">الدعم</div>
+<a class="nav-item" href="about.html"><i class="fas fa-info-circle"></i><span>عنّا</span></a>
+<a class="nav-item" href="contact.html"><i class="fas fa-envelope"></i><span>تواصل معنا</span></a>
+</div>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="main">
+<header class="top-header">
+<button aria-label="Menu" class="mobile-menu-btn header-btn no-print"><i class="fas fa-bars"></i></button>
+<div class="header-search">
+<button class="search-trigger"><i class="fas fa-search"></i><span>ابحث...</span><kbd>Ctrl + K</kbd></button>
+</div>
+<div class="header-actions">
+<a aria-label="WhatsApp" class="header-btn" href="https://wa.me/201092445639" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+</header>
+<div class="page-content"><section class="calc-header"><h1>وظائف المحاسبين في مصر</h1><p>روابط مباشرة لجهات التوظيف الرسمية ولمواقع الوظائف الكبرى ببحث جاهز عن «محاسب». نحن لا ننسخ إعلاناتهم: الإعلان يفتح على موقع صاحبه.</p></section><section class="calc-card"><h2>جهات حكومية رسمية</h2><p>وظائف الجهاز المركزي للتنظيم والإدارة ووزارة القوى العاملة. تأكد دائمًا من الإعلان على الموقع الرسمي نفسه.</p><a class="btn btn-primary" style="margin:.25rem" href="https://jobs.caoa.gov.eg/Index.aspx" target="_blank" rel="noopener noreferrer">بوابة الوظائف الحكومية</a><a class="btn btn-primary" style="margin:.25rem" href="https://www.manpower.gov.eg/jobmanpower.html" target="_blank" rel="noopener noreferrer">وظائف وزارة القوى العاملة</a></section><section class="calc-card"><h2>مواقع الوظائف الكبرى</h2><p>بحث جاهز عن وظائف المحاسبة. تختلف الإعلانات يوميًا، وكل موقع له شروط استخدام خاصة به.</p><a class="btn btn-primary" style="margin:.25rem" href="https://www.bayt.com/en/egypt/jobs/accountant-jobs/" target="_blank" rel="noopener noreferrer">Bayt مصر</a><a class="btn btn-primary" style="margin:.25rem" href="https://www.linkedin.com/jobs/search/?keywords=accountant&location=Egypt" target="_blank" rel="noopener noreferrer">LinkedIn مصر</a><a class="btn btn-primary" style="margin:.25rem" href="https://www.careerjet.com.eg/accountant-jobs.html" target="_blank" rel="noopener noreferrer">Careerjet مصر</a><a class="btn btn-primary" style="margin:.25rem" href="https://wuzzuf.net/search/jobs/?q=accountant" target="_blank" rel="noopener noreferrer">Wuzzuf</a><a class="btn btn-primary" style="margin:.25rem" href="https://eg.indeed.com/jobs?q=accountant" target="_blank" rel="noopener noreferrer">Indeed مصر</a></section><section class="calc-card"><h2>وظائف حية من Careerjet مصر</h2><p class="calc-note">القائمة أدناه مصدرها Careerjet وتُعرض عبر أداتها الرسمية للشركاء. عند الضغط على إعلان تنتقل إلى Careerjet أو إلى صاحب الإعلان، وتسري شروط وخصوصية Careerjet.</p>
+<div class="cj-box" id="cj-slot"><div class="cj-job-box" data-url="https://widget.careerjet.net/job-box/5a31f9f2cc2bfef77d13cc18856d7856" data-search="accountant" data-location="Egypt"></div><script>(function(d){var js=d.createElement('script');js.id='cj-job-box';js.async=true;js.src='https://static.careerjet.org/js/all_widget_job_box_3rd_party.min.js?t='+Date.now();d.body.appendChild(js);})(document);</script><p class="calc-note">الوظائف من Careerjet وتُحدَّث تلقائيًا عند كل زيارة، ولا نخزن شيئًا منها. تصميمها ومحتواها من Careerjet.</p></div></section>
+<section class="calc-card"><h2>قبل أن تتقدم</h2><ul><li>لا تدفع مقابلًا للتوظيف أو للمقابلة: الإعلان الذي يطلب ذلك مشبوه.</li><li>تحقق من اسم الشركة وموقعها الرسمي قبل إرسال بياناتك.</li><li>جهّز سيرتك الذاتية وراجع أسئلة المقابلات الشائعة للمحاسبين.</li></ul><p class="calc-note">الروابط خارجية ولا نملك المواقع المذكورة. آخر مراجعة للروابط: 28 نوفمبر 2026.</p></section><footer style="text-align:center; padding:2rem 1rem; color:var(--gray-500); font-size:0.85rem; border-top:1px solid var(--gray-200); margin-top:2rem;">
+<div>© 2026 كبسولة المحاسب - عمر البدري. جميع الحقوق محفوظة.</div>
+<div style="margin-top:0.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a href="about.html" style="color:var(--primary-600); text-decoration:none;">عن الموقع</a>
+<a href="contact.html" style="color:var(--primary-600); text-decoration:none;">تواصل معنا</a>
+<a href="changelog.html" style="color:var(--primary-600); text-decoration:none;">جديد الموقع</a>
+<a href="methodology.html" style="color:var(--primary-600); text-decoration:none;">منهجنا في المراجعة</a>
+<a href="privacy.html" style="color:var(--primary-600); text-decoration:none;">سياسة الخصوصية</a>
+<a href="terms.html" style="color:var(--primary-600); text-decoration:none;">الشروط والأحكام</a>
+</div>
+</footer></div></main>
+<script src="js/app.js"></script>
+<div class="command-palette-overlay">
+<div class="command-palette">
+<div class="command-input-wrapper">
+<i class="fas fa-search"></i>
+<input autocomplete="off" class="command-input" placeholder="ابحث عن أي شيء..." type="text"/>
+<kbd class="command-kbd">ESC</kbd>
+</div>
+<div class="command-results">
+<div class="command-section"><div class="command-item" data-href="projects.html"><i class="fas fa-briefcase"></i><div class="command-item-info"><h4>قسم المشاريع</h4><p>دراسات جدوى تعليمية ومصادر وافتراضات معلنة</p></div></div>
+<div class="command-section-title">الصفحات</div>
+<div class="command-item selected" data-href="index.html">
+<i class="fas fa-home blue"></i>
+<div class="command-item-info">
+<h4>الرئيسية</h4>
+<p>الصفحة الرئيسية</p>
+</div>
+<span class="command-item-shortcut">⌘H</span>
+</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-download green"></i>
+<div class="command-item-info">
+<h4>التحميلات</h4>
+<p>تحميلات Excel متوقفة مؤقتًا للمراجعة</p>
+</div>
+</div>
+<div class="command-item" data-href="blog.html">
+<i class="fas fa-blog gold"></i>
+<div class="command-item-info">
+<h4>المدونة</h4>
+<p>مقالات ونصائح</p>
+</div>
+</div><div class="command-item" data-href="calculators.html">
+<i class="fas fa-calculator gold"></i>
+<div class="command-item-info">
+<h4>حاسبات سريعة</h4>
+<p>مرتبات وقيمة مضافة وإهلاك</p>
+</div>
+</div>
+<div class="command-item" data-href="letters.html">
+<i class="fas fa-file-signature red"></i>
+<div class="command-item-info">
+<h4>مولّد الخطابات</h4>
+<p>مطابقات ومطالبات ومحاضر جاهزة للطباعة</p>
+</div>
+</div>
+<div class="command-item" data-href="tax-codes.html"><i class="fas fa-scale-balanced"></i><div class="command-item-info"><div class="command-item-title">دليل المعاملة الضريبية</div><div class="command-item-desc">ابحث عن معاملة أي سلعة أو خدمة</div></div>
+</div><div class="command-item" data-href="tax-calendar.html"><i class="fas fa-calendar-days"></i><div class="command-item-info"><div class="command-item-title">التقويم الضريبي 2026</div><div class="command-item-desc">مواعيد الإقرارات والتوريدات بعداد تنازلي</div></div>
+</div><div class="command-item" data-href="financial-health.html"><i class="fas fa-heart-pulse"></i><div class="command-item-info"><div class="command-item-title">مقياس الصحة المالية</div><div class="command-item-desc">قيّم ممارساتك في 10 أسئلة</div></div></div><div class="command-item" data-href="closing-checklist.html"><i class="fas fa-list-check"></i><div class="command-item-info"><div class="command-item-title">قائمة الإقفال الشهري</div><div class="command-item-desc">خطوات إقفال الشهر مرتبة وقابلة للطباعة</div></div></div><div class="command-item" data-href="quiz.html"><i class="fas fa-graduation-cap"></i><div class="command-item-info"><div class="command-item-title">بنك أسئلة المحاسبة</div><div class="command-item-desc">اختبر نفسك مع شرح لكل إجابة</div></div></div><div class="command-item" data-href="invoice-maker.html"><i class="fas fa-file-invoice"></i><div class="command-item-info"><div class="command-item-title">منشئ الفواتير وعروض الأسعار</div><div class="command-item-desc">فاتورة احترافية جاهزة للطباعة</div></div></div><div class="command-item" data-href="saudi-zakat-calculator.html"><i class="fas fa-coins"></i><div class="command-item-info"><div class="command-item-title">حاسبة زكاة المنشآت</div><div class="command-item-desc">الوعاء الزكوي والزكاة المستحقة وفق لائحة زاتكا</div></div></div><div class="command-item" data-href="tafqit.html"><i class="fas fa-money-check"></i><div class="command-item-info"><div class="command-item-title">تفقيط المبالغ</div><div class="command-item-desc">تحويل الأرقام إلى كلمات عربية</div></div></div><div class="command-item" data-href="financial-analyzer.html"><i class="fas fa-chart-pie"></i><div class="command-item-info"><div class="command-item-title">محلل القوائم المالية</div><div class="command-item-desc">من ميزان المراجعة إلى قائمة الدخل والنسب</div></div></div>
+<div class="command-item" data-href="changelog.html"><i class="fas fa-bullhorn"></i><div class="command-item-info"><div class="command-item-title">جديد الموقع</div><div class="command-item-desc">آخر الإضافات والتحديثات</div></div></div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الخدمات</div>
+<div class="command-item" data-href="downloads.html">
+<i class="fas fa-file-excel green"></i>
+<div class="command-item-info">
+<h4>برامج الحسابات</h4>
+<p>تحميلات Excel متوقفة مؤقتًا للمراجعة</p>
+</div>
+</div>
+</div>
+<div class="command-section">
+<div class="command-section-title">الدعم</div>
+<div class="command-item" data-href="contact.html">
+<i class="fas fa-envelope red"></i>
+<div class="command-item-info">
+<h4>تواصل معنا</h4>
+<p>مساعدة واستفسارات</p>
+</div>
+</div>
+<div class="command-item" data-href="about.html">
+<i class="fas fa-info-circle blue"></i>
+<div class="command-item-info">
+<h4>عنّا</h4>
+<p>من نحن ورؤيتنا</p>
+</div>
+</div>
+</div>
+</div>
+<div class="command-footer">
+<span><kbd>↑↓</kbd> للتنقل</span>
+<span><kbd>Enter</kbd> للاختيار</span>
+<span><kbd>ESC</kbd> للإغلاق</span>
+</div>
+</div>
+</div></body>
+</html>
