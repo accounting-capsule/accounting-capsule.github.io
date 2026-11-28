@@ -5,13 +5,13 @@
 <meta content="object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" http-equiv="Content-Security-Policy"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://accounting-capsule.github.io/articles/{{ page.slug }}.html" rel="canonical"/>
+<link href="https://accounting-capsule.github.io/articles/{{ page.name | remove: ".html" }}.html" rel="canonical"/>
 <meta content="ar_AR" property="og:locale"/>
 <meta content="كبسولة المحاسب" property="og:site_name"/>
 <meta content="{{ page.headline }}" property="og:title"/>
 <meta content="{{ page.description }}" property="og:description"/>
 <meta content="article" property="og:type"/>
-<meta content="https://accounting-capsule.github.io/articles/{{ page.slug }}.html" property="og:url"/>
+<meta content="https://accounting-capsule.github.io/articles/{{ page.name | remove: ".html" }}.html" property="og:url"/>
 <meta content="https://accounting-capsule.github.io/assets/og-image.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="{{ page.headline }}" name="twitter:title"/>
@@ -243,7 +243,7 @@
             .article-content table { font-size: 0.8125rem; }
         }
     </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "{{ page.headline }}", "description": "{{ page.description }}", "inLanguage": "ar", "datePublished": "{{ page.pub_date | date: "%Y-%m-%d" }}", "dateModified": "{{ page.mod_date | date: "%Y-%m-%d" }}", "mainEntityOfPage": "https://accounting-capsule.github.io/articles/{{ page.slug }}.html", "image": "https://accounting-capsule.github.io/assets/og-image.png", "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "{{ page.headline }}", "description": "{{ page.description }}", "inLanguage": "ar", "datePublished": "{{ page.pub_date | date: "%Y-%m-%d" }}", "dateModified": "{{ page.mod_date | date: "%Y-%m-%d" }}", "mainEntityOfPage": "https://accounting-capsule.github.io/articles/{{ page.name | remove: ".html" }}.html", "image": "https://accounting-capsule.github.io/assets/og-image.png", "author": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}, "publisher": {"@type": "Organization", "name": "كبسولة المحاسب", "url": "https://accounting-capsule.github.io/"}}]}</script>
 <style>.newsletter-section h3,.newsletter-box h3{color:#fff!important}.newsletter-section p,.newsletter-box p{color:#f1f5f9!important}</style><style>.example-table table{table-layout:fixed;width:100%}.example-table th,.example-table td{overflow-wrap:anywhere;padding:.65rem}.article-content a{overflow-wrap:anywhere}@media(max-width:600px){#wa-float{position:static!important;display:flex!important;margin:1rem auto!important;width:44px!important;height:44px!important;font-size:1.4rem!important}.article-content{padding:1rem!important}.example-table th,.example-table td{padding:.45rem;font-size:.9rem}}</style></head>
 <body>
 <div class="mobile-overlay"></div>
