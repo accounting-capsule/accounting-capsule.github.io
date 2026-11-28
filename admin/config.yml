@@ -23,3 +23,27 @@ collections:
     fields:
       - { name: title, label: العنوان, widget: string }
       - { name: body, label: النص, widget: text }
+
+  - name: articles
+    label: المقالات (تعديل مباشر)
+    label_singular: مقال
+    folder: articles
+    extension: html
+    format: frontmatter
+    create: false
+    delete: false
+    identifier_field: headline
+    summary: "{{headline}}"
+    sortable_fields: [headline, mod_date]
+    fields:
+      - { name: layout, widget: hidden }
+      - { name: rest, widget: hidden }
+      - { name: headline, label: عنوان المقال (يظهر في الصفحة), widget: string }
+      - { name: title, label: عنوان التبويب والبحث (SEO), widget: string }
+      - { name: description, label: الوصف (يظهر في جوجل), widget: text }
+      - { name: cat, label: التصنيف, widget: string }
+      - { name: crumb, label: اسم القسم في شريط التنقل, widget: string }
+      - { name: pub_date, label: تاريخ النشر (YYYY-MM-DD), widget: string }
+      - { name: mod_date, label: تاريخ آخر تعديل (YYYY-MM-DD), widget: string }
+      - { name: meta, label: سطر التاريخ ووقت القراءة (HTML), widget: text }
+      - { name: body, label: نص المقال (HTML), widget: text }
