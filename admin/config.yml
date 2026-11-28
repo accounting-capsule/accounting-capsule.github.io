@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: accounting-capsule/accounting-capsule.github.io
+  branch: main
+
+site_url: https://accounting-capsule.github.io
+display_url: https://accounting-capsule.github.io
+locale: ar
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: notes
+    label: ملاحظات الإدارة (لا تظهر للزوار)
+    folder: admin-data/notes
+    format: json
+    extension: json
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}"
+    fields:
+      - { name: title, label: العنوان, widget: string }
+      - { name: body, label: النص, widget: text }
