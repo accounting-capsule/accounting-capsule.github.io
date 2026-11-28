@@ -1,8 +1,8 @@
 {
-  "available_workbooks": 0,
-  "status": "withdrawn_for_review",
+  "available_workbooks": 109,
+  "status": "available",
   "updated": "2026-11-28",
-  "message_ar": "تحميلات Excel متوقفة مؤقتًا للمراجعة",
+  "message_ar": "109 برنامج Excel مجاني: ملف مثال وملف فارغ لكل نشاط",
   "published_articles": 117,
   "review_dates": {
     "egypt_calculators_arithmetic": "2026-11-23",
@@ -10,5 +10,6 @@
     "egypt_calculators_legal_coverage": "incomplete",
     "saudi_zakat_status": "output_paused_pending_legal_review",
     "saudi_zakat_sources_checked": "2026-11-24"
-  }
+  },
+  "available_files": 218
 }
