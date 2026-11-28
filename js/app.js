@@ -901,6 +901,75 @@ if (location.hostname === 'accounting-capsule.github.io') {
     document.head.appendChild(gcScript);
 }
 
+// 8b. Anonymous engagement events (GoatCounter events: time on page bucket, scroll depth, downloads, outbound links, first tool use).
+// Live site only. No text, input values or personal data are sent: only an event name with the page path.
+(function () {
+    if (location.hostname !== 'accounting-capsule.github.io') return;
+    var path = location.pathname.replace(/\/index\.html$/, '/');
+    var sent = {};
+    function gcEvent(name, once) {
+        if (once && sent[name]) return;
+        sent[name] = 1;
+        var tries = 0;
+        (function go() {
+            if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+                try { window.goatcounter.count({ path: name, title: name, event: true }); } catch (e) {}
+            } else if (tries++ < 20) { setTimeout(go, 500); }
+        })();
+    }
+    // Time on page: visible seconds, sent once when the page is hidden or closed.
+    var visible = 0, since = document.visibilityState === 'visible' ? Date.now() : 0, timeSent = false;
+    function flushTime() {
+        if (since) { visible += Date.now() - since; since = 0; }
+        if (timeSent || visible < 1000) return;
+        timeSent = true;
+        var s = visible / 1000;
+        var b = s < 15 ? 'lt15s' : s < 60 ? '15-60s' : s < 180 ? '1-3m' : 'gt3m';
+        gcEvent('time/' + b + ':' + path, true);
+    }
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'hidden') flushTime(); else if (!since) since = Date.now();
+    });
+    window.addEventListener('pagehide', flushTime);
+    // Scroll depth (50% and 90% of the page).
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+            ticking = false;
+            var d = document.documentElement, h = d.scrollHeight - window.innerHeight;
+            if (h < 200) return;
+            var p = (window.pageYOffset || d.scrollTop) / h;
+            if (p >= 0.5) gcEvent('scroll50:' + path, true);
+            if (p >= 0.9) gcEvent('scroll90:' + path, true);
+        });
+    }, { passive: true });
+    // Downloads and outbound links.
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (a) {
+            var u;
+            try { u = new URL(a.href, location.href); } catch (x) { u = null; }
+            if (u) {
+                var file = u.pathname.split('/').pop();
+                if (/\.(pdf|xlsx|xls|xlsm|csv|zip|docx|doc)$/i.test(u.pathname) || a.hasAttribute('download')) {
+                    gcEvent('download:' + (file || u.pathname), false);
+                } else if (u.hostname !== location.hostname) {
+                    gcEvent('out:' + u.hostname, false);
+                }
+            }
+        }
+        // First use of a tool (button click outside navigation chrome).
+        var btn = e.target.closest && e.target.closest('button');
+        if (btn && !btn.closest('header, nav, footer, .command-palette, #wa-float')) gcEvent('tool-use:' + path, true);
+    }, true);
+    document.addEventListener('input', function (e) {
+        var t = e.target;
+        if (t && /^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName) && !t.closest('header, nav, footer, .command-palette')) gcEvent('tool-use:' + path, true);
+    }, true);
+})();
+
 // WhatsApp consultation floating button (site-wide)
 (function () {
     if (document.getElementById('wa-float')) return;
