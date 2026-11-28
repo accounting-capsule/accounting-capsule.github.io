@@ -2,6 +2,8 @@ backend:
   name: github
   repo: accounting-capsule/accounting-capsule.github.io
   branch: main
+  base_url: https://sveltia-cms-auth-capsule.1d9sxh.workers.dev
+  auth_methods: [oauth]
 
 site_url: https://accounting-capsule.github.io
 display_url: https://accounting-capsule.github.io
